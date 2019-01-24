@@ -1,12 +1,20 @@
-const FullPlayer = () => {
+const FullPlayer = props => {
+  const initialSong = props.songs[0]
   return (
     <div className='player' id='player'>
       <div className='playback_wrapper'>
         <div className='playback_blur' />
-        <div className='playback_thumb' />
+        <div
+          className='playback_thumb'
+          style={{
+            backgroundImage: `url(${
+              initialSong.fields.featuredImage.fields.file.url
+            })`
+          }}
+        />
         <div className='playback_info'>
-          <div className='title'>Friday Comes</div>
-          <div className='artist'>Early</div>
+          <div className='title'>{initialSong.fields.title}</div>
+          <div className='artist'>Pye Luis</div>
         </div>
         <div className='playback_btn_wrapper'>
           <i className='btn-prev fa fa-step-backward' aria-hidden='true' />
@@ -28,62 +36,22 @@ const FullPlayer = () => {
       </div>
       <div className='list_wrapper'>
         <ul className='list'>
-          <li className='list_item selected'>
-            <div className='thumb' />
-            <div className='info'>
-              <div className='title'>Friday Comes</div>
-              <div className='artist'>Early</div>
-            </div>
-          </li>
-          <li className='list_item'>
-            <div className='thumb' />
-            <div className='info'>
-              <div className='title'>Friday Comes</div>
-              <div className='artist'>Early</div>
-            </div>
-          </li>
-          <li className='list_item'>
-            <div className='thumb' />
-            <div className='info'>
-              <div className='title'>Friday Comes</div>
-              <div className='artist'>Early</div>
-            </div>
-          </li>
-          <li className='list_item'>
-            <div className='thumb' />
-            <div className='info'>
-              <div className='title'>Friday Comes</div>
-              <div className='artist'>Early</div>
-            </div>
-          </li>
-          <li className='list_item'>
-            <div className='thumb' />
-            <div className='info'>
-              <div className='title'>Friday Comes</div>
-              <div className='artist'>Early</div>
-            </div>
-          </li>
-          <li className='list_item'>
-            <div className='thumb' />
-            <div className='info'>
-              <div className='title'>Friday Comes</div>
-              <div className='artist'>Early</div>
-            </div>
-          </li>
-          <li className='list_item'>
-            <div className='thumb' />
-            <div className='info'>
-              <div className='title'>Friday Comes</div>
-              <div className='artist'>Early</div>
-            </div>
-          </li>
-          <li className='list_item'>
-            <div className='thumb' />
-            <div className='info'>
-              <div className='title'>Friday Comes</div>
-              <div className='artist'>Early</div>
-            </div>
-          </li>
+          {props.songs.map(song => (
+            <li className='list_item selected'>
+              <div
+                className='thumb'
+                style={{
+                  backgroundImage: `url(${
+                    song.fields.featuredImage.fields.file.url
+                  })`
+                }}
+              />
+              <div className='info'>
+                <div className='title'>{song.fields.title}</div>
+                <div className='artist'>Pye Luis</div>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

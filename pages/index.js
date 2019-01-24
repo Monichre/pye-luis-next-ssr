@@ -20,27 +20,27 @@ class Home extends Component {
     curationOpen: false
   }
 
-  // static async getInitialProps ({ req }) {
-  //   const CMS = Contentful.createClient({
-  //     space: CONTENTFUL_SPACE_ID,
-  //     accessToken: CONTENTFUL_ACCESS_TOKEN
-  //   })
-  //   console.log(CMS)
+  static async getInitialProps ({ req }) {
+    const CMS = Contentful.createClient({
+      space: CONTENTFUL_SPACE_ID,
+      accessToken: CONTENTFUL_ACCESS_TOKEN
+    })
 
-  //   const data = await CMS.getEntries()
-  //     .then(res => {
-  //       console.log(res)
-  //       return res
-  //     })
-  //     .catch(err => console.log(err))
-  //   return { ...data.json() }
-  // }
+    const { items } = await CMS.getEntries()
+    const songs = items.filter(item => item.sys.contentType.sys.id === 'song')
 
-  // componentDidMount () {
-  //   console.log(this.props)
+    return {
+      data: {
+        songs: songs
+      }
+    }
+  }
 
-  //   // this.getData()
-  // }
+  componentDidMount () {
+    console.log(this.props)
+
+    // this.getData()
+  }
 
   openMenu = e => {
     console.log(e)
@@ -199,6 +199,7 @@ class Home extends Component {
   }
 
   render () {
+    const { songs } = this.props.data
     return (
       <Fragment>
         <Head>
@@ -253,8 +254,8 @@ class Home extends Component {
 
           <div className='dim' onClick={this.handleDim} />
 
-          <FullPlayer />
-          <Curation />
+          <FullPlayer songs={songs} />
+          <Curation songs={songs} />
         </div>
       </Fragment>
     )

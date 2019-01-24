@@ -22,7 +22,7 @@ a {
 
 body {
   margin: 0;
-  background-color: #f2d7d3;
+
   font-family: "Oswald", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,6 +37,8 @@ body {
   position: fixed;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+  background-color: #f2d7d3;
+  background: linear-gradient(45deg, #e7b0c6 0%, #f9e2ee 100%);
 }
 
 .wave {
@@ -44,7 +46,8 @@ body {
   position: absolute;
   top: 60%;
   left: -28%;
-  background: #18dfad;
+  background: #00b5dd;
+  mix-blend-mode: screen;
   width: 100%;
   height: 300vw;
   transform-origin: 50% 49%;
@@ -57,7 +60,8 @@ body {
 .wave.-two {
   animation: drift 9000ms infinite linear;
   opacity: 1;
-  background: #33476a;
+  background: #f2d7d3;
+  mix-blend-mode: color-burn;
   top: 60%;
   left: -32%;
 }
@@ -178,13 +182,14 @@ body {
 }
 .header .logo-text {
   font-size: 20px;
-  color: #252120;
+  color: #fff9e1;
 }
 
 .back_btn {
   cursor: pointer;
   position: relative;
-  color: rgba(37, 33, 32, 0.4);
+  /* color: rgba(37, 33, 32, 0.4); */
+  color: #fff9e1;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -283,7 +288,6 @@ body {
   background-color: #d3d6da;
   border-radius: 2px;
   background-size: cover;
-  background-image: url(https://i1.sndcdn.com/artworks-000167527289-p3zpfg-large.jpg);
 }
 .track_info_wrapper .track_info .title {
   white-space: nowrap;
@@ -304,7 +308,6 @@ body {
 }
 
 img.btn-open-player {
-  border: 2px solid black;
   border-radius: 50%;
   padding: 5px;
 }
@@ -391,7 +394,6 @@ img.btn-open-player {
   position: absolute;
   margin: 35px;
   box-shadow: 0px 12px 30px 0px rgba(97, 45, 45, 0.2);
-  background-image: url(https://i1.sndcdn.com/artworks-000167527289-p3zpfg-t500x500.jpg);
 }
 
 .playback_info {
@@ -532,31 +534,6 @@ img.btn-open-player {
 
 .list_item:active {
   transform: scale(0.98);
-}
-
-.list .list_item:nth-child(1) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000167527289-p3zpfg-large.jpg);
-}
-.list .list_item:nth-child(2) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000149308680-w9rj6a-large.jpg);
-}
-.list .list_item:nth-child(3) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000091003491-upr0rf-large.jpg);
-}
-.list .list_item:nth-child(4) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000125642440-o2ff73-large.jpg);
-}
-.list .list_item:nth-child(5) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000174340505-wv6dl1-large.jpg);
-}
-.list .list_item:nth-child(6) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000169142537-e22x2o-large.jpg);
-}
-.list .list_item:nth-child(7) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000180119811-wgpequ-large.jpg);
-}
-.list .list_item:nth-child(8) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000133986066-hf1rz6-large.jpg);
 }
 
 .selected {
@@ -702,31 +679,6 @@ img.btn-open-player {
   background-size: cover;
   margin-bottom: 20px;
   transition: 0.5s;
-}
-
-.curator_list_content .item:nth-child(3) .thumb {
-  background-image: url(https://i1.sndcdn.com/avatars-000202649537-6368nw-t250x250.jpg);
-}
-.curator_list_content .item:nth-child(4) .thumb {
-  background-image: url(https://i1.sndcdn.com/avatars-000249865900-64rve1-t250x250.jpg);
-}
-.curator_list_content .item:nth-child(5) .thumb {
-  background-image: url(https://i1.sndcdn.com/avatars-000270812013-6zuevs-t250x250.jpg);
-}
-.curator_list_content .item:nth-child(6) .thumb {
-  background-image: url(https://i1.sndcdn.com/avatars-000213988027-6nutce-t250x250.jpg);
-}
-.curator_list_content .item:nth-child(7) .thumb {
-  background-image: url(https://i1.sndcdn.com/avatars-000187841543-7rhmm0-t250x250.jpg);
-}
-.curator_list_content .item:nth-child(8) .thumb {
-  background-image: url(https://i1.sndcdn.com/avatars-000248045110-uq3jhv-t250x250.jpg);
-}
-.curator_list_content .item:nth-child(9) .thumb {
-  background-image: url(https://i1.sndcdn.com/avatars-000276749358-7c1upz-t250x250.jpg);
-}
-.curator_list_content .item:nth-child(10) .thumb {
-  background-image: url(https://i1.sndcdn.com/avatars-000265518371-amlg8s-t250x250.jpg);
 }
 
 .shadow {
