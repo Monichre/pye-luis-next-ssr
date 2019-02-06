@@ -1,12 +1,10 @@
 import React, { Fragment, Component } from 'react'
 import { TweenMax, Power2, Expo } from 'gsap'
 import SideBarNav from '../components/SideBarNav'
-import MiniPlayer from '../components/MiniPlayer'
-import Curation from '../components/Curation'
+import Gallery from '../components/Gallery'
 import '../static/style.css'
 import Head from 'next/head'
-import FullPlayer from '../components/FullPlayer'
-// import { getCmsContent } from '../lib/api'
+import MusicPlayer from '../components/MusicPlayer'
 import * as Contentful from 'contentful'
 
 const CONTENTFUL_SPACE_ID = 'aft70ikgwtvx'
@@ -17,7 +15,10 @@ class Home extends Component {
   state = {
     menuOpen: false,
     fullPlayerOpen: false,
-    curationOpen: false
+    curationOpen: false,
+    currentTrack: false,
+    tracks: [],
+    currentIndex: 0
   }
 
   static async getInitialProps ({ req }) {
@@ -28,23 +29,29 @@ class Home extends Component {
 
     const { items } = await CMS.getEntries()
     const songs = items.filter(item => item.sys.contentType.sys.id === 'song')
+    const photoGallery = items.filter(
+      item => item.sys.contentType.sys.id === 'photo'
+    )[0]
+    const videos = items.filter(item => item.sys.contentType.sys.id === 'video')
 
     return {
       data: {
-        songs: songs
+        songs: songs,
+        photoGallery: photoGallery,
+        videos: videos
       }
     }
   }
 
   componentDidMount () {
-    console.log(this.props)
-
-    // this.getData()
+    const {
+      data: { songs }
+    } = this.props
   }
 
   openMenu = e => {
-    console.log(e)
     const { menuOpen } = this.state
+
     if (!menuOpen) {
       TweenMax.to('.dim', 0.5, {
         opacity: 1,
@@ -140,10 +147,14 @@ class Home extends Component {
     const textWrap = document.querySelectorAll('.line, .text')
     // const textLogo = document.querySelector('.text-wrap .text')
     const waves = document.querySelector('.wave-container')
+    const miniplayerButtons = Array.from(
+      document.querySelectorAll('.mini-player_btn_wrapper svg')
+    )
 
     if (!curationOpen) {
       // Hide
       logo.style.display = 'none'
+      miniplayerButtons.forEach(button => button.classList.toggle('black'))
       curationAnim.to(
         textWrap,
         0.5,
@@ -198,8 +209,11 @@ class Home extends Component {
     // TweenMax.to('.line', 0.5, {css: { scaleY: 1, transformOrigin: "center center" }, ease: Expo.easeOut})
   }
 
+
+
   render () {
-    const { songs } = this.props.data
+    const { songs, videos, photoGallery } = this.props.data
+    
     return (
       <Fragment>
         <Head>
@@ -221,13 +235,7 @@ class Home extends Component {
           <div className='line' />
           <div className='text-wrap' onClick={this.toggleCuration}>
             <div className='text' onMouseEnter={this.revealPlayButton}>
-              <span>P</span>
-              <span>Y</span>
-              <span>E</span>
-              <span>L</span>
-              <span>U</span>
-              <span>I</span>
-              <span>S</span>
+              Pye Luis
               <div className='main-btn_wrapper'>
                 <img
                   src='../static/icons/play.svg'
@@ -250,12 +258,14 @@ class Home extends Component {
           </div>
 
           <SideBarNav />
-          <MiniPlayer toggleFullPlayer={this.toggleFullPlayer} />
 
           <div className='dim' onClick={this.handleDim} />
 
-          <FullPlayer songs={songs} />
-          <Curation songs={songs} />
+          <MusicPlayer
+            toggleFullPlayer={this.toggleFullPlayer}
+            songs={songs}
+          />
+          <Gallery videos={videos} photoGallery={photoGallery} />
         </div>
       </Fragment>
     )

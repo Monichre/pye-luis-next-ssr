@@ -1,9 +1,9 @@
 ((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
-/***/ "./components/Curation.js":
-/*!********************************!*\
-  !*** ./components/Curation.js ***!
-  \********************************/
+/***/ "./components/Gallery.js":
+/*!*******************************!*\
+  !*** ./components/Gallery.js ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,564 +11,184 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/Curation.js";
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-player */ "./node_modules/react-player/lib/ReactPlayer.js");
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/Gallery.js";
 
 
-var Curation = function Curation() {
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+
+
+var Gallery = function Gallery(_ref) {
+  var photoGallery = _ref.photoGallery,
+      videos = _ref.videos;
+
+  var _videos = videos.map(function (video) {
+    video.fields.file.isVideo = true;
+    return video.fields.file;
+  });
+
+  var items = [].concat(_toConsumableArray(_videos), _toConsumableArray(photoGallery.fields.photos));
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "page",
     id: "curator",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_title_wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 12
     },
     __self: this
-  }, "LP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "PL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_line",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 13
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 14
     },
     __self: this
-  }, "Curation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Gallery"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_line",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 15
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 16
     },
     __self: this
-  }, "14")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Count em")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_list_content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "connect_btn_wrapper item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "connect_btn",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "connect_btn_text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, "Connect ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }), "SoundCloud"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "curator_list_content_desc",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, "Or Select ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }), "a Listener of ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }), "L.P."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "Fantasy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "desc",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, "Sam"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, "Fantasy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "desc",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, "Sam"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, "Fantasy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "desc",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, "Sam"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: this
-  }, "Fantasy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "desc",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: this
-  }, "Sam"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: this
-  }, "Fantasy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "desc",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: this
-  }, "Sam"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, "Fantasy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "desc",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, "Sam"))))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Curation);
-
-/***/ }),
-
-/***/ "./components/FullPlayer.js":
-/*!**********************************!*\
-  !*** ./components/FullPlayer.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/FullPlayer.js";
-
-
-var FullPlayer = function FullPlayer(props) {
-  var initialSong = props.songs[0];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "player",
-    id: "player",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_wrapper",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_blur",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_thumb",
-    style: {
-      backgroundImage: "url(".concat(initialSong.fields.featuredImage.fields.file.url, ")")
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, initialSong.fields.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "artist",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, "Pye Luis")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_btn_wrapper",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "btn-prev fa fa-step-backward",
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "btn-switch",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "btn-play fa fa-play",
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "btn-pause fa fa-pause",
-    "aria-hidden": "true",
+  }, "View On ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "btn-next fa fa-step-forward",
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_timeline",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_timeline_start-time",
+  }), "Youtube"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "curator_list_content_desc",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  }, "00:31"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_timeline_slider",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "slider_base",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "slider_progress",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "slider_handle",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "playback_timeline_end-time",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, "03:11"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "list_wrapper",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "list",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, props.songs.map(function (song) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      className: "list_item selected",
+  }, "Or Play Here"), items.map(function (item) {
+    console.log(item);
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "item",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 32
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, item.isVideo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      url: item.fields.file.url,
       className: "thumb",
-      style: {
-        backgroundImage: "url(".concat(song.fields.featuredImage.fields.file.url, ")")
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
       },
+      __self: this
+    }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "thumb",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: item.fields.file.url + '?w=400&h=400',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "info",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "info",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 49
-      },
-      __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "title",
+      className: "name",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 42
       },
       __self: this
-    }, song.fields.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "artist",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51
-      },
-      __self: this
-    }, "Pye Luis")));
+    }, item.fields.title)));
   }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (FullPlayer);
+/* harmony default export */ __webpack_exports__["default"] = (Gallery);
 
 /***/ }),
 
-/***/ "./components/MiniPlayer.js":
-/*!**********************************!*\
-  !*** ./components/MiniPlayer.js ***!
-  \**********************************/
+/***/ "./components/MusicPlayer.js":
+/*!***********************************!*\
+  !*** ./components/MusicPlayer.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -576,103 +196,455 @@ var FullPlayer = function FullPlayer(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/MiniPlayer.js";
+/* harmony import */ var _icons_playIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icons/playIcon */ "./components/icons/playIcon.js");
+/* harmony import */ var _icons_musicIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icons/musicIcon */ "./components/icons/musicIcon.js");
+/* harmony import */ var _icons_nextIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./icons/nextIcon */ "./components/icons/nextIcon.js");
+/* harmony import */ var _icons_backIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./icons/backIcon */ "./components/icons/backIcon.js");
+/* harmony import */ var _icons_pauseIcon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./icons/pauseIcon */ "./components/icons/pauseIcon.js");
+/* harmony import */ var howler__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! howler */ "./node_modules/howler/dist/howler.js");
+/* harmony import */ var howler__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(howler__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/MusicPlayer.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-var MiniPlayer = function MiniPlayer(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mini-player",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 3
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "track_info_wrapper",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "track_info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "info",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, "Friday Comes"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "artist",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, "Early")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mini-player_btn_wrapper",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "../static/icons/skip-back.svg",
-    className: "btn-prev",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "../static/icons/play.svg",
-    className: "btn-play",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "../static/icons/skip-forward.svg",
-    className: "btn-next",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "../static/icons/music.svg",
-    className: "btn-open-player",
-    onClick: props.toggleFullPlayer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  })));
-};
 
-/* harmony default export */ __webpack_exports__["default"] = (MiniPlayer);
+
+
+
+
+
+
+var MusicPlayer =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(MusicPlayer, _Component);
+
+  function MusicPlayer(props) {
+    var _this;
+
+    _classCallCheck(this, MusicPlayer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MusicPlayer).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "formatTime", function (secs) {
+      var minutes = Math.floor(secs / 60) || 0;
+      var seconds = secs - minutes * 60 || 0;
+      return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "playCurrentTrack", function (e) {
+      e.preventDefault();
+      var currentTrack = _this.state.currentTrack;
+
+      if (currentTrack) {
+        currentTrack.sound.play();
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "nextSong", function () {});
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "previousSong", function () {});
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "pause", function (e) {
+      e.preventDefault();
+      var currentTrack = _this.state.currentTrack;
+
+      if (currentTrack) {
+        currentTrack.sound.pause();
+      }
+    });
+
+    _this.state = {
+      currentIndex: 0,
+      playing: false,
+      tracks: [],
+      currentTrack: null
+    };
+    return _this;
+  }
+
+  _createClass(MusicPlayer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var progress = document.querySelector('.slider_progress');
+      var progressBall = document.querySelector('.slider_handle');
+      var timer = document.querySelector('.playback_timeline_end-time');
+      var self = this;
+      var howlLoadedSongs = this.props.songs.map(function (song) {
+        var sound = new howler__WEBPACK_IMPORTED_MODULE_6__["Howl"]({
+          src: [song.fields.trackUrl.fields.file.url],
+          onplay: function onplay(arg) {
+            var count = 0;
+            var timerInterval = setInterval(function () {
+              count++;
+              progress.style.width = "".concat(count, "%");
+              progressBall.style.left = "".concat(count, "px");
+            }, 1000);
+            self.setState({
+              playing: true
+            }, function () {
+              timer.innerHTML = "".concat(self.formatTime(Math.round(self.state.currentTrack.sound.duration())));
+            });
+          },
+          onend: function onend() {
+            self.setState({
+              playing: false
+            });
+          },
+          onpause: function onpause() {
+            self.setState({
+              playing: false
+            });
+          },
+          onstop: function onstop() {
+            self.setState({
+              playing: false
+            });
+          }
+        });
+        return _objectSpread({}, song, {
+          sound: sound
+        });
+      });
+      this.setState({
+        tracks: howlLoadedSongs,
+        currentTrack: howlLoadedSongs[this.state.currentIndex]
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var currentTrack = this.state.currentTrack ? this.state.currentTrack : this.props.currentTrack;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106
+        },
+        __self: this
+      }, currentTrack ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mini-player",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track_info_wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track_info",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 110
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "thumb",
+        style: {
+          backgroundImage: "url(".concat(currentTrack ? currentTrack.fields.featuredImage.fields.file.url : this.props.currentTrack.fields.featuredImage.fields.file.url, ")")
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 111
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "info",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, currentTrack.fields.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "artist",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      }, "Pye Luis")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mini-player_btn_wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 128
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_backIcon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      }), this.state.playing ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_pauseIcon__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        onClick: this.pause,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        },
+        __self: this
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_playIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        onClick: this.playCurrentTrack,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_nextIcon__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_musicIcon__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        onClick: this.props.toggleFullPlayer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 137
+        },
+        __self: this
+      }))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "player",
+        id: "player",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 143
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_blur",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 144
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_thumb",
+        style: {
+          backgroundImage: "url(".concat(currentTrack ? currentTrack.fields.featuredImage.fields.file.url : null, ")")
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_info",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 155
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 156
+        },
+        __self: this
+      }, currentTrack ? currentTrack.fields.title : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "artist",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 159
+        },
+        __self: this
+      }, "Pye Luis")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_btn_wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 161
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "btn-prev fa fa-step-backward",
+        "aria-hidden": "true",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 162
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "btn-switch",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 163
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "btn-play fa fa-play",
+        "aria-hidden": "true",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 164
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "btn-pause fa fa-pause",
+        "aria-hidden": "true",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 165
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "btn-next fa fa-step-forward",
+        "aria-hidden": "true",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 167
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_timeline",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 169
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_timeline_start-time",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 170
+        },
+        __self: this
+      }, "00:00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_timeline_slider",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 171
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "slider_base",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 172
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "slider_progress",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 173
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "slider_handle",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 174
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "playback_timeline_end-time",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 176
+        },
+        __self: this
+      }, "03:11"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "list_wrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 179
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "list",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 180
+        },
+        __self: this
+      }, this.props.songs.map(function (song, i) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "list_item selected",
+          key: i,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 182
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "thumb",
+          style: {
+            backgroundImage: "url(".concat(song.fields.featuredImage.fields.file.url, ")")
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 183
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "info",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 191
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "title",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 192
+          },
+          __self: this
+        }, song.fields.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "artist",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 193
+          },
+          __self: this
+        }, "Pye Luis")));
+      })))));
+    }
+  }]);
+
+  return MusicPlayer;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (MusicPlayer);
 
 /***/ }),
 
@@ -803,6 +775,320 @@ var SideBarNav = function SideBarNav() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SideBarNav);
+
+/***/ }),
+
+/***/ "./components/icons/backIcon.js":
+/*!**************************************!*\
+  !*** ./components/icons/backIcon.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/icons/backIcon.js";
+
+
+var BackIcon = function BackIcon(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "#fff9e1",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    className: "btn-prev",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polygon", {
+    points: "19 20 9 12 19 4 19 20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    x1: "5",
+    y1: "19",
+    x2: "5",
+    y2: "5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BackIcon);
+
+/***/ }),
+
+/***/ "./components/icons/musicIcon.js":
+/*!***************************************!*\
+  !*** ./components/icons/musicIcon.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/icons/musicIcon.js";
+
+
+var MusicIcon = function MusicIcon(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "#fff9e1",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    className: "btn-open-player",
+    onClick: props.onClick,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    x1: "8",
+    y1: "6",
+    x2: "21",
+    y2: "6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    x1: "8",
+    y1: "12",
+    x2: "21",
+    y2: "12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    x1: "8",
+    y1: "18",
+    x2: "21",
+    y2: "18",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    x1: "3",
+    y1: "6",
+    x2: "3",
+    y2: "6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    x1: "3",
+    y1: "12",
+    x2: "3",
+    y2: "12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    x1: "3",
+    y1: "18",
+    x2: "3",
+    y2: "18",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MusicIcon);
+
+/***/ }),
+
+/***/ "./components/icons/nextIcon.js":
+/*!**************************************!*\
+  !*** ./components/icons/nextIcon.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/icons/nextIcon.js";
+
+
+var NextIcon = function NextIcon() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "#fff9e1",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    className: "btn-next",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polygon", {
+    points: "5 4 15 12 5 20 5 4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    x1: "19",
+    y1: "5",
+    x2: "19",
+    y2: "19",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (NextIcon);
+
+/***/ }),
+
+/***/ "./components/icons/pauseIcon.js":
+/*!***************************************!*\
+  !*** ./components/icons/pauseIcon.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/icons/pauseIcon.js";
+
+
+var PauseIcon = function PauseIcon(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "#fff9e1",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    className: "feather feather-pause",
+    onClick: props.onClick,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    x: "6",
+    y: "4",
+    width: "4",
+    height: "16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    x: "14",
+    y: "4",
+    width: "4",
+    height: "16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PauseIcon);
+
+/***/ }),
+
+/***/ "./components/icons/playIcon.js":
+/*!**************************************!*\
+  !*** ./components/icons/playIcon.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/icons/playIcon.js";
+
+
+var PlayIcon = function PlayIcon(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "#fff9e1",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    className: "btn-play",
+    onClick: props.onClick,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polygon", {
+    points: "5 3 19 12 5 21 5 3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PlayIcon);
 
 /***/ }),
 
@@ -8344,6 +8630,113 @@ for (var i = 0; i < DOMIterables.length; i++) {
   if (proto && !proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
   Iterators[NAME] = Iterators.Array;
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/deepmerge/dist/umd.js":
+/*!********************************************!*\
+  !*** ./node_modules/deepmerge/dist/umd.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (global, factory) {
+	 true ? module.exports = factory() :
+	undefined;
+}(this, (function () { 'use strict';
+
+var isMergeableObject = function isMergeableObject(value) {
+	return isNonNullObject(value)
+		&& !isSpecial(value)
+};
+
+function isNonNullObject(value) {
+	return !!value && typeof value === 'object'
+}
+
+function isSpecial(value) {
+	var stringValue = Object.prototype.toString.call(value);
+
+	return stringValue === '[object RegExp]'
+		|| stringValue === '[object Date]'
+		|| isReactElement(value)
+}
+
+// see https://github.com/facebook/react/blob/b5ac963fb791d1298e7f396236383bc955f916c1/src/isomorphic/classic/element/ReactElement.js#L21-L25
+var canUseSymbol = typeof Symbol === 'function' && Symbol.for;
+var REACT_ELEMENT_TYPE = canUseSymbol ? Symbol.for('react.element') : 0xeac7;
+
+function isReactElement(value) {
+	return value.$$typeof === REACT_ELEMENT_TYPE
+}
+
+function emptyTarget(val) {
+	return Array.isArray(val) ? [] : {}
+}
+
+function cloneUnlessOtherwiseSpecified(value, options) {
+	return (options.clone !== false && options.isMergeableObject(value))
+		? deepmerge(emptyTarget(value), value, options)
+		: value
+}
+
+function defaultArrayMerge(target, source, options) {
+	return target.concat(source).map(function(element) {
+		return cloneUnlessOtherwiseSpecified(element, options)
+	})
+}
+
+function mergeObject(target, source, options) {
+	var destination = {};
+	if (options.isMergeableObject(target)) {
+		Object.keys(target).forEach(function(key) {
+			destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);
+		});
+	}
+	Object.keys(source).forEach(function(key) {
+		if (!options.isMergeableObject(source[key]) || !target[key]) {
+			destination[key] = cloneUnlessOtherwiseSpecified(source[key], options);
+		} else {
+			destination[key] = deepmerge(target[key], source[key], options);
+		}
+	});
+	return destination
+}
+
+function deepmerge(target, source, options) {
+	options = options || {};
+	options.arrayMerge = options.arrayMerge || defaultArrayMerge;
+	options.isMergeableObject = options.isMergeableObject || isMergeableObject;
+
+	var sourceIsArray = Array.isArray(source);
+	var targetIsArray = Array.isArray(target);
+	var sourceAndTargetTypesMatch = sourceIsArray === targetIsArray;
+
+	if (!sourceAndTargetTypesMatch) {
+		return cloneUnlessOtherwiseSpecified(source, options)
+	} else if (sourceIsArray) {
+		return options.arrayMerge(target, source, options)
+	} else {
+		return mergeObject(target, source, options)
+	}
+}
+
+deepmerge.all = function deepmergeAll(array, options) {
+	if (!Array.isArray(array)) {
+		throw new Error('first argument should be an array')
+	}
+
+	return array.reduce(function(prev, next) {
+		return deepmerge(prev, next, options)
+	}, {})
+};
+
+var deepmerge_1 = deepmerge;
+
+return deepmerge_1;
+
+})));
 
 
 /***/ }),
@@ -16805,6 +17198,3154 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/howler/dist/howler.js":
+/*!********************************************!*\
+  !*** ./node_modules/howler/dist/howler.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ *  howler.js v2.1.1
+ *  howlerjs.com
+ *
+ *  (c) 2013-2018, James Simpson of GoldFire Studios
+ *  goldfirestudios.com
+ *
+ *  MIT License
+ */
+
+(function() {
+
+  'use strict';
+
+  /** Global Methods **/
+  /***************************************************************************/
+
+  /**
+   * Create the global controller. All contained methods and properties apply
+   * to all sounds that are currently playing or will be in the future.
+   */
+  var HowlerGlobal = function() {
+    this.init();
+  };
+  HowlerGlobal.prototype = {
+    /**
+     * Initialize the global Howler object.
+     * @return {Howler}
+     */
+    init: function() {
+      var self = this || Howler;
+
+      // Create a global ID counter.
+      self._counter = 1000;
+
+      // Pool of unlocked HTML5 Audio objects.
+      self._html5AudioPool = [];
+      self.html5PoolSize = 10;
+
+      // Internal properties.
+      self._codecs = {};
+      self._howls = [];
+      self._muted = false;
+      self._volume = 1;
+      self._canPlayEvent = 'canplaythrough';
+      self._navigator = (typeof window !== 'undefined' && window.navigator) ? window.navigator : null;
+
+      // Public properties.
+      self.masterGain = null;
+      self.noAudio = false;
+      self.usingWebAudio = true;
+      self.autoSuspend = true;
+      self.ctx = null;
+
+      // Set to false to disable the auto audio unlocker.
+      self.autoUnlock = true;
+
+      // Setup the various state values for global tracking.
+      self._setup();
+
+      return self;
+    },
+
+    /**
+     * Get/set the global volume for all sounds.
+     * @param  {Float} vol Volume from 0.0 to 1.0.
+     * @return {Howler/Float}     Returns self or current volume.
+     */
+    volume: function(vol) {
+      var self = this || Howler;
+      vol = parseFloat(vol);
+
+      // If we don't have an AudioContext created yet, run the setup.
+      if (!self.ctx) {
+        setupAudioContext();
+      }
+
+      if (typeof vol !== 'undefined' && vol >= 0 && vol <= 1) {
+        self._volume = vol;
+
+        // Don't update any of the nodes if we are muted.
+        if (self._muted) {
+          return self;
+        }
+
+        // When using Web Audio, we just need to adjust the master gain.
+        if (self.usingWebAudio) {
+          self.masterGain.gain.setValueAtTime(vol, Howler.ctx.currentTime);
+        }
+
+        // Loop through and change volume for all HTML5 audio nodes.
+        for (var i=0; i<self._howls.length; i++) {
+          if (!self._howls[i]._webAudio) {
+            // Get all of the sounds in this Howl group.
+            var ids = self._howls[i]._getSoundIds();
+
+            // Loop through all sounds and change the volumes.
+            for (var j=0; j<ids.length; j++) {
+              var sound = self._howls[i]._soundById(ids[j]);
+
+              if (sound && sound._node) {
+                sound._node.volume = sound._volume * vol;
+              }
+            }
+          }
+        }
+
+        return self;
+      }
+
+      return self._volume;
+    },
+
+    /**
+     * Handle muting and unmuting globally.
+     * @param  {Boolean} muted Is muted or not.
+     */
+    mute: function(muted) {
+      var self = this || Howler;
+
+      // If we don't have an AudioContext created yet, run the setup.
+      if (!self.ctx) {
+        setupAudioContext();
+      }
+
+      self._muted = muted;
+
+      // With Web Audio, we just need to mute the master gain.
+      if (self.usingWebAudio) {
+        self.masterGain.gain.setValueAtTime(muted ? 0 : self._volume, Howler.ctx.currentTime);
+      }
+
+      // Loop through and mute all HTML5 Audio nodes.
+      for (var i=0; i<self._howls.length; i++) {
+        if (!self._howls[i]._webAudio) {
+          // Get all of the sounds in this Howl group.
+          var ids = self._howls[i]._getSoundIds();
+
+          // Loop through all sounds and mark the audio node as muted.
+          for (var j=0; j<ids.length; j++) {
+            var sound = self._howls[i]._soundById(ids[j]);
+
+            if (sound && sound._node) {
+              sound._node.muted = (muted) ? true : sound._muted;
+            }
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Unload and destroy all currently loaded Howl objects.
+     * @return {Howler}
+     */
+    unload: function() {
+      var self = this || Howler;
+
+      for (var i=self._howls.length-1; i>=0; i--) {
+        self._howls[i].unload();
+      }
+
+      // Create a new AudioContext to make sure it is fully reset.
+      if (self.usingWebAudio && self.ctx && typeof self.ctx.close !== 'undefined') {
+        self.ctx.close();
+        self.ctx = null;
+        setupAudioContext();
+      }
+
+      return self;
+    },
+
+    /**
+     * Check for codec support of specific extension.
+     * @param  {String} ext Audio file extention.
+     * @return {Boolean}
+     */
+    codecs: function(ext) {
+      return (this || Howler)._codecs[ext.replace(/^x-/, '')];
+    },
+
+    /**
+     * Setup various state values for global tracking.
+     * @return {Howler}
+     */
+    _setup: function() {
+      var self = this || Howler;
+
+      // Keeps track of the suspend/resume state of the AudioContext.
+      self.state = self.ctx ? self.ctx.state || 'suspended' : 'suspended';
+
+      // Automatically begin the 30-second suspend process
+      self._autoSuspend();
+
+      // Check if audio is available.
+      if (!self.usingWebAudio) {
+        // No audio is available on this system if noAudio is set to true.
+        if (typeof Audio !== 'undefined') {
+          try {
+            var test = new Audio();
+
+            // Check if the canplaythrough event is available.
+            if (typeof test.oncanplaythrough === 'undefined') {
+              self._canPlayEvent = 'canplay';
+            }
+          } catch(e) {
+            self.noAudio = true;
+          }
+        } else {
+          self.noAudio = true;
+        }
+      }
+
+      // Test to make sure audio isn't disabled in Internet Explorer.
+      try {
+        var test = new Audio();
+        if (test.muted) {
+          self.noAudio = true;
+        }
+      } catch (e) {}
+
+      // Check for supported codecs.
+      if (!self.noAudio) {
+        self._setupCodecs();
+      }
+
+      return self;
+    },
+
+    /**
+     * Check for browser support for various codecs and cache the results.
+     * @return {Howler}
+     */
+    _setupCodecs: function() {
+      var self = this || Howler;
+      var audioTest = null;
+
+      // Must wrap in a try/catch because IE11 in server mode throws an error.
+      try {
+        audioTest = (typeof Audio !== 'undefined') ? new Audio() : null;
+      } catch (err) {
+        return self;
+      }
+
+      if (!audioTest || typeof audioTest.canPlayType !== 'function') {
+        return self;
+      }
+
+      var mpegTest = audioTest.canPlayType('audio/mpeg;').replace(/^no$/, '');
+
+      // Opera version <33 has mixed MP3 support, so we need to check for and block it.
+      var checkOpera = self._navigator && self._navigator.userAgent.match(/OPR\/([0-6].)/g);
+      var isOldOpera = (checkOpera && parseInt(checkOpera[0].split('/')[1], 10) < 33);
+
+      self._codecs = {
+        mp3: !!(!isOldOpera && (mpegTest || audioTest.canPlayType('audio/mp3;').replace(/^no$/, ''))),
+        mpeg: !!mpegTest,
+        opus: !!audioTest.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ''),
+        ogg: !!audioTest.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ''),
+        oga: !!audioTest.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ''),
+        wav: !!audioTest.canPlayType('audio/wav; codecs="1"').replace(/^no$/, ''),
+        aac: !!audioTest.canPlayType('audio/aac;').replace(/^no$/, ''),
+        caf: !!audioTest.canPlayType('audio/x-caf;').replace(/^no$/, ''),
+        m4a: !!(audioTest.canPlayType('audio/x-m4a;') || audioTest.canPlayType('audio/m4a;') || audioTest.canPlayType('audio/aac;')).replace(/^no$/, ''),
+        mp4: !!(audioTest.canPlayType('audio/x-mp4;') || audioTest.canPlayType('audio/mp4;') || audioTest.canPlayType('audio/aac;')).replace(/^no$/, ''),
+        weba: !!audioTest.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, ''),
+        webm: !!audioTest.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, ''),
+        dolby: !!audioTest.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ''),
+        flac: !!(audioTest.canPlayType('audio/x-flac;') || audioTest.canPlayType('audio/flac;')).replace(/^no$/, '')
+      };
+
+      return self;
+    },
+
+    /**
+     * Some browsers/devices will only allow audio to be played after a user interaction.
+     * Attempt to automatically unlock audio on the first user interaction.
+     * Concept from: http://paulbakaus.com/tutorials/html5/web-audio-on-ios/
+     * @return {Howler}
+     */
+    _unlockAudio: function() {
+      var self = this || Howler;
+
+      // Only run this on certain browsers/devices.
+      var shouldUnlock = /iPhone|iPad|iPod|Android|BlackBerry|BB10|Silk|Mobi|Chrome|Safari/i.test(self._navigator && self._navigator.userAgent);
+      if (self._audioUnlocked || !self.ctx || !shouldUnlock) {
+        return;
+      }
+
+      self._audioUnlocked = false;
+      self.autoUnlock = false;
+
+      // Some mobile devices/platforms have distortion issues when opening/closing tabs and/or web views.
+      // Bugs in the browser (especially Mobile Safari) can cause the sampleRate to change from 44100 to 48000.
+      // By calling Howler.unload(), we create a new AudioContext with the correct sampleRate.
+      if (!self._mobileUnloaded && self.ctx.sampleRate !== 44100) {
+        self._mobileUnloaded = true;
+        self.unload();
+      }
+
+      // Scratch buffer for enabling iOS to dispose of web audio buffers correctly, as per:
+      // http://stackoverflow.com/questions/24119684
+      self._scratchBuffer = self.ctx.createBuffer(1, 1, 22050);
+
+      // Call this method on touch start to create and play a buffer,
+      // then check if the audio actually played to determine if
+      // audio has now been unlocked on iOS, Android, etc.
+      var unlock = function(e) {
+        // Create a pool of unlocked HTML5 Audio objects that can
+        // be used for playing sounds without user interaction. HTML5
+        // Audio objects must be individually unlocked, as opposed
+        // to the WebAudio API which only needs a single activation.
+        // This must occur before WebAudio setup or the source.onended
+        // event will not fire.
+        for (var i=0; i<self.html5PoolSize; i++) {
+          var audioNode = new Audio();
+
+          // Mark this Audio object as unlocked to ensure it can get returned
+          // to the unlocked pool when released.
+          audioNode._unlocked = true;
+
+          // Add the audio node to the pool.
+          self._releaseHtml5Audio(audioNode);
+        }
+
+        // Loop through any assigned audio nodes and unlock them.
+        for (var i=0; i<self._howls.length; i++) {
+          if (!self._howls[i]._webAudio) {
+            // Get all of the sounds in this Howl group.
+            var ids = self._howls[i]._getSoundIds();
+
+            // Loop through all sounds and unlock the audio nodes.
+            for (var j=0; j<ids.length; j++) {
+              var sound = self._howls[i]._soundById(ids[j]);
+
+              if (sound && sound._node && !sound._node._unlocked) {
+                sound._node._unlocked = true;
+                sound._node.load();
+              }
+            }
+          }
+        }
+
+        // Fix Android can not play in suspend state.
+        self._autoResume();
+
+        // Create an empty buffer.
+        var source = self.ctx.createBufferSource();
+        source.buffer = self._scratchBuffer;
+        source.connect(self.ctx.destination);
+
+        // Play the empty buffer.
+        if (typeof source.start === 'undefined') {
+          source.noteOn(0);
+        } else {
+          source.start(0);
+        }
+
+        // Calling resume() on a stack initiated by user gesture is what actually unlocks the audio on Android Chrome >= 55.
+        if (typeof self.ctx.resume === 'function') {
+          self.ctx.resume();
+        }
+
+        // Setup a timeout to check that we are unlocked on the next event loop.
+        source.onended = function() {
+          source.disconnect(0);
+
+          // Update the unlocked state and prevent this check from happening again.
+          self._audioUnlocked = true;
+
+          // Remove the touch start listener.
+          document.removeEventListener('touchstart', unlock, true);
+          document.removeEventListener('touchend', unlock, true);
+          document.removeEventListener('click', unlock, true);
+
+          // Let all sounds know that audio has been unlocked.
+          for (var i=0; i<self._howls.length; i++) {
+            self._howls[i]._emit('unlock');
+          }
+        };
+      };
+
+      // Setup a touch start listener to attempt an unlock in.
+      document.addEventListener('touchstart', unlock, true);
+      document.addEventListener('touchend', unlock, true);
+      document.addEventListener('click', unlock, true);
+
+      return self;
+    },
+
+    /**
+     * Get an unlocked HTML5 Audio object from the pool. If none are left,
+     * return a new Audio object and throw a warning.
+     * @return {Audio} HTML5 Audio object.
+     */
+    _obtainHtml5Audio: function() {
+      var self = this || Howler;
+
+      // Return the next object from the pool if one exists.
+      if (self._html5AudioPool.length) {
+        return self._html5AudioPool.pop();
+      }
+
+      //.Check if the audio is locked and throw a warning.
+      var testPlay = new Audio().play();
+      if (testPlay && typeof Promise !== 'undefined' && (testPlay instanceof Promise || typeof testPlay.then === 'function')) {
+        testPlay.catch(function() {
+          console.warn('HTML5 Audio pool exhausted, returning potentially locked audio object.');
+        });
+      }
+
+      return new Audio();
+    },
+
+    /**
+     * Return an activated HTML5 Audio object to the pool.
+     * @return {Howler}
+     */
+    _releaseHtml5Audio: function(audio) {
+      var self = this || Howler;
+
+      // Don't add audio to the pool if we don't know if it has been unlocked.
+      if (audio._unlocked) {
+        self._html5AudioPool.push(audio);
+      }
+
+      return self;
+    },
+
+    /**
+     * Automatically suspend the Web Audio AudioContext after no sound has played for 30 seconds.
+     * This saves processing/energy and fixes various browser-specific bugs with audio getting stuck.
+     * @return {Howler}
+     */
+    _autoSuspend: function() {
+      var self = this;
+
+      if (!self.autoSuspend || !self.ctx || typeof self.ctx.suspend === 'undefined' || !Howler.usingWebAudio) {
+        return;
+      }
+
+      // Check if any sounds are playing.
+      for (var i=0; i<self._howls.length; i++) {
+        if (self._howls[i]._webAudio) {
+          for (var j=0; j<self._howls[i]._sounds.length; j++) {
+            if (!self._howls[i]._sounds[j]._paused) {
+              return self;
+            }
+          }
+        }
+      }
+
+      if (self._suspendTimer) {
+        clearTimeout(self._suspendTimer);
+      }
+
+      // If no sound has played after 30 seconds, suspend the context.
+      self._suspendTimer = setTimeout(function() {
+        if (!self.autoSuspend) {
+          return;
+        }
+
+        self._suspendTimer = null;
+        self.state = 'suspending';
+        self.ctx.suspend().then(function() {
+          self.state = 'suspended';
+
+          if (self._resumeAfterSuspend) {
+            delete self._resumeAfterSuspend;
+            self._autoResume();
+          }
+        });
+      }, 30000);
+
+      return self;
+    },
+
+    /**
+     * Automatically resume the Web Audio AudioContext when a new sound is played.
+     * @return {Howler}
+     */
+    _autoResume: function() {
+      var self = this;
+
+      if (!self.ctx || typeof self.ctx.resume === 'undefined' || !Howler.usingWebAudio) {
+        return;
+      }
+
+      if (self.state === 'running' && self._suspendTimer) {
+        clearTimeout(self._suspendTimer);
+        self._suspendTimer = null;
+      } else if (self.state === 'suspended') {
+        self.ctx.resume().then(function() {
+          self.state = 'running';
+
+          // Emit to all Howls that the audio has resumed.
+          for (var i=0; i<self._howls.length; i++) {
+            self._howls[i]._emit('resume');
+          }
+        });
+
+        if (self._suspendTimer) {
+          clearTimeout(self._suspendTimer);
+          self._suspendTimer = null;
+        }
+      } else if (self.state === 'suspending') {
+        self._resumeAfterSuspend = true;
+      }
+
+      return self;
+    }
+  };
+
+  // Setup the global audio controller.
+  var Howler = new HowlerGlobal();
+
+  /** Group Methods **/
+  /***************************************************************************/
+
+  /**
+   * Create an audio group controller.
+   * @param {Object} o Passed in properties for this group.
+   */
+  var Howl = function(o) {
+    var self = this;
+
+    // Throw an error if no source is provided.
+    if (!o.src || o.src.length === 0) {
+      console.error('An array of source files must be passed with any new Howl.');
+      return;
+    }
+
+    self.init(o);
+  };
+  Howl.prototype = {
+    /**
+     * Initialize a new Howl group object.
+     * @param  {Object} o Passed in properties for this group.
+     * @return {Howl}
+     */
+    init: function(o) {
+      var self = this;
+
+      // If we don't have an AudioContext created yet, run the setup.
+      if (!Howler.ctx) {
+        setupAudioContext();
+      }
+
+      // Setup user-defined default properties.
+      self._autoplay = o.autoplay || false;
+      self._format = (typeof o.format !== 'string') ? o.format : [o.format];
+      self._html5 = o.html5 || false;
+      self._muted = o.mute || false;
+      self._loop = o.loop || false;
+      self._pool = o.pool || 5;
+      self._preload = (typeof o.preload === 'boolean') ? o.preload : true;
+      self._rate = o.rate || 1;
+      self._sprite = o.sprite || {};
+      self._src = (typeof o.src !== 'string') ? o.src : [o.src];
+      self._volume = o.volume !== undefined ? o.volume : 1;
+      self._xhrWithCredentials = o.xhrWithCredentials || false;
+
+      // Setup all other default properties.
+      self._duration = 0;
+      self._state = 'unloaded';
+      self._sounds = [];
+      self._endTimers = {};
+      self._queue = [];
+      self._playLock = false;
+
+      // Setup event listeners.
+      self._onend = o.onend ? [{fn: o.onend}] : [];
+      self._onfade = o.onfade ? [{fn: o.onfade}] : [];
+      self._onload = o.onload ? [{fn: o.onload}] : [];
+      self._onloaderror = o.onloaderror ? [{fn: o.onloaderror}] : [];
+      self._onplayerror = o.onplayerror ? [{fn: o.onplayerror}] : [];
+      self._onpause = o.onpause ? [{fn: o.onpause}] : [];
+      self._onplay = o.onplay ? [{fn: o.onplay}] : [];
+      self._onstop = o.onstop ? [{fn: o.onstop}] : [];
+      self._onmute = o.onmute ? [{fn: o.onmute}] : [];
+      self._onvolume = o.onvolume ? [{fn: o.onvolume}] : [];
+      self._onrate = o.onrate ? [{fn: o.onrate}] : [];
+      self._onseek = o.onseek ? [{fn: o.onseek}] : [];
+      self._onunlock = o.onunlock ? [{fn: o.onunlock}] : [];
+      self._onresume = [];
+
+      // Web Audio or HTML5 Audio?
+      self._webAudio = Howler.usingWebAudio && !self._html5;
+
+      // Automatically try to enable audio.
+      if (typeof Howler.ctx !== 'undefined' && Howler.ctx && Howler.autoUnlock) {
+        Howler._unlockAudio();
+      }
+
+      // Keep track of this Howl group in the global controller.
+      Howler._howls.push(self);
+
+      // If they selected autoplay, add a play event to the load queue.
+      if (self._autoplay) {
+        self._queue.push({
+          event: 'play',
+          action: function() {
+            self.play();
+          }
+        });
+      }
+
+      // Load the source file unless otherwise specified.
+      if (self._preload) {
+        self.load();
+      }
+
+      return self;
+    },
+
+    /**
+     * Load the audio file.
+     * @return {Howler}
+     */
+    load: function() {
+      var self = this;
+      var url = null;
+
+      // If no audio is available, quit immediately.
+      if (Howler.noAudio) {
+        self._emit('loaderror', null, 'No audio support.');
+        return;
+      }
+
+      // Make sure our source is in an array.
+      if (typeof self._src === 'string') {
+        self._src = [self._src];
+      }
+
+      // Loop through the sources and pick the first one that is compatible.
+      for (var i=0; i<self._src.length; i++) {
+        var ext, str;
+
+        if (self._format && self._format[i]) {
+          // If an extension was specified, use that instead.
+          ext = self._format[i];
+        } else {
+          // Make sure the source is a string.
+          str = self._src[i];
+          if (typeof str !== 'string') {
+            self._emit('loaderror', null, 'Non-string found in selected audio sources - ignoring.');
+            continue;
+          }
+
+          // Extract the file extension from the URL or base64 data URI.
+          ext = /^data:audio\/([^;,]+);/i.exec(str);
+          if (!ext) {
+            ext = /\.([^.]+)$/.exec(str.split('?', 1)[0]);
+          }
+
+          if (ext) {
+            ext = ext[1].toLowerCase();
+          }
+        }
+
+        // Log a warning if no extension was found.
+        if (!ext) {
+          console.warn('No file extension was found. Consider using the "format" property or specify an extension.');
+        }
+
+        // Check if this extension is available.
+        if (ext && Howler.codecs(ext)) {
+          url = self._src[i];
+          break;
+        }
+      }
+
+      if (!url) {
+        self._emit('loaderror', null, 'No codec support for selected audio sources.');
+        return;
+      }
+
+      self._src = url;
+      self._state = 'loading';
+
+      // If the hosting page is HTTPS and the source isn't,
+      // drop down to HTML5 Audio to avoid Mixed Content errors.
+      if (window.location.protocol === 'https:' && url.slice(0, 5) === 'http:') {
+        self._html5 = true;
+        self._webAudio = false;
+      }
+
+      // Create a new sound object and add it to the pool.
+      new Sound(self);
+
+      // Load and decode the audio data for playback.
+      if (self._webAudio) {
+        loadBuffer(self);
+      }
+
+      return self;
+    },
+
+    /**
+     * Play a sound or resume previous playback.
+     * @param  {String/Number} sprite   Sprite name for sprite playback or sound id to continue previous.
+     * @param  {Boolean} internal Internal Use: true prevents event firing.
+     * @return {Number}          Sound ID.
+     */
+    play: function(sprite, internal) {
+      var self = this;
+      var id = null;
+
+      // Determine if a sprite, sound id or nothing was passed
+      if (typeof sprite === 'number') {
+        id = sprite;
+        sprite = null;
+      } else if (typeof sprite === 'string' && self._state === 'loaded' && !self._sprite[sprite]) {
+        // If the passed sprite doesn't exist, do nothing.
+        return null;
+      } else if (typeof sprite === 'undefined') {
+        // Use the default sound sprite (plays the full audio length).
+        sprite = '__default';
+
+        // Check if there is a single paused sound that isn't ended. 
+        // If there is, play that sound. If not, continue as usual.  
+        if (!self._playLock) {
+          var num = 0;
+          for (var i=0; i<self._sounds.length; i++) {
+            if (self._sounds[i]._paused && !self._sounds[i]._ended) {
+              num++;
+              id = self._sounds[i]._id;
+            }
+          }
+
+          if (num === 1) {
+            sprite = null;
+          } else {
+            id = null;
+          }
+        }
+      }
+
+      // Get the selected node, or get one from the pool.
+      var sound = id ? self._soundById(id) : self._inactiveSound();
+
+      // If the sound doesn't exist, do nothing.
+      if (!sound) {
+        return null;
+      }
+
+      // Select the sprite definition.
+      if (id && !sprite) {
+        sprite = sound._sprite || '__default';
+      }
+
+      // If the sound hasn't loaded, we must wait to get the audio's duration.
+      // We also need to wait to make sure we don't run into race conditions with
+      // the order of function calls.
+      if (self._state !== 'loaded') {
+        // Set the sprite value on this sound.
+        sound._sprite = sprite;
+
+        // Mark this sound as not ended in case another sound is played before this one loads.
+        sound._ended = false;
+
+        // Add the sound to the queue to be played on load.
+        var soundId = sound._id;
+        self._queue.push({
+          event: 'play',
+          action: function() {
+            self.play(soundId);
+          }
+        });
+
+        return soundId;
+      }
+
+      // Don't play the sound if an id was passed and it is already playing.
+      if (id && !sound._paused) {
+        // Trigger the play event, in order to keep iterating through queue.
+        if (!internal) {
+          self._loadQueue('play');
+        }
+
+        return sound._id;
+      }
+
+      // Make sure the AudioContext isn't suspended, and resume it if it is.
+      if (self._webAudio) {
+        Howler._autoResume();
+      }
+
+      // Determine how long to play for and where to start playing.
+      var seek = Math.max(0, sound._seek > 0 ? sound._seek : self._sprite[sprite][0] / 1000);
+      var duration = Math.max(0, ((self._sprite[sprite][0] + self._sprite[sprite][1]) / 1000) - seek);
+      var timeout = (duration * 1000) / Math.abs(sound._rate);
+      var start = self._sprite[sprite][0] / 1000;
+      var stop = (self._sprite[sprite][0] + self._sprite[sprite][1]) / 1000;
+      var loop = !!(sound._loop || self._sprite[sprite][2]);
+      sound._sprite = sprite;
+
+      // Mark the sound as ended instantly so that this async playback
+      // doesn't get grabbed by another call to play while this one waits to start.
+      sound._ended = false;
+
+      // Update the parameters of the sound.
+      var setParams = function() {
+        sound._paused = false;
+        sound._seek = seek;
+        sound._start = start;
+        sound._stop = stop;
+        sound._loop = loop;
+      };
+
+      // End the sound instantly if seek is at the end.
+      if (seek >= stop) {
+        self._ended(sound);
+        return;
+      }
+
+      // Begin the actual playback.
+      var node = sound._node;
+      if (self._webAudio) {
+        // Fire this when the sound is ready to play to begin Web Audio playback.
+        var playWebAudio = function() {
+          self._playLock = false;
+          setParams();
+          self._refreshBuffer(sound);
+
+          // Setup the playback params.
+          var vol = (sound._muted || self._muted) ? 0 : sound._volume;
+          node.gain.setValueAtTime(vol, Howler.ctx.currentTime);
+          sound._playStart = Howler.ctx.currentTime;
+
+          // Play the sound using the supported method.
+          if (typeof node.bufferSource.start === 'undefined') {
+            sound._loop ? node.bufferSource.noteGrainOn(0, seek, 86400) : node.bufferSource.noteGrainOn(0, seek, duration);
+          } else {
+            sound._loop ? node.bufferSource.start(0, seek, 86400) : node.bufferSource.start(0, seek, duration);
+          }
+
+          // Start a new timer if none is present.
+          if (timeout !== Infinity) {
+            self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
+          }
+
+          if (!internal) {
+            setTimeout(function() {
+              self._emit('play', sound._id);
+              self._loadQueue();
+            }, 0);
+          }
+        };
+
+        if (Howler.state === 'running') {
+          playWebAudio();
+        } else {
+          self._playLock = true;
+
+          // Wait for the audio context to resume before playing.
+          self.once('resume', playWebAudio);
+
+          // Cancel the end timer.
+          self._clearTimer(sound._id);
+        }
+      } else {
+        // Fire this when the sound is ready to play to begin HTML5 Audio playback.
+        var playHtml5 = function() {
+          node.currentTime = seek;
+          node.muted = sound._muted || self._muted || Howler._muted || node.muted;
+          node.volume = sound._volume * Howler.volume();
+          node.playbackRate = sound._rate;
+
+          // Some browsers will throw an error if this is called without user interaction.
+          try {
+            var play = node.play();
+
+            // Support older browsers that don't support promises, and thus don't have this issue.
+            if (play && typeof Promise !== 'undefined' && (play instanceof Promise || typeof play.then === 'function')) {
+              // Implements a lock to prevent DOMException: The play() request was interrupted by a call to pause().
+              self._playLock = true;
+
+              // Set param values immediately.
+              setParams();
+
+              // Releases the lock and executes queued actions.
+              play
+                .then(function() {
+                  self._playLock = false;
+                  node._unlocked = true;
+                  if (!internal) {
+                    self._emit('play', sound._id);
+                    self._loadQueue();
+                  }
+                })
+                .catch(function() {
+                  self._playLock = false;
+                  self._emit('playerror', sound._id, 'Playback was unable to start. This is most commonly an issue ' +
+                    'on mobile devices and Chrome where playback was not within a user interaction.');
+
+                  // Reset the ended and paused values.
+                  sound._ended = true;
+                  sound._paused = true;
+                });
+            } else if (!internal) {
+              self._playLock = false;
+              setParams();
+              self._emit('play', sound._id);
+              self._loadQueue();
+            }
+
+            // Setting rate before playing won't work in IE, so we set it again here.
+            node.playbackRate = sound._rate;
+
+            // If the node is still paused, then we can assume there was a playback issue.
+            if (node.paused) {
+              self._emit('playerror', sound._id, 'Playback was unable to start. This is most commonly an issue ' +
+                'on mobile devices and Chrome where playback was not within a user interaction.');
+              return;
+            }
+
+            // Setup the end timer on sprites or listen for the ended event.
+            if (sprite !== '__default' || sound._loop) {
+              self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
+            } else {
+              self._endTimers[sound._id] = function() {
+                // Fire ended on this audio node.
+                self._ended(sound);
+
+                // Clear this listener.
+                node.removeEventListener('ended', self._endTimers[sound._id], false);
+              };
+              node.addEventListener('ended', self._endTimers[sound._id], false);
+            }
+          } catch (err) {
+            self._emit('playerror', sound._id, err);
+          }
+        };
+
+        // Play immediately if ready, or wait for the 'canplaythrough'e vent.
+        var loadedNoReadyState = (window && window.ejecta) || (!node.readyState && Howler._navigator.isCocoonJS);
+        if (node.readyState >= 3 || loadedNoReadyState) {
+          playHtml5();
+        } else {
+          self._playLock = true;
+
+          var listener = function() {
+            // Begin playback.
+            playHtml5();
+
+            // Clear this listener.
+            node.removeEventListener(Howler._canPlayEvent, listener, false);
+          };
+          node.addEventListener(Howler._canPlayEvent, listener, false);
+
+          // Cancel the end timer.
+          self._clearTimer(sound._id);
+        }
+      }
+
+      return sound._id;
+    },
+
+    /**
+     * Pause playback and save current position.
+     * @param  {Number} id The sound ID (empty to pause all in group).
+     * @return {Howl}
+     */
+    pause: function(id) {
+      var self = this;
+
+      // If the sound hasn't loaded or a play() promise is pending, add it to the load queue to pause when capable.
+      if (self._state !== 'loaded' || self._playLock) {
+        self._queue.push({
+          event: 'pause',
+          action: function() {
+            self.pause(id);
+          }
+        });
+
+        return self;
+      }
+
+      // If no id is passed, get all ID's to be paused.
+      var ids = self._getSoundIds(id);
+
+      for (var i=0; i<ids.length; i++) {
+        // Clear the end timer.
+        self._clearTimer(ids[i]);
+
+        // Get the sound.
+        var sound = self._soundById(ids[i]);
+
+        if (sound && !sound._paused) {
+          // Reset the seek position.
+          sound._seek = self.seek(ids[i]);
+          sound._rateSeek = 0;
+          sound._paused = true;
+
+          // Stop currently running fades.
+          self._stopFade(ids[i]);
+
+          if (sound._node) {
+            if (self._webAudio) {
+              // Make sure the sound has been created.
+              if (!sound._node.bufferSource) {
+                continue;
+              }
+
+              if (typeof sound._node.bufferSource.stop === 'undefined') {
+                sound._node.bufferSource.noteOff(0);
+              } else {
+                sound._node.bufferSource.stop(0);
+              }
+
+              // Clean up the buffer source.
+              self._cleanBuffer(sound._node);
+            } else if (!isNaN(sound._node.duration) || sound._node.duration === Infinity) {
+              sound._node.pause();
+            }
+          }
+        }
+
+        // Fire the pause event, unless `true` is passed as the 2nd argument.
+        if (!arguments[1]) {
+          self._emit('pause', sound ? sound._id : null);
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Stop playback and reset to start.
+     * @param  {Number} id The sound ID (empty to stop all in group).
+     * @param  {Boolean} internal Internal Use: true prevents event firing.
+     * @return {Howl}
+     */
+    stop: function(id, internal) {
+      var self = this;
+
+      // If the sound hasn't loaded, add it to the load queue to stop when capable.
+      if (self._state !== 'loaded' || self._playLock) {
+        self._queue.push({
+          event: 'stop',
+          action: function() {
+            self.stop(id);
+          }
+        });
+
+        return self;
+      }
+
+      // If no id is passed, get all ID's to be stopped.
+      var ids = self._getSoundIds(id);
+
+      for (var i=0; i<ids.length; i++) {
+        // Clear the end timer.
+        self._clearTimer(ids[i]);
+
+        // Get the sound.
+        var sound = self._soundById(ids[i]);
+
+        if (sound) {
+          // Reset the seek position.
+          sound._seek = sound._start || 0;
+          sound._rateSeek = 0;
+          sound._paused = true;
+          sound._ended = true;
+
+          // Stop currently running fades.
+          self._stopFade(ids[i]);
+
+          if (sound._node) {
+            if (self._webAudio) {
+              // Make sure the sound's AudioBufferSourceNode has been created.
+              if (sound._node.bufferSource) {
+                if (typeof sound._node.bufferSource.stop === 'undefined') {
+                  sound._node.bufferSource.noteOff(0);
+                } else {
+                  sound._node.bufferSource.stop(0);
+                }
+
+                // Clean up the buffer source.
+                self._cleanBuffer(sound._node);
+              }
+            } else if (!isNaN(sound._node.duration) || sound._node.duration === Infinity) {
+              sound._node.currentTime = sound._start || 0;
+              sound._node.pause();
+            }
+          }
+
+          if (!internal) {
+            self._emit('stop', sound._id);
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Mute/unmute a single sound or all sounds in this Howl group.
+     * @param  {Boolean} muted Set to true to mute and false to unmute.
+     * @param  {Number} id    The sound ID to update (omit to mute/unmute all).
+     * @return {Howl}
+     */
+    mute: function(muted, id) {
+      var self = this;
+
+      // If the sound hasn't loaded, add it to the load queue to mute when capable.
+      if (self._state !== 'loaded'|| self._playLock) {
+        self._queue.push({
+          event: 'mute',
+          action: function() {
+            self.mute(muted, id);
+          }
+        });
+
+        return self;
+      }
+
+      // If applying mute/unmute to all sounds, update the group's value.
+      if (typeof id === 'undefined') {
+        if (typeof muted === 'boolean') {
+          self._muted = muted;
+        } else {
+          return self._muted;
+        }
+      }
+
+      // If no id is passed, get all ID's to be muted.
+      var ids = self._getSoundIds(id);
+
+      for (var i=0; i<ids.length; i++) {
+        // Get the sound.
+        var sound = self._soundById(ids[i]);
+
+        if (sound) {
+          sound._muted = muted;
+
+          // Cancel active fade and set the volume to the end value.
+          if (sound._interval) {
+            self._stopFade(sound._id);
+          }
+
+          if (self._webAudio && sound._node) {
+            sound._node.gain.setValueAtTime(muted ? 0 : sound._volume, Howler.ctx.currentTime);
+          } else if (sound._node) {
+            sound._node.muted = Howler._muted ? true : muted;
+          }
+
+          self._emit('mute', sound._id);
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Get/set the volume of this sound or of the Howl group. This method can optionally take 0, 1 or 2 arguments.
+     *   volume() -> Returns the group's volume value.
+     *   volume(id) -> Returns the sound id's current volume.
+     *   volume(vol) -> Sets the volume of all sounds in this Howl group.
+     *   volume(vol, id) -> Sets the volume of passed sound id.
+     * @return {Howl/Number} Returns self or current volume.
+     */
+    volume: function() {
+      var self = this;
+      var args = arguments;
+      var vol, id;
+
+      // Determine the values based on arguments.
+      if (args.length === 0) {
+        // Return the value of the groups' volume.
+        return self._volume;
+      } else if (args.length === 1 || args.length === 2 && typeof args[1] === 'undefined') {
+        // First check if this is an ID, and if not, assume it is a new volume.
+        var ids = self._getSoundIds();
+        var index = ids.indexOf(args[0]);
+        if (index >= 0) {
+          id = parseInt(args[0], 10);
+        } else {
+          vol = parseFloat(args[0]);
+        }
+      } else if (args.length >= 2) {
+        vol = parseFloat(args[0]);
+        id = parseInt(args[1], 10);
+      }
+
+      // Update the volume or return the current volume.
+      var sound;
+      if (typeof vol !== 'undefined' && vol >= 0 && vol <= 1) {
+        // If the sound hasn't loaded, add it to the load queue to change volume when capable.
+        if (self._state !== 'loaded'|| self._playLock) {
+          self._queue.push({
+            event: 'volume',
+            action: function() {
+              self.volume.apply(self, args);
+            }
+          });
+
+          return self;
+        }
+
+        // Set the group volume.
+        if (typeof id === 'undefined') {
+          self._volume = vol;
+        }
+
+        // Update one or all volumes.
+        id = self._getSoundIds(id);
+        for (var i=0; i<id.length; i++) {
+          // Get the sound.
+          sound = self._soundById(id[i]);
+
+          if (sound) {
+            sound._volume = vol;
+
+            // Stop currently running fades.
+            if (!args[2]) {
+              self._stopFade(id[i]);
+            }
+
+            if (self._webAudio && sound._node && !sound._muted) {
+              sound._node.gain.setValueAtTime(vol, Howler.ctx.currentTime);
+            } else if (sound._node && !sound._muted) {
+              sound._node.volume = vol * Howler.volume();
+            }
+
+            self._emit('volume', sound._id);
+          }
+        }
+      } else {
+        sound = id ? self._soundById(id) : self._sounds[0];
+        return sound ? sound._volume : 0;
+      }
+
+      return self;
+    },
+
+    /**
+     * Fade a currently playing sound between two volumes (if no id is passsed, all sounds will fade).
+     * @param  {Number} from The value to fade from (0.0 to 1.0).
+     * @param  {Number} to   The volume to fade to (0.0 to 1.0).
+     * @param  {Number} len  Time in milliseconds to fade.
+     * @param  {Number} id   The sound id (omit to fade all sounds).
+     * @return {Howl}
+     */
+    fade: function(from, to, len, id) {
+      var self = this;
+
+      // If the sound hasn't loaded, add it to the load queue to fade when capable.
+      if (self._state !== 'loaded' || self._playLock) {
+        self._queue.push({
+          event: 'fade',
+          action: function() {
+            self.fade(from, to, len, id);
+          }
+        });
+
+        return self;
+      }
+
+      // Make sure the to/from/len values are numbers.
+      from = parseFloat(from);
+      to = parseFloat(to);
+      len = parseFloat(len);
+
+      // Set the volume to the start position.
+      self.volume(from, id);
+
+      // Fade the volume of one or all sounds.
+      var ids = self._getSoundIds(id);
+      for (var i=0; i<ids.length; i++) {
+        // Get the sound.
+        var sound = self._soundById(ids[i]);
+
+        // Create a linear fade or fall back to timeouts with HTML5 Audio.
+        if (sound) {
+          // Stop the previous fade if no sprite is being used (otherwise, volume handles this).
+          if (!id) {
+            self._stopFade(ids[i]);
+          }
+
+          // If we are using Web Audio, let the native methods do the actual fade.
+          if (self._webAudio && !sound._muted) {
+            var currentTime = Howler.ctx.currentTime;
+            var end = currentTime + (len / 1000);
+            sound._volume = from;
+            sound._node.gain.setValueAtTime(from, currentTime);
+            sound._node.gain.linearRampToValueAtTime(to, end);
+          }
+
+          self._startFadeInterval(sound, from, to, len, ids[i], typeof id === 'undefined');
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Starts the internal interval to fade a sound.
+     * @param  {Object} sound Reference to sound to fade.
+     * @param  {Number} from The value to fade from (0.0 to 1.0).
+     * @param  {Number} to   The volume to fade to (0.0 to 1.0).
+     * @param  {Number} len  Time in milliseconds to fade.
+     * @param  {Number} id   The sound id to fade.
+     * @param  {Boolean} isGroup   If true, set the volume on the group.
+     */
+    _startFadeInterval: function(sound, from, to, len, id, isGroup) {
+      var self = this;
+      var vol = from;
+      var diff = to - from;
+      var steps = Math.abs(diff / 0.01);
+      var stepLen = Math.max(4, (steps > 0) ? len / steps : len);
+      var lastTick = Date.now();
+
+      // Store the value being faded to.
+      sound._fadeTo = to;
+
+      // Update the volume value on each interval tick.
+      sound._interval = setInterval(function() {
+        // Update the volume based on the time since the last tick.
+        var tick = (Date.now() - lastTick) / len;
+        lastTick = Date.now();
+        vol += diff * tick;
+
+        // Make sure the volume is in the right bounds.
+        vol = Math.max(0, vol);
+        vol = Math.min(1, vol);
+
+        // Round to within 2 decimal points.
+        vol = Math.round(vol * 100) / 100;
+
+        // Change the volume.
+        if (self._webAudio) {
+          sound._volume = vol;
+        } else {
+          self.volume(vol, sound._id, true);
+        }
+
+        // Set the group's volume.
+        if (isGroup) {
+          self._volume = vol;
+        }
+
+        // When the fade is complete, stop it and fire event.
+        if ((to < from && vol <= to) || (to > from && vol >= to)) {
+          clearInterval(sound._interval);
+          sound._interval = null;
+          sound._fadeTo = null;
+          self.volume(to, sound._id);
+          self._emit('fade', sound._id);
+        }
+      }, stepLen);
+    },
+
+    /**
+     * Internal method that stops the currently playing fade when
+     * a new fade starts, volume is changed or the sound is stopped.
+     * @param  {Number} id The sound id.
+     * @return {Howl}
+     */
+    _stopFade: function(id) {
+      var self = this;
+      var sound = self._soundById(id);
+
+      if (sound && sound._interval) {
+        if (self._webAudio) {
+          sound._node.gain.cancelScheduledValues(Howler.ctx.currentTime);
+        }
+
+        clearInterval(sound._interval);
+        sound._interval = null;
+        self.volume(sound._fadeTo, id);
+        sound._fadeTo = null;
+        self._emit('fade', id);
+      }
+
+      return self;
+    },
+
+    /**
+     * Get/set the loop parameter on a sound. This method can optionally take 0, 1 or 2 arguments.
+     *   loop() -> Returns the group's loop value.
+     *   loop(id) -> Returns the sound id's loop value.
+     *   loop(loop) -> Sets the loop value for all sounds in this Howl group.
+     *   loop(loop, id) -> Sets the loop value of passed sound id.
+     * @return {Howl/Boolean} Returns self or current loop value.
+     */
+    loop: function() {
+      var self = this;
+      var args = arguments;
+      var loop, id, sound;
+
+      // Determine the values for loop and id.
+      if (args.length === 0) {
+        // Return the grou's loop value.
+        return self._loop;
+      } else if (args.length === 1) {
+        if (typeof args[0] === 'boolean') {
+          loop = args[0];
+          self._loop = loop;
+        } else {
+          // Return this sound's loop value.
+          sound = self._soundById(parseInt(args[0], 10));
+          return sound ? sound._loop : false;
+        }
+      } else if (args.length === 2) {
+        loop = args[0];
+        id = parseInt(args[1], 10);
+      }
+
+      // If no id is passed, get all ID's to be looped.
+      var ids = self._getSoundIds(id);
+      for (var i=0; i<ids.length; i++) {
+        sound = self._soundById(ids[i]);
+
+        if (sound) {
+          sound._loop = loop;
+          if (self._webAudio && sound._node && sound._node.bufferSource) {
+            sound._node.bufferSource.loop = loop;
+            if (loop) {
+              sound._node.bufferSource.loopStart = sound._start || 0;
+              sound._node.bufferSource.loopEnd = sound._stop;
+            }
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Get/set the playback rate of a sound. This method can optionally take 0, 1 or 2 arguments.
+     *   rate() -> Returns the first sound node's current playback rate.
+     *   rate(id) -> Returns the sound id's current playback rate.
+     *   rate(rate) -> Sets the playback rate of all sounds in this Howl group.
+     *   rate(rate, id) -> Sets the playback rate of passed sound id.
+     * @return {Howl/Number} Returns self or the current playback rate.
+     */
+    rate: function() {
+      var self = this;
+      var args = arguments;
+      var rate, id;
+
+      // Determine the values based on arguments.
+      if (args.length === 0) {
+        // We will simply return the current rate of the first node.
+        id = self._sounds[0]._id;
+      } else if (args.length === 1) {
+        // First check if this is an ID, and if not, assume it is a new rate value.
+        var ids = self._getSoundIds();
+        var index = ids.indexOf(args[0]);
+        if (index >= 0) {
+          id = parseInt(args[0], 10);
+        } else {
+          rate = parseFloat(args[0]);
+        }
+      } else if (args.length === 2) {
+        rate = parseFloat(args[0]);
+        id = parseInt(args[1], 10);
+      }
+
+      // Update the playback rate or return the current value.
+      var sound;
+      if (typeof rate === 'number') {
+        // If the sound hasn't loaded, add it to the load queue to change playback rate when capable.
+        if (self._state !== 'loaded' || self._playLock) {
+          self._queue.push({
+            event: 'rate',
+            action: function() {
+              self.rate.apply(self, args);
+            }
+          });
+
+          return self;
+        }
+
+        // Set the group rate.
+        if (typeof id === 'undefined') {
+          self._rate = rate;
+        }
+
+        // Update one or all volumes.
+        id = self._getSoundIds(id);
+        for (var i=0; i<id.length; i++) {
+          // Get the sound.
+          sound = self._soundById(id[i]);
+
+          if (sound) {
+            // Keep track of our position when the rate changed and update the playback
+            // start position so we can properly adjust the seek position for time elapsed.
+            if (self.playing(id[i])) {
+              sound._rateSeek = self.seek(id[i]);
+              sound._playStart = self._webAudio ? Howler.ctx.currentTime : sound._playStart;
+            }
+            sound._rate = rate;
+
+            // Change the playback rate.
+            if (self._webAudio && sound._node && sound._node.bufferSource) {
+              sound._node.bufferSource.playbackRate.setValueAtTime(rate, Howler.ctx.currentTime);
+            } else if (sound._node) {
+              sound._node.playbackRate = rate;
+            }
+
+            // Reset the timers.
+            var seek = self.seek(id[i]);
+            var duration = ((self._sprite[sound._sprite][0] + self._sprite[sound._sprite][1]) / 1000) - seek;
+            var timeout = (duration * 1000) / Math.abs(sound._rate);
+
+            // Start a new end timer if sound is already playing.
+            if (self._endTimers[id[i]] || !sound._paused) {
+              self._clearTimer(id[i]);
+              self._endTimers[id[i]] = setTimeout(self._ended.bind(self, sound), timeout);
+            }
+
+            self._emit('rate', sound._id);
+          }
+        }
+      } else {
+        sound = self._soundById(id);
+        return sound ? sound._rate : self._rate;
+      }
+
+      return self;
+    },
+
+    /**
+     * Get/set the seek position of a sound. This method can optionally take 0, 1 or 2 arguments.
+     *   seek() -> Returns the first sound node's current seek position.
+     *   seek(id) -> Returns the sound id's current seek position.
+     *   seek(seek) -> Sets the seek position of the first sound node.
+     *   seek(seek, id) -> Sets the seek position of passed sound id.
+     * @return {Howl/Number} Returns self or the current seek position.
+     */
+    seek: function() {
+      var self = this;
+      var args = arguments;
+      var seek, id;
+
+      // Determine the values based on arguments.
+      if (args.length === 0) {
+        // We will simply return the current position of the first node.
+        id = self._sounds[0]._id;
+      } else if (args.length === 1) {
+        // First check if this is an ID, and if not, assume it is a new seek position.
+        var ids = self._getSoundIds();
+        var index = ids.indexOf(args[0]);
+        if (index >= 0) {
+          id = parseInt(args[0], 10);
+        } else if (self._sounds.length) {
+          id = self._sounds[0]._id;
+          seek = parseFloat(args[0]);
+        }
+      } else if (args.length === 2) {
+        seek = parseFloat(args[0]);
+        id = parseInt(args[1], 10);
+      }
+
+      // If there is no ID, bail out.
+      if (typeof id === 'undefined') {
+        return self;
+      }
+
+      // If the sound hasn't loaded, add it to the load queue to seek when capable.
+      if (self._state !== 'loaded' || self._playLock) {
+        self._queue.push({
+          event: 'seek',
+          action: function() {
+            self.seek.apply(self, args);
+          }
+        });
+
+        return self;
+      }
+
+      // Get the sound.
+      var sound = self._soundById(id);
+
+      if (sound) {
+        if (typeof seek === 'number' && seek >= 0) {
+          // Pause the sound and update position for restarting playback.
+          var playing = self.playing(id);
+          if (playing) {
+            self.pause(id, true);
+          }
+
+          // Move the position of the track and cancel timer.
+          sound._seek = seek;
+          sound._ended = false;
+          self._clearTimer(id);
+
+          // Update the seek position for HTML5 Audio.
+          if (!self._webAudio && sound._node && !isNaN(sound._node.duration)) {
+            sound._node.currentTime = seek;
+          }
+
+          // Seek and emit when ready.
+          var seekAndEmit = function() {
+            self._emit('seek', id);
+
+            // Restart the playback if the sound was playing.
+            if (playing) {
+              self.play(id, true);
+            }
+          };
+
+          // Wait for the play lock to be unset before emitting (HTML5 Audio).
+          if (playing && !self._webAudio) {
+            var emitSeek = function() {
+              if (!self._playLock) {
+                seekAndEmit();
+              } else {
+                setTimeout(emitSeek, 0);
+              }
+            };
+            setTimeout(emitSeek, 0);
+          } else {
+            seekAndEmit();
+          }
+        } else {
+          if (self._webAudio) {
+            var realTime = self.playing(id) ? Howler.ctx.currentTime - sound._playStart : 0;
+            var rateSeek = sound._rateSeek ? sound._rateSeek - sound._seek : 0;
+            return sound._seek + (rateSeek + realTime * Math.abs(sound._rate));
+          } else {
+            return sound._node.currentTime;
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Check if a specific sound is currently playing or not (if id is provided), or check if at least one of the sounds in the group is playing or not.
+     * @param  {Number}  id The sound id to check. If none is passed, the whole sound group is checked.
+     * @return {Boolean} True if playing and false if not.
+     */
+    playing: function(id) {
+      var self = this;
+
+      // Check the passed sound ID (if any).
+      if (typeof id === 'number') {
+        var sound = self._soundById(id);
+        return sound ? !sound._paused : false;
+      }
+
+      // Otherwise, loop through all sounds and check if any are playing.
+      for (var i=0; i<self._sounds.length; i++) {
+        if (!self._sounds[i]._paused) {
+          return true;
+        }
+      }
+
+      return false;
+    },
+
+    /**
+     * Get the duration of this sound. Passing a sound id will return the sprite duration.
+     * @param  {Number} id The sound id to check. If none is passed, return full source duration.
+     * @return {Number} Audio duration in seconds.
+     */
+    duration: function(id) {
+      var self = this;
+      var duration = self._duration;
+
+      // If we pass an ID, get the sound and return the sprite length.
+      var sound = self._soundById(id);
+      if (sound) {
+        duration = self._sprite[sound._sprite][1] / 1000;
+      }
+
+      return duration;
+    },
+
+    /**
+     * Returns the current loaded state of this Howl.
+     * @return {String} 'unloaded', 'loading', 'loaded'
+     */
+    state: function() {
+      return this._state;
+    },
+
+    /**
+     * Unload and destroy the current Howl object.
+     * This will immediately stop all sound instances attached to this group.
+     */
+    unload: function() {
+      var self = this;
+
+      // Stop playing any active sounds.
+      var sounds = self._sounds;
+      for (var i=0; i<sounds.length; i++) {
+        // Stop the sound if it is currently playing.
+        if (!sounds[i]._paused) {
+          self.stop(sounds[i]._id);
+        }
+
+        // Remove the source or disconnect.
+        if (!self._webAudio) {
+          // Set the source to 0-second silence to stop any downloading (except in IE).
+          var checkIE = /MSIE |Trident\//.test(Howler._navigator && Howler._navigator.userAgent);
+          if (!checkIE) {
+            sounds[i]._node.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
+          }
+
+          // Remove any event listeners.
+          sounds[i]._node.removeEventListener('error', sounds[i]._errorFn, false);
+          sounds[i]._node.removeEventListener(Howler._canPlayEvent, sounds[i]._loadFn, false);
+
+          // Release the Audio object back to the pool.
+          Howler._releaseHtml5Audio(sounds[i]._node);
+        }
+
+        // Empty out all of the nodes.
+        delete sounds[i]._node;
+
+        // Make sure all timers are cleared out.
+        self._clearTimer(sounds[i]._id);
+      }
+
+      // Remove the references in the global Howler object.
+      var index = Howler._howls.indexOf(self);
+      if (index >= 0) {
+        Howler._howls.splice(index, 1);
+      }
+
+      // Delete this sound from the cache (if no other Howl is using it).
+      var remCache = true;
+      for (i=0; i<Howler._howls.length; i++) {
+        if (Howler._howls[i]._src === self._src || self._src.indexOf(Howler._howls[i]._src) >= 0) {
+          remCache = false;
+          break;
+        }
+      }
+
+      if (cache && remCache) {
+        delete cache[self._src];
+      }
+
+      // Clear global errors.
+      Howler.noAudio = false;
+
+      // Clear out `self`.
+      self._state = 'unloaded';
+      self._sounds = [];
+      self = null;
+
+      return null;
+    },
+
+    /**
+     * Listen to a custom event.
+     * @param  {String}   event Event name.
+     * @param  {Function} fn    Listener to call.
+     * @param  {Number}   id    (optional) Only listen to events for this sound.
+     * @param  {Number}   once  (INTERNAL) Marks event to fire only once.
+     * @return {Howl}
+     */
+    on: function(event, fn, id, once) {
+      var self = this;
+      var events = self['_on' + event];
+
+      if (typeof fn === 'function') {
+        events.push(once ? {id: id, fn: fn, once: once} : {id: id, fn: fn});
+      }
+
+      return self;
+    },
+
+    /**
+     * Remove a custom event. Call without parameters to remove all events.
+     * @param  {String}   event Event name.
+     * @param  {Function} fn    Listener to remove. Leave empty to remove all.
+     * @param  {Number}   id    (optional) Only remove events for this sound.
+     * @return {Howl}
+     */
+    off: function(event, fn, id) {
+      var self = this;
+      var events = self['_on' + event];
+      var i = 0;
+
+      // Allow passing just an event and ID.
+      if (typeof fn === 'number') {
+        id = fn;
+        fn = null;
+      }
+
+      if (fn || id) {
+        // Loop through event store and remove the passed function.
+        for (i=0; i<events.length; i++) {
+          var isId = (id === events[i].id);
+          if (fn === events[i].fn && isId || !fn && isId) {
+            events.splice(i, 1);
+            break;
+          }
+        }
+      } else if (event) {
+        // Clear out all events of this type.
+        self['_on' + event] = [];
+      } else {
+        // Clear out all events of every type.
+        var keys = Object.keys(self);
+        for (i=0; i<keys.length; i++) {
+          if ((keys[i].indexOf('_on') === 0) && Array.isArray(self[keys[i]])) {
+            self[keys[i]] = [];
+          }
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Listen to a custom event and remove it once fired.
+     * @param  {String}   event Event name.
+     * @param  {Function} fn    Listener to call.
+     * @param  {Number}   id    (optional) Only listen to events for this sound.
+     * @return {Howl}
+     */
+    once: function(event, fn, id) {
+      var self = this;
+
+      // Setup the event listener.
+      self.on(event, fn, id, 1);
+
+      return self;
+    },
+
+    /**
+     * Emit all events of a specific type and pass the sound id.
+     * @param  {String} event Event name.
+     * @param  {Number} id    Sound ID.
+     * @param  {Number} msg   Message to go with event.
+     * @return {Howl}
+     */
+    _emit: function(event, id, msg) {
+      var self = this;
+      var events = self['_on' + event];
+
+      // Loop through event store and fire all functions.
+      for (var i=events.length-1; i>=0; i--) {
+        // Only fire the listener if the correct ID is used.
+        if (!events[i].id || events[i].id === id || event === 'load') {
+          setTimeout(function(fn) {
+            fn.call(this, id, msg);
+          }.bind(self, events[i].fn), 0);
+
+          // If this event was setup with `once`, remove it.
+          if (events[i].once) {
+            self.off(event, events[i].fn, events[i].id);
+          }
+        }
+      }
+
+      // Pass the event type into load queue so that it can continue stepping.
+      self._loadQueue(event);
+
+      return self;
+    },
+
+    /**
+     * Queue of actions initiated before the sound has loaded.
+     * These will be called in sequence, with the next only firing
+     * after the previous has finished executing (even if async like play).
+     * @return {Howl}
+     */
+    _loadQueue: function(event) {
+      var self = this;
+
+      if (self._queue.length > 0) {
+        var task = self._queue[0];
+
+        // Remove this task if a matching event was passed.
+        if (task.event === event) {
+          self._queue.shift();
+          self._loadQueue();
+        }
+
+        // Run the task if no event type is passed.
+        if (!event) {
+          task.action();
+        }
+      }
+
+      return self;
+    },
+
+    /**
+     * Fired when playback ends at the end of the duration.
+     * @param  {Sound} sound The sound object to work with.
+     * @return {Howl}
+     */
+    _ended: function(sound) {
+      var self = this;
+      var sprite = sound._sprite;
+
+      // If we are using IE and there was network latency we may be clipping
+      // audio before it completes playing. Lets check the node to make sure it
+      // believes it has completed, before ending the playback.
+      if (!self._webAudio && sound._node && !sound._node.paused && !sound._node.ended && sound._node.currentTime < sound._stop) {
+        setTimeout(self._ended.bind(self, sound), 100);
+        return self;
+      }
+
+      // Should this sound loop?
+      var loop = !!(sound._loop || self._sprite[sprite][2]);
+
+      // Fire the ended event.
+      self._emit('end', sound._id);
+
+      // Restart the playback for HTML5 Audio loop.
+      if (!self._webAudio && loop) {
+        self.stop(sound._id, true).play(sound._id);
+      }
+
+      // Restart this timer if on a Web Audio loop.
+      if (self._webAudio && loop) {
+        self._emit('play', sound._id);
+        sound._seek = sound._start || 0;
+        sound._rateSeek = 0;
+        sound._playStart = Howler.ctx.currentTime;
+
+        var timeout = ((sound._stop - sound._start) * 1000) / Math.abs(sound._rate);
+        self._endTimers[sound._id] = setTimeout(self._ended.bind(self, sound), timeout);
+      }
+
+      // Mark the node as paused.
+      if (self._webAudio && !loop) {
+        sound._paused = true;
+        sound._ended = true;
+        sound._seek = sound._start || 0;
+        sound._rateSeek = 0;
+        self._clearTimer(sound._id);
+
+        // Clean up the buffer source.
+        self._cleanBuffer(sound._node);
+
+        // Attempt to auto-suspend AudioContext if no sounds are still playing.
+        Howler._autoSuspend();
+      }
+
+      // When using a sprite, end the track.
+      if (!self._webAudio && !loop) {
+        self.stop(sound._id, true);
+      }
+
+      return self;
+    },
+
+    /**
+     * Clear the end timer for a sound playback.
+     * @param  {Number} id The sound ID.
+     * @return {Howl}
+     */
+    _clearTimer: function(id) {
+      var self = this;
+
+      if (self._endTimers[id]) {
+        // Clear the timeout or remove the ended listener.
+        if (typeof self._endTimers[id] !== 'function') {
+          clearTimeout(self._endTimers[id]);
+        } else {
+          var sound = self._soundById(id);
+          if (sound && sound._node) {
+            sound._node.removeEventListener('ended', self._endTimers[id], false);
+          }
+        }
+
+        delete self._endTimers[id];
+      }
+
+      return self;
+    },
+
+    /**
+     * Return the sound identified by this ID, or return null.
+     * @param  {Number} id Sound ID
+     * @return {Object}    Sound object or null.
+     */
+    _soundById: function(id) {
+      var self = this;
+
+      // Loop through all sounds and find the one with this ID.
+      for (var i=0; i<self._sounds.length; i++) {
+        if (id === self._sounds[i]._id) {
+          return self._sounds[i];
+        }
+      }
+
+      return null;
+    },
+
+    /**
+     * Return an inactive sound from the pool or create a new one.
+     * @return {Sound} Sound playback object.
+     */
+    _inactiveSound: function() {
+      var self = this;
+
+      self._drain();
+
+      // Find the first inactive node to recycle.
+      for (var i=0; i<self._sounds.length; i++) {
+        if (self._sounds[i]._ended) {
+          return self._sounds[i].reset();
+        }
+      }
+
+      // If no inactive node was found, create a new one.
+      return new Sound(self);
+    },
+
+    /**
+     * Drain excess inactive sounds from the pool.
+     */
+    _drain: function() {
+      var self = this;
+      var limit = self._pool;
+      var cnt = 0;
+      var i = 0;
+
+      // If there are less sounds than the max pool size, we are done.
+      if (self._sounds.length < limit) {
+        return;
+      }
+
+      // Count the number of inactive sounds.
+      for (i=0; i<self._sounds.length; i++) {
+        if (self._sounds[i]._ended) {
+          cnt++;
+        }
+      }
+
+      // Remove excess inactive sounds, going in reverse order.
+      for (i=self._sounds.length - 1; i>=0; i--) {
+        if (cnt <= limit) {
+          return;
+        }
+
+        if (self._sounds[i]._ended) {
+          // Disconnect the audio source when using Web Audio.
+          if (self._webAudio && self._sounds[i]._node) {
+            self._sounds[i]._node.disconnect(0);
+          }
+
+          // Remove sounds until we have the pool size.
+          self._sounds.splice(i, 1);
+          cnt--;
+        }
+      }
+    },
+
+    /**
+     * Get all ID's from the sounds pool.
+     * @param  {Number} id Only return one ID if one is passed.
+     * @return {Array}    Array of IDs.
+     */
+    _getSoundIds: function(id) {
+      var self = this;
+
+      if (typeof id === 'undefined') {
+        var ids = [];
+        for (var i=0; i<self._sounds.length; i++) {
+          ids.push(self._sounds[i]._id);
+        }
+
+        return ids;
+      } else {
+        return [id];
+      }
+    },
+
+    /**
+     * Load the sound back into the buffer source.
+     * @param  {Sound} sound The sound object to work with.
+     * @return {Howl}
+     */
+    _refreshBuffer: function(sound) {
+      var self = this;
+
+      // Setup the buffer source for playback.
+      sound._node.bufferSource = Howler.ctx.createBufferSource();
+      sound._node.bufferSource.buffer = cache[self._src];
+
+      // Connect to the correct node.
+      if (sound._panner) {
+        sound._node.bufferSource.connect(sound._panner);
+      } else {
+        sound._node.bufferSource.connect(sound._node);
+      }
+
+      // Setup looping and playback rate.
+      sound._node.bufferSource.loop = sound._loop;
+      if (sound._loop) {
+        sound._node.bufferSource.loopStart = sound._start || 0;
+        sound._node.bufferSource.loopEnd = sound._stop || 0;
+      }
+      sound._node.bufferSource.playbackRate.setValueAtTime(sound._rate, Howler.ctx.currentTime);
+
+      return self;
+    },
+
+    /**
+     * Prevent memory leaks by cleaning up the buffer source after playback.
+     * @param  {Object} node Sound's audio node containing the buffer source.
+     * @return {Howl}
+     */
+    _cleanBuffer: function(node) {
+      var self = this;
+      var isIOS = Howler._navigator && Howler._navigator.vendor.indexOf('Apple') >= 0;
+
+      if (Howler._scratchBuffer && node.bufferSource) {
+        node.bufferSource.onended = null;
+        node.bufferSource.disconnect(0);
+        if (isIOS) {
+          try { node.bufferSource.buffer = Howler._scratchBuffer; } catch(e) {}
+        }
+      }
+      node.bufferSource = null;
+
+      return self;
+    }
+  };
+
+  /** Single Sound Methods **/
+  /***************************************************************************/
+
+  /**
+   * Setup the sound object, which each node attached to a Howl group is contained in.
+   * @param {Object} howl The Howl parent group.
+   */
+  var Sound = function(howl) {
+    this._parent = howl;
+    this.init();
+  };
+  Sound.prototype = {
+    /**
+     * Initialize a new Sound object.
+     * @return {Sound}
+     */
+    init: function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Setup the default parameters.
+      self._muted = parent._muted;
+      self._loop = parent._loop;
+      self._volume = parent._volume;
+      self._rate = parent._rate;
+      self._seek = 0;
+      self._paused = true;
+      self._ended = true;
+      self._sprite = '__default';
+
+      // Generate a unique ID for this sound.
+      self._id = ++Howler._counter;
+
+      // Add itself to the parent's pool.
+      parent._sounds.push(self);
+
+      // Create the new node.
+      self.create();
+
+      return self;
+    },
+
+    /**
+     * Create and setup a new sound object, whether HTML5 Audio or Web Audio.
+     * @return {Sound}
+     */
+    create: function() {
+      var self = this;
+      var parent = self._parent;
+      var volume = (Howler._muted || self._muted || self._parent._muted) ? 0 : self._volume;
+
+      if (parent._webAudio) {
+        // Create the gain node for controlling volume (the source will connect to this).
+        self._node = (typeof Howler.ctx.createGain === 'undefined') ? Howler.ctx.createGainNode() : Howler.ctx.createGain();
+        self._node.gain.setValueAtTime(volume, Howler.ctx.currentTime);
+        self._node.paused = true;
+        self._node.connect(Howler.masterGain);
+      } else {
+        // Get an unlocked Audio object from the pool.
+        self._node = Howler._obtainHtml5Audio();
+
+        // Listen for errors (http://dev.w3.org/html5/spec-author-view/spec.html#mediaerror).
+        self._errorFn = self._errorListener.bind(self);
+        self._node.addEventListener('error', self._errorFn, false);
+
+        // Listen for 'canplaythrough' event to let us know the sound is ready.
+        self._loadFn = self._loadListener.bind(self);
+        self._node.addEventListener(Howler._canPlayEvent, self._loadFn, false);
+
+        // Setup the new audio node.
+        self._node.src = parent._src;
+        self._node.preload = 'auto';
+        self._node.volume = volume * Howler.volume();
+
+        // Begin loading the source.
+        self._node.load();
+      }
+
+      return self;
+    },
+
+    /**
+     * Reset the parameters of this sound to the original state (for recycle).
+     * @return {Sound}
+     */
+    reset: function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Reset all of the parameters of this sound.
+      self._muted = parent._muted;
+      self._loop = parent._loop;
+      self._volume = parent._volume;
+      self._rate = parent._rate;
+      self._seek = 0;
+      self._rateSeek = 0;
+      self._paused = true;
+      self._ended = true;
+      self._sprite = '__default';
+
+      // Generate a new ID so that it isn't confused with the previous sound.
+      self._id = ++Howler._counter;
+
+      return self;
+    },
+
+    /**
+     * HTML5 Audio error listener callback.
+     */
+    _errorListener: function() {
+      var self = this;
+
+      // Fire an error event and pass back the code.
+      self._parent._emit('loaderror', self._id, self._node.error ? self._node.error.code : 0);
+
+      // Clear the event listener.
+      self._node.removeEventListener('error', self._errorFn, false);
+    },
+
+    /**
+     * HTML5 Audio canplaythrough listener callback.
+     */
+    _loadListener: function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Round up the duration to account for the lower precision in HTML5 Audio.
+      parent._duration = Math.ceil(self._node.duration * 10) / 10;
+
+      // Setup a sprite if none is defined.
+      if (Object.keys(parent._sprite).length === 0) {
+        parent._sprite = {__default: [0, parent._duration * 1000]};
+      }
+
+      if (parent._state !== 'loaded') {
+        parent._state = 'loaded';
+        parent._emit('load');
+        parent._loadQueue();
+      }
+
+      // Clear the event listener.
+      self._node.removeEventListener(Howler._canPlayEvent, self._loadFn, false);
+    }
+  };
+
+  /** Helper Methods **/
+  /***************************************************************************/
+
+  var cache = {};
+
+  /**
+   * Buffer a sound from URL, Data URI or cache and decode to audio source (Web Audio API).
+   * @param  {Howl} self
+   */
+  var loadBuffer = function(self) {
+    var url = self._src;
+
+    // Check if the buffer has already been cached and use it instead.
+    if (cache[url]) {
+      // Set the duration from the cache.
+      self._duration = cache[url].duration;
+
+      // Load the sound into this Howl.
+      loadSound(self);
+
+      return;
+    }
+
+    if (/^data:[^;]+;base64,/.test(url)) {
+      // Decode the base64 data URI without XHR, since some browsers don't support it.
+      var data = atob(url.split(',')[1]);
+      var dataView = new Uint8Array(data.length);
+      for (var i=0; i<data.length; ++i) {
+        dataView[i] = data.charCodeAt(i);
+      }
+
+      decodeAudioData(dataView.buffer, self);
+    } else {
+      // Load the buffer from the URL.
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.withCredentials = self._xhrWithCredentials;
+      xhr.responseType = 'arraybuffer';
+      xhr.onload = function() {
+        // Make sure we get a successful response back.
+        var code = (xhr.status + '')[0];
+        if (code !== '0' && code !== '2' && code !== '3') {
+          self._emit('loaderror', null, 'Failed loading audio file with status: ' + xhr.status + '.');
+          return;
+        }
+
+        decodeAudioData(xhr.response, self);
+      };
+      xhr.onerror = function() {
+        // If there is an error, switch to HTML5 Audio.
+        if (self._webAudio) {
+          self._html5 = true;
+          self._webAudio = false;
+          self._sounds = [];
+          delete cache[url];
+          self.load();
+        }
+      };
+      safeXhrSend(xhr);
+    }
+  };
+
+  /**
+   * Send the XHR request wrapped in a try/catch.
+   * @param  {Object} xhr XHR to send.
+   */
+  var safeXhrSend = function(xhr) {
+    try {
+      xhr.send();
+    } catch (e) {
+      xhr.onerror();
+    }
+  };
+
+  /**
+   * Decode audio data from an array buffer.
+   * @param  {ArrayBuffer} arraybuffer The audio data.
+   * @param  {Howl}        self
+   */
+  var decodeAudioData = function(arraybuffer, self) {
+    // Fire a load error if something broke.
+    var error = function() {
+      self._emit('loaderror', null, 'Decoding audio data failed.');
+    };
+
+    // Load the sound on success.
+    var success = function(buffer) {
+      if (buffer && self._sounds.length > 0) {
+        cache[self._src] = buffer;
+        loadSound(self, buffer);
+      } else {
+        error();
+      }
+    };
+
+    // Decode the buffer into an audio source.
+    if (typeof Promise !== 'undefined' && Howler.ctx.decodeAudioData.length === 1) {
+      Howler.ctx.decodeAudioData(arraybuffer).then(success).catch(error);
+    } else {
+      Howler.ctx.decodeAudioData(arraybuffer, success, error);
+    }
+  }
+
+  /**
+   * Sound is now loaded, so finish setting everything up and fire the loaded event.
+   * @param  {Howl} self
+   * @param  {Object} buffer The decoded buffer sound source.
+   */
+  var loadSound = function(self, buffer) {
+    // Set the duration.
+    if (buffer && !self._duration) {
+      self._duration = buffer.duration;
+    }
+
+    // Setup a sprite if none is defined.
+    if (Object.keys(self._sprite).length === 0) {
+      self._sprite = {__default: [0, self._duration * 1000]};
+    }
+
+    // Fire the loaded event.
+    if (self._state !== 'loaded') {
+      self._state = 'loaded';
+      self._emit('load');
+      self._loadQueue();
+    }
+  };
+
+  /**
+   * Setup the audio context when available, or switch to HTML5 Audio mode.
+   */
+  var setupAudioContext = function() {
+    // If we have already detected that Web Audio isn't supported, don't run this step again.
+    if (!Howler.usingWebAudio) {
+      return;
+    }
+
+    // Check if we are using Web Audio and setup the AudioContext if we are.
+    try {
+      if (typeof AudioContext !== 'undefined') {
+        Howler.ctx = new AudioContext();
+      } else if (typeof webkitAudioContext !== 'undefined') {
+        Howler.ctx = new webkitAudioContext();
+      } else {
+        Howler.usingWebAudio = false;
+      }
+    } catch(e) {
+      Howler.usingWebAudio = false;
+    }
+
+    // If the audio context creation still failed, set using web audio to false.
+    if (!Howler.ctx) {
+      Howler.usingWebAudio = false;
+    }
+
+    // Check if a webview is being used on iOS8 or earlier (rather than the browser).
+    // If it is, disable Web Audio as it causes crashing.
+    var iOS = (/iP(hone|od|ad)/.test(Howler._navigator && Howler._navigator.platform));
+    var appVersion = Howler._navigator && Howler._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
+    var version = appVersion ? parseInt(appVersion[1], 10) : null;
+    if (iOS && version && version < 9) {
+      var safari = /safari/.test(Howler._navigator && Howler._navigator.userAgent.toLowerCase());
+      if (Howler._navigator && Howler._navigator.standalone && !safari || Howler._navigator && !Howler._navigator.standalone && !safari) {
+        Howler.usingWebAudio = false;
+      }
+    }
+
+    // Create and expose the master GainNode when using Web Audio (useful for plugins or advanced usage).
+    if (Howler.usingWebAudio) {
+      Howler.masterGain = (typeof Howler.ctx.createGain === 'undefined') ? Howler.ctx.createGainNode() : Howler.ctx.createGain();
+      Howler.masterGain.gain.setValueAtTime(Howler._muted ? 0 : 1, Howler.ctx.currentTime);
+      Howler.masterGain.connect(Howler.ctx.destination);
+    }
+
+    // Re-run the setup on Howler.
+    Howler._setup();
+  };
+
+  // Add support for AMD (Asynchronous Module Definition) libraries such as require.js.
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+      return {
+        Howler: Howler,
+        Howl: Howl
+      };
+    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  }
+
+  // Add support for CommonJS libraries such as browserify.
+  if (true) {
+    exports.Howler = Howler;
+    exports.Howl = Howl;
+  }
+
+  // Define globally in case AMD is not available or unused.
+  if (typeof window !== 'undefined') {
+    window.HowlerGlobal = HowlerGlobal;
+    window.Howler = Howler;
+    window.Howl = Howl;
+    window.Sound = Sound;
+  } else if (typeof global !== 'undefined') { // Add to global in Node.js (for testing, etc).
+    global.HowlerGlobal = HowlerGlobal;
+    global.Howler = Howler;
+    global.Howl = Howl;
+    global.Sound = Sound;
+  }
+})();
+
+
+/*!
+ *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
+ *  
+ *  howler.js v2.1.1
+ *  howlerjs.com
+ *
+ *  (c) 2013-2018, James Simpson of GoldFire Studios
+ *  goldfirestudios.com
+ *
+ *  MIT License
+ */
+
+(function() {
+
+  'use strict';
+
+  // Setup default properties.
+  HowlerGlobal.prototype._pos = [0, 0, 0];
+  HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0];
+
+  /** Global Methods **/
+  /***************************************************************************/
+
+  /**
+   * Helper method to update the stereo panning position of all current Howls.
+   * Future Howls will not use this value unless explicitly set.
+   * @param  {Number} pan A value of -1.0 is all the way left and 1.0 is all the way right.
+   * @return {Howler/Number}     Self or current stereo panning value.
+   */
+  HowlerGlobal.prototype.stereo = function(pan) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self.ctx || !self.ctx.listener) {
+      return self;
+    }
+
+    // Loop through all Howls and update their stereo panning.
+    for (var i=self._howls.length-1; i>=0; i--) {
+      self._howls[i].stereo(pan);
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the position of the listener in 3D cartesian space. Sounds using
+   * 3D position will be relative to the listener's position.
+   * @param  {Number} x The x-position of the listener.
+   * @param  {Number} y The y-position of the listener.
+   * @param  {Number} z The z-position of the listener.
+   * @return {Howler/Array}   Self or current listener position.
+   */
+  HowlerGlobal.prototype.pos = function(x, y, z) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self.ctx || !self.ctx.listener) {
+      return self;
+    }
+
+    // Set the defaults for optional 'y' & 'z'.
+    y = (typeof y !== 'number') ? self._pos[1] : y;
+    z = (typeof z !== 'number') ? self._pos[2] : z;
+
+    if (typeof x === 'number') {
+      self._pos = [x, y, z];
+
+      if (typeof self.ctx.listener.positionX !== 'undefined') {
+        self.ctx.listener.positionX.setTargetAtTime(self._pos[0], Howler.ctx.currentTime, 0.1);
+        self.ctx.listener.positionY.setTargetAtTime(self._pos[1], Howler.ctx.currentTime, 0.1);
+        self.ctx.listener.positionZ.setTargetAtTime(self._pos[2], Howler.ctx.currentTime, 0.1);
+      } else {
+        self.ctx.listener.setPosition(self._pos[0], self._pos[1], self._pos[2]);
+      }
+    } else {
+      return self._pos;
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the direction the listener is pointing in the 3D cartesian space.
+   * A front and up vector must be provided. The front is the direction the
+   * face of the listener is pointing, and up is the direction the top of the
+   * listener is pointing. Thus, these values are expected to be at right angles
+   * from each other.
+   * @param  {Number} x   The x-orientation of the listener.
+   * @param  {Number} y   The y-orientation of the listener.
+   * @param  {Number} z   The z-orientation of the listener.
+   * @param  {Number} xUp The x-orientation of the top of the listener.
+   * @param  {Number} yUp The y-orientation of the top of the listener.
+   * @param  {Number} zUp The z-orientation of the top of the listener.
+   * @return {Howler/Array}     Returns self or the current orientation vectors.
+   */
+  HowlerGlobal.prototype.orientation = function(x, y, z, xUp, yUp, zUp) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self.ctx || !self.ctx.listener) {
+      return self;
+    }
+
+    // Set the defaults for optional 'y' & 'z'.
+    var or = self._orientation;
+    y = (typeof y !== 'number') ? or[1] : y;
+    z = (typeof z !== 'number') ? or[2] : z;
+    xUp = (typeof xUp !== 'number') ? or[3] : xUp;
+    yUp = (typeof yUp !== 'number') ? or[4] : yUp;
+    zUp = (typeof zUp !== 'number') ? or[5] : zUp;
+
+    if (typeof x === 'number') {
+      self._orientation = [x, y, z, xUp, yUp, zUp];
+
+      if (typeof self.ctx.listener.forwardX !== 'undefined') {
+        self.ctx.listener.forwardX.setTargetAtTime(x, Howler.ctx.currentTime, 0.1);
+        self.ctx.listener.forwardY.setTargetAtTime(y, Howler.ctx.currentTime, 0.1);
+        self.ctx.listener.forwardZ.setTargetAtTime(z, Howler.ctx.currentTime, 0.1);
+        self.ctx.listener.upX.setTargetAtTime(x, Howler.ctx.currentTime, 0.1);
+        self.ctx.listener.upY.setTargetAtTime(y, Howler.ctx.currentTime, 0.1);
+        self.ctx.listener.upZ.setTargetAtTime(z, Howler.ctx.currentTime, 0.1);
+      } else {
+        self.ctx.listener.setOrientation(x, y, z, xUp, yUp, zUp);
+      }
+    } else {
+      return or;
+    }
+
+    return self;
+  };
+
+  /** Group Methods **/
+  /***************************************************************************/
+
+  /**
+   * Add new properties to the core init.
+   * @param  {Function} _super Core init method.
+   * @return {Howl}
+   */
+  Howl.prototype.init = (function(_super) {
+    return function(o) {
+      var self = this;
+
+      // Setup user-defined default properties.
+      self._orientation = o.orientation || [1, 0, 0];
+      self._stereo = o.stereo || null;
+      self._pos = o.pos || null;
+      self._pannerAttr = {
+        coneInnerAngle: typeof o.coneInnerAngle !== 'undefined' ? o.coneInnerAngle : 360,
+        coneOuterAngle: typeof o.coneOuterAngle !== 'undefined' ? o.coneOuterAngle : 360,
+        coneOuterGain: typeof o.coneOuterGain !== 'undefined' ? o.coneOuterGain : 0,
+        distanceModel: typeof o.distanceModel !== 'undefined' ? o.distanceModel : 'inverse',
+        maxDistance: typeof o.maxDistance !== 'undefined' ? o.maxDistance : 10000,
+        panningModel: typeof o.panningModel !== 'undefined' ? o.panningModel : 'HRTF',
+        refDistance: typeof o.refDistance !== 'undefined' ? o.refDistance : 1,
+        rolloffFactor: typeof o.rolloffFactor !== 'undefined' ? o.rolloffFactor : 1
+      };
+
+      // Setup event listeners.
+      self._onstereo = o.onstereo ? [{fn: o.onstereo}] : [];
+      self._onpos = o.onpos ? [{fn: o.onpos}] : [];
+      self._onorientation = o.onorientation ? [{fn: o.onorientation}] : [];
+
+      // Complete initilization with howler.js core's init function.
+      return _super.call(this, o);
+    };
+  })(Howl.prototype.init);
+
+  /**
+   * Get/set the stereo panning of the audio source for this sound or all in the group.
+   * @param  {Number} pan  A value of -1.0 is all the way left and 1.0 is all the way right.
+   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
+   * @return {Howl/Number}    Returns self or the current stereo panning value.
+   */
+  Howl.prototype.stereo = function(pan, id) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self._webAudio) {
+      return self;
+    }
+
+    // If the sound hasn't loaded, add it to the load queue to change stereo pan when capable.
+    if (self._state !== 'loaded') {
+      self._queue.push({
+        event: 'stereo',
+        action: function() {
+          self.stereo(pan, id);
+        }
+      });
+
+      return self;
+    }
+
+    // Check for PannerStereoNode support and fallback to PannerNode if it doesn't exist.
+    var pannerType = (typeof Howler.ctx.createStereoPanner === 'undefined') ? 'spatial' : 'stereo';
+
+    // Setup the group's stereo panning if no ID is passed.
+    if (typeof id === 'undefined') {
+      // Return the group's stereo panning if no parameters are passed.
+      if (typeof pan === 'number') {
+        self._stereo = pan;
+        self._pos = [pan, 0, 0];
+      } else {
+        return self._stereo;
+      }
+    }
+
+    // Change the streo panning of one or all sounds in group.
+    var ids = self._getSoundIds(id);
+    for (var i=0; i<ids.length; i++) {
+      // Get the sound.
+      var sound = self._soundById(ids[i]);
+
+      if (sound) {
+        if (typeof pan === 'number') {
+          sound._stereo = pan;
+          sound._pos = [pan, 0, 0];
+
+          if (sound._node) {
+            // If we are falling back, make sure the panningModel is equalpower.
+            sound._pannerAttr.panningModel = 'equalpower';
+
+            // Check if there is a panner setup and create a new one if not.
+            if (!sound._panner || !sound._panner.pan) {
+              setupPanner(sound, pannerType);
+            }
+
+            if (pannerType === 'spatial') {
+              if (typeof sound._panner.positionX !== 'undefined') {
+                sound._panner.positionX.setValueAtTime(pan, Howler.ctx.currentTime);
+                sound._panner.positionY.setValueAtTime(0, Howler.ctx.currentTime);
+                sound._panner.positionZ.setValueAtTime(0, Howler.ctx.currentTime);
+              } else {
+                sound._panner.setPosition(pan, 0, 0);
+              }
+            } else {
+              sound._panner.pan.setValueAtTime(pan, Howler.ctx.currentTime);
+            }
+          }
+
+          self._emit('stereo', sound._id);
+        } else {
+          return sound._stereo;
+        }
+      }
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the 3D spatial position of the audio source for this sound or group relative to the global listener.
+   * @param  {Number} x  The x-position of the audio source.
+   * @param  {Number} y  The y-position of the audio source.
+   * @param  {Number} z  The z-position of the audio source.
+   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
+   * @return {Howl/Array}    Returns self or the current 3D spatial position: [x, y, z].
+   */
+  Howl.prototype.pos = function(x, y, z, id) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self._webAudio) {
+      return self;
+    }
+
+    // If the sound hasn't loaded, add it to the load queue to change position when capable.
+    if (self._state !== 'loaded') {
+      self._queue.push({
+        event: 'pos',
+        action: function() {
+          self.pos(x, y, z, id);
+        }
+      });
+
+      return self;
+    }
+
+    // Set the defaults for optional 'y' & 'z'.
+    y = (typeof y !== 'number') ? 0 : y;
+    z = (typeof z !== 'number') ? -0.5 : z;
+
+    // Setup the group's spatial position if no ID is passed.
+    if (typeof id === 'undefined') {
+      // Return the group's spatial position if no parameters are passed.
+      if (typeof x === 'number') {
+        self._pos = [x, y, z];
+      } else {
+        return self._pos;
+      }
+    }
+
+    // Change the spatial position of one or all sounds in group.
+    var ids = self._getSoundIds(id);
+    for (var i=0; i<ids.length; i++) {
+      // Get the sound.
+      var sound = self._soundById(ids[i]);
+
+      if (sound) {
+        if (typeof x === 'number') {
+          sound._pos = [x, y, z];
+
+          if (sound._node) {
+            // Check if there is a panner setup and create a new one if not.
+            if (!sound._panner || sound._panner.pan) {
+              setupPanner(sound, 'spatial');
+            }
+
+            if (typeof sound._panner.positionX !== 'undefined') {
+              sound._panner.positionX.setValueAtTime(x, Howler.ctx.currentTime);
+              sound._panner.positionY.setValueAtTime(y, Howler.ctx.currentTime);
+              sound._panner.positionZ.setValueAtTime(z, Howler.ctx.currentTime);
+            } else {
+              sound._panner.setPosition(x, y, z);
+            }
+          }
+
+          self._emit('pos', sound._id);
+        } else {
+          return sound._pos;
+        }
+      }
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the direction the audio source is pointing in the 3D cartesian coordinate
+   * space. Depending on how direction the sound is, based on the `cone` attributes,
+   * a sound pointing away from the listener can be quiet or silent.
+   * @param  {Number} x  The x-orientation of the source.
+   * @param  {Number} y  The y-orientation of the source.
+   * @param  {Number} z  The z-orientation of the source.
+   * @param  {Number} id (optional) The sound ID. If none is passed, all in group will be updated.
+   * @return {Howl/Array}    Returns self or the current 3D spatial orientation: [x, y, z].
+   */
+  Howl.prototype.orientation = function(x, y, z, id) {
+    var self = this;
+
+    // Stop right here if not using Web Audio.
+    if (!self._webAudio) {
+      return self;
+    }
+
+    // If the sound hasn't loaded, add it to the load queue to change orientation when capable.
+    if (self._state !== 'loaded') {
+      self._queue.push({
+        event: 'orientation',
+        action: function() {
+          self.orientation(x, y, z, id);
+        }
+      });
+
+      return self;
+    }
+
+    // Set the defaults for optional 'y' & 'z'.
+    y = (typeof y !== 'number') ? self._orientation[1] : y;
+    z = (typeof z !== 'number') ? self._orientation[2] : z;
+
+    // Setup the group's spatial orientation if no ID is passed.
+    if (typeof id === 'undefined') {
+      // Return the group's spatial orientation if no parameters are passed.
+      if (typeof x === 'number') {
+        self._orientation = [x, y, z];
+      } else {
+        return self._orientation;
+      }
+    }
+
+    // Change the spatial orientation of one or all sounds in group.
+    var ids = self._getSoundIds(id);
+    for (var i=0; i<ids.length; i++) {
+      // Get the sound.
+      var sound = self._soundById(ids[i]);
+
+      if (sound) {
+        if (typeof x === 'number') {
+          sound._orientation = [x, y, z];
+
+          if (sound._node) {
+            // Check if there is a panner setup and create a new one if not.
+            if (!sound._panner) {
+              // Make sure we have a position to setup the node with.
+              if (!sound._pos) {
+                sound._pos = self._pos || [0, 0, -0.5];
+              }
+
+              setupPanner(sound, 'spatial');
+            }
+
+            if (typeof sound._panner.orientationX !== 'undefined') {
+              sound._panner.orientationX.setValueAtTime(x, Howler.ctx.currentTime);
+              sound._panner.orientationY.setValueAtTime(y, Howler.ctx.currentTime);
+              sound._panner.orientationZ.setValueAtTime(z, Howler.ctx.currentTime);
+            } else {
+              sound._panner.setOrientation(x, y, z);
+            }
+          }
+
+          self._emit('orientation', sound._id);
+        } else {
+          return sound._orientation;
+        }
+      }
+    }
+
+    return self;
+  };
+
+  /**
+   * Get/set the panner node's attributes for a sound or group of sounds.
+   * This method can optionall take 0, 1 or 2 arguments.
+   *   pannerAttr() -> Returns the group's values.
+   *   pannerAttr(id) -> Returns the sound id's values.
+   *   pannerAttr(o) -> Set's the values of all sounds in this Howl group.
+   *   pannerAttr(o, id) -> Set's the values of passed sound id.
+   *
+   *   Attributes:
+   *     coneInnerAngle - (360 by default) A parameter for directional audio sources, this is an angle, in degrees,
+   *                      inside of which there will be no volume reduction.
+   *     coneOuterAngle - (360 by default) A parameter for directional audio sources, this is an angle, in degrees,
+   *                      outside of which the volume will be reduced to a constant value of `coneOuterGain`.
+   *     coneOuterGain - (0 by default) A parameter for directional audio sources, this is the gain outside of the
+   *                     `coneOuterAngle`. It is a linear value in the range `[0, 1]`.
+   *     distanceModel - ('inverse' by default) Determines algorithm used to reduce volume as audio moves away from
+   *                     listener. Can be `linear`, `inverse` or `exponential.
+   *     maxDistance - (10000 by default) The maximum distance between source and listener, after which the volume
+   *                   will not be reduced any further.
+   *     refDistance - (1 by default) A reference distance for reducing volume as source moves further from the listener.
+   *                   This is simply a variable of the distance model and has a different effect depending on which model
+   *                   is used and the scale of your coordinates. Generally, volume will be equal to 1 at this distance.
+   *     rolloffFactor - (1 by default) How quickly the volume reduces as source moves from listener. This is simply a
+   *                     variable of the distance model and can be in the range of `[0, 1]` with `linear` and `[0, ∞]`
+   *                     with `inverse` and `exponential`.
+   *     panningModel - ('HRTF' by default) Determines which spatialization algorithm is used to position audio.
+   *                     Can be `HRTF` or `equalpower`.
+   *
+   * @return {Howl/Object} Returns self or current panner attributes.
+   */
+  Howl.prototype.pannerAttr = function() {
+    var self = this;
+    var args = arguments;
+    var o, id, sound;
+
+    // Stop right here if not using Web Audio.
+    if (!self._webAudio) {
+      return self;
+    }
+
+    // Determine the values based on arguments.
+    if (args.length === 0) {
+      // Return the group's panner attribute values.
+      return self._pannerAttr;
+    } else if (args.length === 1) {
+      if (typeof args[0] === 'object') {
+        o = args[0];
+
+        // Set the grou's panner attribute values.
+        if (typeof id === 'undefined') {
+          if (!o.pannerAttr) {
+            o.pannerAttr = {
+              coneInnerAngle: o.coneInnerAngle,
+              coneOuterAngle: o.coneOuterAngle,
+              coneOuterGain: o.coneOuterGain,
+              distanceModel: o.distanceModel,
+              maxDistance: o.maxDistance,
+              refDistance: o.refDistance,
+              rolloffFactor: o.rolloffFactor,
+              panningModel: o.panningModel
+            };
+          }
+
+          self._pannerAttr = {
+            coneInnerAngle: typeof o.pannerAttr.coneInnerAngle !== 'undefined' ? o.pannerAttr.coneInnerAngle : self._coneInnerAngle,
+            coneOuterAngle: typeof o.pannerAttr.coneOuterAngle !== 'undefined' ? o.pannerAttr.coneOuterAngle : self._coneOuterAngle,
+            coneOuterGain: typeof o.pannerAttr.coneOuterGain !== 'undefined' ? o.pannerAttr.coneOuterGain : self._coneOuterGain,
+            distanceModel: typeof o.pannerAttr.distanceModel !== 'undefined' ? o.pannerAttr.distanceModel : self._distanceModel,
+            maxDistance: typeof o.pannerAttr.maxDistance !== 'undefined' ? o.pannerAttr.maxDistance : self._maxDistance,
+            refDistance: typeof o.pannerAttr.refDistance !== 'undefined' ? o.pannerAttr.refDistance : self._refDistance,
+            rolloffFactor: typeof o.pannerAttr.rolloffFactor !== 'undefined' ? o.pannerAttr.rolloffFactor : self._rolloffFactor,
+            panningModel: typeof o.pannerAttr.panningModel !== 'undefined' ? o.pannerAttr.panningModel : self._panningModel
+          };
+        }
+      } else {
+        // Return this sound's panner attribute values.
+        sound = self._soundById(parseInt(args[0], 10));
+        return sound ? sound._pannerAttr : self._pannerAttr;
+      }
+    } else if (args.length === 2) {
+      o = args[0];
+      id = parseInt(args[1], 10);
+    }
+
+    // Update the values of the specified sounds.
+    var ids = self._getSoundIds(id);
+    for (var i=0; i<ids.length; i++) {
+      sound = self._soundById(ids[i]);
+
+      if (sound) {
+        // Merge the new values into the sound.
+        var pa = sound._pannerAttr;
+        pa = {
+          coneInnerAngle: typeof o.coneInnerAngle !== 'undefined' ? o.coneInnerAngle : pa.coneInnerAngle,
+          coneOuterAngle: typeof o.coneOuterAngle !== 'undefined' ? o.coneOuterAngle : pa.coneOuterAngle,
+          coneOuterGain: typeof o.coneOuterGain !== 'undefined' ? o.coneOuterGain : pa.coneOuterGain,
+          distanceModel: typeof o.distanceModel !== 'undefined' ? o.distanceModel : pa.distanceModel,
+          maxDistance: typeof o.maxDistance !== 'undefined' ? o.maxDistance : pa.maxDistance,
+          refDistance: typeof o.refDistance !== 'undefined' ? o.refDistance : pa.refDistance,
+          rolloffFactor: typeof o.rolloffFactor !== 'undefined' ? o.rolloffFactor : pa.rolloffFactor,
+          panningModel: typeof o.panningModel !== 'undefined' ? o.panningModel : pa.panningModel
+        };
+
+        // Update the panner values or create a new panner if none exists.
+        var panner = sound._panner;
+        if (panner) {
+          panner.coneInnerAngle = pa.coneInnerAngle;
+          panner.coneOuterAngle = pa.coneOuterAngle;
+          panner.coneOuterGain = pa.coneOuterGain;
+          panner.distanceModel = pa.distanceModel;
+          panner.maxDistance = pa.maxDistance;
+          panner.refDistance = pa.refDistance;
+          panner.rolloffFactor = pa.rolloffFactor;
+          panner.panningModel = pa.panningModel;
+        } else {
+          // Make sure we have a position to setup the node with.
+          if (!sound._pos) {
+            sound._pos = self._pos || [0, 0, -0.5];
+          }
+
+          // Create a new panner node.
+          setupPanner(sound, 'spatial');
+        }
+      }
+    }
+
+    return self;
+  };
+
+  /** Single Sound Methods **/
+  /***************************************************************************/
+
+  /**
+   * Add new properties to the core Sound init.
+   * @param  {Function} _super Core Sound init method.
+   * @return {Sound}
+   */
+  Sound.prototype.init = (function(_super) {
+    return function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Setup user-defined default properties.
+      self._orientation = parent._orientation;
+      self._stereo = parent._stereo;
+      self._pos = parent._pos;
+      self._pannerAttr = parent._pannerAttr;
+
+      // Complete initilization with howler.js core Sound's init function.
+      _super.call(this);
+
+      // If a stereo or position was specified, set it up.
+      if (self._stereo) {
+        parent.stereo(self._stereo);
+      } else if (self._pos) {
+        parent.pos(self._pos[0], self._pos[1], self._pos[2], self._id);
+      }
+    };
+  })(Sound.prototype.init);
+
+  /**
+   * Override the Sound.reset method to clean up properties from the spatial plugin.
+   * @param  {Function} _super Sound reset method.
+   * @return {Sound}
+   */
+  Sound.prototype.reset = (function(_super) {
+    return function() {
+      var self = this;
+      var parent = self._parent;
+
+      // Reset all spatial plugin properties on this sound.
+      self._orientation = parent._orientation;
+      self._stereo = parent._stereo;
+      self._pos = parent._pos;
+      self._pannerAttr = parent._pannerAttr;
+
+      // If a stereo or position was specified, set it up.
+      if (self._stereo) {
+        parent.stereo(self._stereo);
+      } else if (self._pos) {
+        parent.pos(self._pos[0], self._pos[1], self._pos[2], self._id);
+      } else if (self._panner) {
+        // Disconnect the panner.
+        self._panner.disconnect(0);
+        self._panner = undefined;
+        parent._refreshBuffer(self);
+      }
+
+      // Complete resetting of the sound.
+      return _super.call(this);
+    };
+  })(Sound.prototype.reset);
+
+  /** Helper Methods **/
+  /***************************************************************************/
+
+  /**
+   * Create a new panner node and save it on the sound.
+   * @param  {Sound} sound Specific sound to setup panning on.
+   * @param {String} type Type of panner to create: 'stereo' or 'spatial'.
+   */
+  var setupPanner = function(sound, type) {
+    type = type || 'spatial';
+
+    // Create the new panner node.
+    if (type === 'spatial') {
+      sound._panner = Howler.ctx.createPanner();
+      sound._panner.coneInnerAngle = sound._pannerAttr.coneInnerAngle;
+      sound._panner.coneOuterAngle = sound._pannerAttr.coneOuterAngle;
+      sound._panner.coneOuterGain = sound._pannerAttr.coneOuterGain;
+      sound._panner.distanceModel = sound._pannerAttr.distanceModel;
+      sound._panner.maxDistance = sound._pannerAttr.maxDistance;
+      sound._panner.refDistance = sound._pannerAttr.refDistance;
+      sound._panner.rolloffFactor = sound._pannerAttr.rolloffFactor;
+      sound._panner.panningModel = sound._pannerAttr.panningModel;
+
+      if (typeof sound._panner.positionX !== 'undefined') {
+        sound._panner.positionX.setValueAtTime(sound._pos[0], Howler.ctx.currentTime);
+        sound._panner.positionY.setValueAtTime(sound._pos[1], Howler.ctx.currentTime);
+        sound._panner.positionZ.setValueAtTime(sound._pos[2], Howler.ctx.currentTime);
+      } else {
+        sound._panner.setPosition(sound._pos[0], sound._pos[1], sound._pos[2]);
+      }
+
+      if (typeof sound._panner.orientationX !== 'undefined') {
+        sound._panner.orientationX.setValueAtTime(sound._orientation[0], Howler.ctx.currentTime);
+        sound._panner.orientationY.setValueAtTime(sound._orientation[1], Howler.ctx.currentTime);
+        sound._panner.orientationZ.setValueAtTime(sound._orientation[2], Howler.ctx.currentTime);
+      } else {
+        sound._panner.setOrientation(sound._orientation[0], sound._orientation[1], sound._orientation[2]);
+      }
+    } else {
+      sound._panner = Howler.ctx.createStereoPanner();
+      sound._panner.pan.setValueAtTime(sound._stereo, Howler.ctx.currentTime);
+    }
+
+    sound._panner.connect(sound._node);
+
+    // Update the connections.
+    if (!sound._paused) {
+      sound._parent.pause(sound._id, true).play(sound._id, true);
+    }
+  };
+})();
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/is-buffer/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/is-buffer/index.js ***!
@@ -16869,6 +20410,82 @@ function serializer(replacer, cycleReplacer) {
     else stack.push(value)
 
     return replacer == null ? value : replacer.call(this, key, value)
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/load-script/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/load-script/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+module.exports = function load (src, opts, cb) {
+  var head = document.head || document.getElementsByTagName('head')[0]
+  var script = document.createElement('script')
+
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = {}
+  }
+
+  opts = opts || {}
+  cb = cb || function() {}
+
+  script.type = opts.type || 'text/javascript'
+  script.charset = opts.charset || 'utf8';
+  script.async = 'async' in opts ? !!opts.async : true
+  script.src = src
+
+  if (opts.attrs) {
+    setAttributes(script, opts.attrs)
+  }
+
+  if (opts.text) {
+    script.text = '' + opts.text
+  }
+
+  var onend = 'onload' in script ? stdOnEnd : ieOnEnd
+  onend(script, cb)
+
+  // some good legacy browsers (firefox) fail the 'in' detection above
+  // so as a fallback we always set onload
+  // old IE will ignore this and new IE will set onload
+  if (!script.onload) {
+    stdOnEnd(script, cb);
+  }
+
+  head.appendChild(script)
+}
+
+function setAttributes(script, attrs) {
+  for (var attr in attrs) {
+    script.setAttribute(attr, attrs[attr]);
+  }
+}
+
+function stdOnEnd (script, cb) {
+  script.onload = function () {
+    this.onerror = this.onload = null
+    cb(null, script)
+  }
+  script.onerror = function () {
+    // this.onload = null here is necessary
+    // because even IE9 works not like others
+    this.onerror = this.onload = null
+    cb(new Error('Failed to load ' + this.src), script)
+  }
+}
+
+function ieOnEnd (script, cb) {
+  script.onreadystatechange = function () {
+    if (this.readyState != 'complete' && this.readyState != 'loaded') return
+    this.onreadystatechange = null
+    cb(null, script) // there is no way to catch loading errors in IE8
   }
 }
 
@@ -22850,6 +26467,3644 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/react-player/lib/Player.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-player/lib/Player.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _props2 = __webpack_require__(/*! ./props */ "./node_modules/react-player/lib/props.js");
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-player/lib/utils.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SEEK_ON_PLAY_EXPIRY = 5000;
+
+var Player = function (_Component) {
+  _inherits(Player, _Component);
+
+  function Player() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Player);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Player.__proto__ || Object.getPrototypeOf(Player)).call.apply(_ref, [this].concat(args))), _this), _this.mounted = false, _this.isReady = false, _this.isPlaying = false, _this.isLoading = true, _this.loadOnReady = null, _this.startOnPlay = true, _this.seekOnPlay = null, _this.onDurationCalled = false, _this.getInternalPlayer = function (key) {
+      if (!_this.player) return null;
+      return _this.player[key];
+    }, _this.progress = function () {
+      if (_this.props.url && _this.player && _this.isReady) {
+        var playedSeconds = _this.getCurrentTime() || 0;
+        var loadedSeconds = _this.getSecondsLoaded();
+        var duration = _this.getDuration();
+        if (duration) {
+          var progress = {
+            playedSeconds: playedSeconds,
+            played: playedSeconds / duration
+          };
+          if (loadedSeconds !== null) {
+            progress.loadedSeconds = loadedSeconds;
+            progress.loaded = loadedSeconds / duration;
+          }
+          // Only call onProgress if values have changed
+          if (progress.played !== _this.prevPlayed || progress.loaded !== _this.prevLoaded) {
+            _this.props.onProgress(progress);
+          }
+          _this.prevPlayed = progress.played;
+          _this.prevLoaded = progress.loaded;
+        }
+      }
+      _this.progressTimeout = setTimeout(_this.progress, _this.props.progressFrequency || _this.props.progressInterval);
+    }, _this.onReady = function () {
+      if (!_this.mounted) return;
+      _this.isReady = true;
+      _this.isLoading = false;
+      var _this$props = _this.props,
+          onReady = _this$props.onReady,
+          playing = _this$props.playing,
+          volume = _this$props.volume,
+          muted = _this$props.muted;
+
+      onReady();
+      if (!muted && volume !== null) {
+        _this.player.setVolume(volume);
+      }
+      if (_this.loadOnReady) {
+        _this.player.load(_this.loadOnReady, true);
+        _this.loadOnReady = null;
+      } else if (playing) {
+        _this.player.play();
+      }
+      _this.onDurationCheck();
+    }, _this.onPlay = function () {
+      _this.isPlaying = true;
+      _this.isLoading = false;
+      var _this$props2 = _this.props,
+          onStart = _this$props2.onStart,
+          onPlay = _this$props2.onPlay,
+          playbackRate = _this$props2.playbackRate;
+
+      if (_this.startOnPlay) {
+        if (_this.player.setPlaybackRate) {
+          _this.player.setPlaybackRate(playbackRate);
+        }
+        onStart();
+        _this.startOnPlay = false;
+      }
+      onPlay();
+      if (_this.seekOnPlay) {
+        _this.seekTo(_this.seekOnPlay);
+        _this.seekOnPlay = null;
+      }
+      _this.onDurationCheck();
+    }, _this.onPause = function (e) {
+      _this.isPlaying = false;
+      if (!_this.isLoading) {
+        _this.props.onPause(e);
+      }
+    }, _this.onEnded = function () {
+      var _this$props3 = _this.props,
+          activePlayer = _this$props3.activePlayer,
+          loop = _this$props3.loop,
+          onEnded = _this$props3.onEnded;
+
+      if (activePlayer.loopOnEnded && loop) {
+        _this.seekTo(0);
+      }
+      if (!loop) {
+        _this.isPlaying = false;
+        onEnded();
+      }
+    }, _this.onDurationCheck = function () {
+      clearTimeout(_this.durationCheckTimeout);
+      var duration = _this.getDuration();
+      if (duration) {
+        if (!_this.onDurationCalled) {
+          _this.props.onDuration(duration);
+          _this.onDurationCalled = true;
+        }
+      } else {
+        _this.durationCheckTimeout = setTimeout(_this.onDurationCheck, 100);
+      }
+    }, _this.onLoaded = function () {
+      // Sometimes we know loading has stopped but onReady/onPlay are never called
+      // so this provides a way for players to avoid getting stuck
+      _this.isLoading = false;
+    }, _this.ref = function (player) {
+      if (player) {
+        _this.player = player;
+      }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  } // Track playing state internally to prevent bugs
+  // Use isLoading to prevent onPause when switching URL
+
+
+  _createClass(Player, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.mounted = true;
+      this.player.load(this.props.url);
+      this.progress();
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      clearTimeout(this.progressTimeout);
+      clearTimeout(this.durationCheckTimeout);
+      if (this.isReady) {
+        this.player.stop();
+      }
+      if (this.player.disablePIP) {
+        this.player.disablePIP();
+      }
+      this.mounted = false;
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      var _this2 = this;
+
+      // Invoke player methods based on incoming props
+      var _props = this.props,
+          url = _props.url,
+          playing = _props.playing,
+          volume = _props.volume,
+          muted = _props.muted,
+          playbackRate = _props.playbackRate,
+          pip = _props.pip,
+          loop = _props.loop;
+
+      if (!(0, _utils.isEqual)(url, nextProps.url)) {
+        if (this.isLoading) {
+          console.warn('ReactPlayer: the attempt to load ' + nextProps.url + ' is being deferred until the player has loaded');
+          this.loadOnReady = nextProps.url;
+          return;
+        }
+        this.isLoading = true;
+        this.startOnPlay = true;
+        this.onDurationCalled = false;
+        this.player.load(nextProps.url, this.isReady);
+      }
+      if (!playing && nextProps.playing && !this.isPlaying) {
+        this.player.play();
+      }
+      if (playing && !nextProps.playing && this.isPlaying) {
+        this.player.pause();
+      }
+      if (!pip && nextProps.pip && this.player.enablePIP) {
+        this.player.enablePIP();
+      } else if (pip && !nextProps.pip && this.player.disablePIP) {
+        this.player.disablePIP();
+      }
+      if (volume !== nextProps.volume && nextProps.volume !== null) {
+        this.player.setVolume(nextProps.volume);
+      }
+      if (muted !== nextProps.muted) {
+        if (nextProps.muted) {
+          this.player.mute();
+        } else {
+          this.player.unmute();
+          if (nextProps.volume !== null) {
+            // Set volume next tick to fix a bug with DailyMotion
+            setTimeout(function () {
+              return _this2.player.setVolume(nextProps.volume);
+            });
+          }
+        }
+      }
+      if (playbackRate !== nextProps.playbackRate && this.player.setPlaybackRate) {
+        this.player.setPlaybackRate(nextProps.playbackRate);
+      }
+      if (loop !== nextProps.loop && this.player.setLoop) {
+        this.player.setLoop(nextProps.loop);
+      }
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      if (!this.isReady) return null;
+      return this.player.getDuration();
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      if (!this.isReady) return null;
+      return this.player.getCurrentTime();
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      if (!this.isReady) return null;
+      return this.player.getSecondsLoaded();
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(amount) {
+      var _this3 = this;
+
+      // When seeking before player is ready, store value and seek later
+      if (!this.isReady && amount !== 0) {
+        this.seekOnPlay = amount;
+        setTimeout(function () {
+          _this3.seekOnPlay = null;
+        }, SEEK_ON_PLAY_EXPIRY);
+        return;
+      }
+      if (amount > 0 && amount < 1) {
+        // Convert fraction to seconds based on duration
+        var duration = this.player.getDuration();
+        if (!duration) {
+          console.warn('ReactPlayer: could not seek using fraction – duration not yet available');
+          return;
+        }
+        this.player.seekTo(duration * amount);
+        return;
+      }
+      this.player.seekTo(amount);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var Player = this.props.activePlayer;
+      if (!Player) {
+        return null;
+      }
+      return _react2['default'].createElement(Player, _extends({}, this.props, {
+        ref: this.ref,
+        onReady: this.onReady,
+        onPlay: this.onPlay,
+        onPause: this.onPause,
+        onEnded: this.onEnded,
+        onLoaded: this.onLoaded
+      }));
+    }
+  }]);
+
+  return Player;
+}(_react.Component);
+
+Player.displayName = 'Player';
+Player.propTypes = _props2.propTypes;
+Player.defaultProps = _props2.defaultProps;
+exports['default'] = Player;
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/Preview.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-player/lib/Preview.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ICON_SIZE = '64px';
+
+var Preview = function (_Component) {
+  _inherits(Preview, _Component);
+
+  function Preview() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Preview);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Preview.__proto__ || Object.getPrototypeOf(Preview)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      image: null
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Preview, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.fetchImage(this.props);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (this.props.url !== nextProps.url) {
+        this.fetchImage(nextProps);
+      }
+    }
+  }, {
+    key: 'fetchImage',
+    value: function fetchImage(_ref2) {
+      var _this2 = this;
+
+      var url = _ref2.url,
+          light = _ref2.light;
+
+      if (typeof light === 'string') {
+        this.setState({ image: light });
+        return;
+      }
+      this.setState({ image: null });
+      return window.fetch('https://noembed.com/embed?url=' + url).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        if (data.thumbnail_url) {
+          var image = data.thumbnail_url.replace('height=100', 'height=480');
+          _this2.setState({ image: image });
+        }
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var onClick = this.props.onClick;
+      var image = this.state.image;
+
+      var flexCenter = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      };
+      var styles = {
+        preview: _extends({
+          width: '100%',
+          height: '100%',
+          backgroundImage: image ? 'url(' + image + ')' : undefined,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          cursor: 'pointer'
+        }, flexCenter),
+        shadow: _extends({
+          background: 'radial-gradient(rgb(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 60%)',
+          borderRadius: ICON_SIZE,
+          width: ICON_SIZE,
+          height: ICON_SIZE
+        }, flexCenter),
+        playIcon: {
+          borderStyle: 'solid',
+          borderWidth: '16px 0 16px 26px',
+          borderColor: 'transparent transparent transparent white',
+          marginLeft: '7px'
+        }
+      };
+      return _react2['default'].createElement(
+        'div',
+        { style: styles.preview, className: 'react-player__preview', onClick: onClick },
+        _react2['default'].createElement(
+          'div',
+          { style: styles.shadow, className: 'react-player__shadow' },
+          _react2['default'].createElement('div', { style: styles.playIcon, className: 'react-player__play-icon' })
+        )
+      );
+    }
+  }]);
+
+  return Preview;
+}(_react.Component);
+
+exports['default'] = Preview;
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/ReactPlayer.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-player/lib/ReactPlayer.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FilePlayer = exports.Mixcloud = exports.DailyMotion = exports.Twitch = exports.Wistia = exports.Streamable = exports.Facebook = exports.Vimeo = exports.SoundCloud = exports.YouTube = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _YouTube = __webpack_require__(/*! ./players/YouTube */ "./node_modules/react-player/lib/players/YouTube.js");
+
+Object.defineProperty(exports, 'YouTube', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_YouTube)['default'];
+  }
+});
+
+var _SoundCloud = __webpack_require__(/*! ./players/SoundCloud */ "./node_modules/react-player/lib/players/SoundCloud.js");
+
+Object.defineProperty(exports, 'SoundCloud', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_SoundCloud)['default'];
+  }
+});
+
+var _Vimeo = __webpack_require__(/*! ./players/Vimeo */ "./node_modules/react-player/lib/players/Vimeo.js");
+
+Object.defineProperty(exports, 'Vimeo', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Vimeo)['default'];
+  }
+});
+
+var _Facebook = __webpack_require__(/*! ./players/Facebook */ "./node_modules/react-player/lib/players/Facebook.js");
+
+Object.defineProperty(exports, 'Facebook', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Facebook)['default'];
+  }
+});
+
+var _Streamable = __webpack_require__(/*! ./players/Streamable */ "./node_modules/react-player/lib/players/Streamable.js");
+
+Object.defineProperty(exports, 'Streamable', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Streamable)['default'];
+  }
+});
+
+var _Wistia = __webpack_require__(/*! ./players/Wistia */ "./node_modules/react-player/lib/players/Wistia.js");
+
+Object.defineProperty(exports, 'Wistia', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Wistia)['default'];
+  }
+});
+
+var _Twitch = __webpack_require__(/*! ./players/Twitch */ "./node_modules/react-player/lib/players/Twitch.js");
+
+Object.defineProperty(exports, 'Twitch', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Twitch)['default'];
+  }
+});
+
+var _DailyMotion = __webpack_require__(/*! ./players/DailyMotion */ "./node_modules/react-player/lib/players/DailyMotion.js");
+
+Object.defineProperty(exports, 'DailyMotion', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_DailyMotion)['default'];
+  }
+});
+
+var _Mixcloud = __webpack_require__(/*! ./players/Mixcloud */ "./node_modules/react-player/lib/players/Mixcloud.js");
+
+Object.defineProperty(exports, 'Mixcloud', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Mixcloud)['default'];
+  }
+});
+
+var _FilePlayer = __webpack_require__(/*! ./players/FilePlayer */ "./node_modules/react-player/lib/players/FilePlayer.js");
+
+Object.defineProperty(exports, 'FilePlayer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_FilePlayer)['default'];
+  }
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _props2 = __webpack_require__(/*! ./props */ "./node_modules/react-player/lib/props.js");
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-player/lib/utils.js");
+
+var _players = __webpack_require__(/*! ./players */ "./node_modules/react-player/lib/players/index.js");
+
+var _players2 = _interopRequireDefault(_players);
+
+var _Player4 = __webpack_require__(/*! ./Player */ "./node_modules/react-player/lib/Player.js");
+
+var _Player5 = _interopRequireDefault(_Player4);
+
+var _Preview = __webpack_require__(/*! ./Preview */ "./node_modules/react-player/lib/Preview.js");
+
+var _Preview2 = _interopRequireDefault(_Preview);
+
+var _preload = __webpack_require__(/*! ./preload */ "./node_modules/react-player/lib/preload.js");
+
+var _preload2 = _interopRequireDefault(_preload);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SUPPORTED_PROPS = Object.keys(_props2.propTypes);
+
+var customPlayers = [];
+
+var ReactPlayer = function (_Component) {
+  _inherits(ReactPlayer, _Component);
+
+  function ReactPlayer() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, ReactPlayer);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ReactPlayer.__proto__ || Object.getPrototypeOf(ReactPlayer)).call.apply(_ref, [this].concat(args))), _this), _this.config = (0, _utils.getConfig)(_this.props, _props2.defaultProps, true), _this.state = {
+      showPreview: !!_this.props.light
+    }, _this.onClickPreview = function () {
+      _this.setState({ showPreview: false });
+    }, _this.getDuration = function () {
+      if (!_this.player) return null;
+      return _this.player.getDuration();
+    }, _this.getCurrentTime = function () {
+      if (!_this.player) return null;
+      return _this.player.getCurrentTime();
+    }, _this.getSecondsLoaded = function () {
+      if (!_this.player) return null;
+      return _this.player.getSecondsLoaded();
+    }, _this.getInternalPlayer = function () {
+      var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'player';
+
+      if (!_this.player) return null;
+      return _this.player.getInternalPlayer(key);
+    }, _this.seekTo = function (fraction) {
+      if (!_this.player) return null;
+      _this.player.seekTo(fraction);
+    }, _this.onReady = function () {
+      _this.props.onReady(_this);
+    }, _this.wrapperRef = function (wrapper) {
+      _this.wrapper = wrapper;
+    }, _this.activePlayerRef = function (player) {
+      _this.player = player;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(ReactPlayer, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (this.props.progressFrequency) {
+        var message = 'ReactPlayer: %cprogressFrequency%c is deprecated, please use %cprogressInterval%c instead';
+        console.warn(message, 'font-weight: bold', '', 'font-weight: bold', '');
+      }
+    }
+  }, {
+    key: 'shouldComponentUpdate',
+    value: function shouldComponentUpdate(nextProps, nextState) {
+      return !(0, _utils.isEqual)(this.props, nextProps) || !(0, _utils.isEqual)(this.state, nextState);
+    }
+  }, {
+    key: 'componentWillUpdate',
+    value: function componentWillUpdate(nextProps) {
+      this.config = (0, _utils.getConfig)(nextProps, _props2.defaultProps);
+      if (!this.props.light && nextProps.light) {
+        this.setState({ showPreview: true });
+      }
+    }
+  }, {
+    key: 'getActivePlayer',
+    value: function getActivePlayer(url) {
+      var _arr = [].concat(_toConsumableArray(customPlayers), _toConsumableArray(_players2['default']));
+
+      for (var _i = 0; _i < _arr.length; _i++) {
+        var _Player = _arr[_i];
+        if (_Player.canPlay(url)) {
+          return _Player;
+        }
+      }
+      // Fall back to FilePlayer if nothing else can play the URL
+      return _FilePlayer.FilePlayer;
+    }
+  }, {
+    key: 'renderActivePlayer',
+    value: function renderActivePlayer(url, activePlayer) {
+      if (!url) return null;
+      return _react2['default'].createElement(_Player5['default'], _extends({}, this.props, {
+        key: activePlayer.displayName,
+        ref: this.activePlayerRef,
+        config: this.config,
+        activePlayer: activePlayer,
+        onReady: this.onReady
+      }));
+    }
+  }, {
+    key: 'sortPlayers',
+    value: function sortPlayers(a, b) {
+      // Retain player order to prevent weird iframe behaviour when switching players
+      if (a && b) {
+        return a.key < b.key ? -1 : 1;
+      }
+      return 0;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          url = _props.url,
+          style = _props.style,
+          width = _props.width,
+          height = _props.height,
+          light = _props.light,
+          Wrapper = _props.wrapper;
+      var showPreview = this.state.showPreview;
+
+      var otherProps = (0, _utils.omit)(this.props, SUPPORTED_PROPS, _props2.DEPRECATED_CONFIG_PROPS);
+      var activePlayer = this.getActivePlayer(url);
+      var renderedActivePlayer = this.renderActivePlayer(url, activePlayer);
+      var preloadPlayers = (0, _preload2['default'])(url, this.config);
+      var players = [renderedActivePlayer].concat(_toConsumableArray(preloadPlayers)).sort(this.sortPlayers);
+      if (showPreview && url) {
+        return _react2['default'].createElement(_Preview2['default'], {
+          url: url,
+          light: light,
+          onClick: this.onClickPreview
+        });
+      }
+      return _react2['default'].createElement(
+        Wrapper,
+        _extends({ ref: this.wrapperRef, style: _extends({}, style, { width: width, height: height }) }, otherProps),
+        players
+      );
+    }
+  }]);
+
+  return ReactPlayer;
+}(_react.Component);
+
+ReactPlayer.addCustomPlayer = function (player) {
+  customPlayers.push(player);
+};
+
+ReactPlayer.removeCustomPlayers = function () {
+  customPlayers = [];
+};
+
+ReactPlayer.displayName = 'ReactPlayer';
+ReactPlayer.propTypes = _props2.propTypes;
+ReactPlayer.defaultProps = _props2.defaultProps;
+
+ReactPlayer.canPlay = function (url) {
+  var _arr2 = [].concat(_toConsumableArray(customPlayers), _toConsumableArray(_players2['default']));
+
+  for (var _i2 = 0; _i2 < _arr2.length; _i2++) {
+    var _Player2 = _arr2[_i2];
+    if (_Player2.canPlay(url)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+ReactPlayer.canEnablePIP = function (url) {
+  var _arr3 = [].concat(_toConsumableArray(customPlayers), _toConsumableArray(_players2['default']));
+
+  for (var _i3 = 0; _i3 < _arr3.length; _i3++) {
+    var _Player3 = _arr3[_i3];
+    if (_Player3.canEnablePIP && _Player3.canEnablePIP(url)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+exports['default'] = ReactPlayer;
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/DailyMotion.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-player/lib/players/DailyMotion.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DailyMotion = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = 'https://api.dmcdn.net/all.js';
+var SDK_GLOBAL = 'DM';
+var SDK_GLOBAL_READY = 'dmAsyncInit';
+var MATCH_URL = /^(?:(?:https?):)?(?:\/\/)?(?:www\.)?(?:(?:dailymotion\.com(?:\/embed)?\/video)|dai\.ly)\/([a-zA-Z0-9]+)(?:_[\w_-]+)?$/;
+
+var DailyMotion = exports.DailyMotion = function (_Component) {
+  _inherits(DailyMotion, _Component);
+
+  function DailyMotion() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, DailyMotion);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DailyMotion.__proto__ || Object.getPrototypeOf(DailyMotion)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.onDurationChange = function () {
+      var duration = _this.getDuration();
+      _this.props.onDuration(duration);
+    }, _this.mute = function () {
+      _this.callPlayer('setMuted', true);
+    }, _this.unmute = function () {
+      _this.callPlayer('setMuted', false);
+    }, _this.ref = function (container) {
+      _this.container = container;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(DailyMotion, [{
+    key: 'load',
+    value: function load(url) {
+      var _this2 = this;
+
+      var _props = this.props,
+          controls = _props.controls,
+          config = _props.config,
+          onError = _props.onError,
+          playing = _props.playing;
+
+      var _url$match = url.match(MATCH_URL),
+          _url$match2 = _slicedToArray(_url$match, 2),
+          id = _url$match2[1];
+
+      if (this.player) {
+        this.player.load(id, {
+          start: (0, _utils.parseStartTime)(url),
+          autoplay: playing
+        });
+        return;
+      }
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL, SDK_GLOBAL_READY, function (DM) {
+        return DM.player;
+      }).then(function (DM) {
+        if (!_this2.container) return;
+        var Player = DM.player;
+        _this2.player = new Player(_this2.container, {
+          width: '100%',
+          height: '100%',
+          video: id,
+          params: _extends({
+            controls: controls,
+            autoplay: _this2.props.playing,
+            mute: _this2.props.muted,
+            start: (0, _utils.parseStartTime)(url),
+            origin: window.location.origin
+          }, config.dailymotion.params),
+          events: {
+            apiready: _this2.props.onReady,
+            seeked: function seeked() {
+              return _this2.props.onSeek(_this2.player.currentTime);
+            },
+            video_end: _this2.props.onEnded,
+            durationchange: _this2.onDurationChange,
+            pause: _this2.props.onPause,
+            playing: _this2.props.onPlay,
+            waiting: _this2.props.onBuffer,
+            error: function error(event) {
+              return onError(event);
+            }
+          }
+        });
+      }, onError);
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('play');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      // Nothing to do
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.callPlayer('seek', seconds);
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.callPlayer('setVolume', fraction);
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.player.duration || null;
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.player.currentTime;
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return this.player.bufferedTime;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var style = _extends({
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'black'
+      }, this.props.style);
+      return _react2['default'].createElement(
+        'div',
+        { style: style },
+        _react2['default'].createElement('div', { ref: this.ref })
+      );
+    }
+  }]);
+
+  return DailyMotion;
+}(_react.Component);
+
+DailyMotion.displayName = 'DailyMotion';
+
+DailyMotion.canPlay = function (url) {
+  return MATCH_URL.test(url);
+};
+
+DailyMotion.loopOnEnded = true;
+exports['default'] = (0, _singlePlayer2['default'])(DailyMotion);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/Facebook.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-player/lib/players/Facebook.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Facebook = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = '//connect.facebook.net/en_US/sdk.js';
+var SDK_GLOBAL = 'FB';
+var SDK_GLOBAL_READY = 'fbAsyncInit';
+var MATCH_URL = /facebook\.com\/([^/?].+\/)?video(s|\.php)[/?].*$/;
+var PLAYER_ID_PREFIX = 'facebook-player-';
+
+var Facebook = exports.Facebook = function (_Component) {
+  _inherits(Facebook, _Component);
+
+  function Facebook() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Facebook);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Facebook.__proto__ || Object.getPrototypeOf(Facebook)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.playerID = PLAYER_ID_PREFIX + (0, _utils.randomString)(), _this.mute = function () {
+      _this.callPlayer('mute');
+    }, _this.unmute = function () {
+      _this.callPlayer('unmute');
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Facebook, [{
+    key: 'load',
+    value: function load(url, isReady) {
+      var _this2 = this;
+
+      if (isReady) {
+        (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL, SDK_GLOBAL_READY).then(function (FB) {
+          return FB.XFBML.parse();
+        });
+        return;
+      }
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL, SDK_GLOBAL_READY).then(function (FB) {
+        FB.init({
+          appId: _this2.props.config.facebook.appId,
+          xfbml: true,
+          version: 'v2.5'
+        });
+        FB.Event.subscribe('xfbml.render', function (msg) {
+          // Here we know the SDK has loaded, even if onReady/onPlay
+          // is not called due to a video that cannot be embedded
+          _this2.props.onLoaded();
+        });
+        FB.Event.subscribe('xfbml.ready', function (msg) {
+          if (msg.type === 'video' && msg.id === _this2.playerID) {
+            _this2.player = msg.instance;
+            _this2.player.subscribe('startedPlaying', _this2.props.onPlay);
+            _this2.player.subscribe('paused', _this2.props.onPause);
+            _this2.player.subscribe('finishedPlaying', _this2.props.onEnded);
+            _this2.player.subscribe('startedBuffering', _this2.props.onBuffer);
+            _this2.player.subscribe('error', _this2.props.onError);
+            if (!_this2.props.muted) {
+              // Player is muted by default
+              _this2.callPlayer('unmute');
+            }
+            _this2.props.onReady();
+
+            // For some reason Facebook have added `visibility: hidden`
+            // to the iframe when autoplay fails, so here we set it back
+            document.getElementById(_this2.playerID).querySelector('iframe').style.visibility = 'visible';
+          }
+        });
+      });
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('play');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      // Nothing to do
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.callPlayer('seek', seconds);
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.callPlayer('setVolume', fraction);
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.callPlayer('getDuration');
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.callPlayer('getCurrentPosition');
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return null;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var style = {
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'black'
+      };
+      return _react2['default'].createElement('div', {
+        style: style,
+        id: this.playerID,
+        className: 'fb-video',
+        'data-href': this.props.url,
+        'data-autoplay': this.props.playing ? 'true' : 'false',
+        'data-allowfullscreen': 'true',
+        'data-controls': this.props.controls ? 'true' : 'false'
+      });
+    }
+  }]);
+
+  return Facebook;
+}(_react.Component);
+
+Facebook.displayName = 'Facebook';
+
+Facebook.canPlay = function (url) {
+  return MATCH_URL.test(url);
+};
+
+Facebook.loopOnEnded = true;
+exports['default'] = (0, _singlePlayer2['default'])(Facebook);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/FilePlayer.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-player/lib/players/FilePlayer.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FilePlayer = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var IOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+var AUDIO_EXTENSIONS = /\.(m4a|mp4a|mpga|mp2|mp2a|mp3|m2a|m3a|wav|weba|aac|oga|spx)($|\?)/i;
+var VIDEO_EXTENSIONS = /\.(mp4|og[gv]|webm|mov|m4v)($|\?)/i;
+var HLS_EXTENSIONS = /\.(m3u8)($|\?)/i;
+var HLS_SDK_URL = 'https://cdnjs.cloudflare.com/ajax/libs/hls.js/VERSION/hls.min.js';
+var HLS_GLOBAL = 'Hls';
+var DASH_EXTENSIONS = /\.(mpd)($|\?)/i;
+var DASH_SDK_URL = 'https://cdnjs.cloudflare.com/ajax/libs/dashjs/VERSION/dash.all.min.js';
+var DASH_GLOBAL = 'dashjs';
+var MATCH_DROPBOX_URL = /www\.dropbox\.com\/.+/;
+
+function canPlay(url) {
+  if (url instanceof Array) {
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+      for (var _iterator = url[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var item = _step.value;
+
+        if (typeof item === 'string' && canPlay(item)) {
+          return true;
+        }
+        if (canPlay(item.src)) {
+          return true;
+        }
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator['return']) {
+          _iterator['return']();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
+      }
+    }
+
+    return false;
+  }
+  if ((0, _utils.isMediaStream)(url)) {
+    return true;
+  }
+  return AUDIO_EXTENSIONS.test(url) || VIDEO_EXTENSIONS.test(url) || HLS_EXTENSIONS.test(url) || DASH_EXTENSIONS.test(url);
+}
+
+function canEnablePIP(url) {
+  return canPlay(url) && !!document.pictureInPictureEnabled && !AUDIO_EXTENSIONS.test(url);
+}
+
+var FilePlayer = exports.FilePlayer = function (_Component) {
+  _inherits(FilePlayer, _Component);
+
+  function FilePlayer() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, FilePlayer);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FilePlayer.__proto__ || Object.getPrototypeOf(FilePlayer)).call.apply(_ref, [this].concat(args))), _this), _this.onDisablePIP = function (e) {
+      var _this$props = _this.props,
+          onDisablePIP = _this$props.onDisablePIP,
+          playing = _this$props.playing;
+
+      onDisablePIP(e);
+      if (playing) {
+        _this.play();
+      }
+    }, _this.onSeek = function (e) {
+      _this.props.onSeek(e.target.currentTime);
+    }, _this.mute = function () {
+      _this.player.muted = true;
+    }, _this.unmute = function () {
+      _this.player.muted = false;
+    }, _this.renderSourceElement = function (source, index) {
+      if (typeof source === 'string') {
+        return _react2['default'].createElement('source', { key: index, src: source });
+      }
+      return _react2['default'].createElement('source', _extends({ key: index }, source));
+    }, _this.renderTrack = function (track, index) {
+      return _react2['default'].createElement('track', _extends({ key: index }, track));
+    }, _this.ref = function (player) {
+      _this.player = player;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(FilePlayer, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.addListeners();
+      if (IOS) {
+        this.player.load();
+      }
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (this.shouldUseAudio(this.props) !== this.shouldUseAudio(nextProps)) {
+        this.removeListeners();
+      }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      if (this.shouldUseAudio(this.props) !== this.shouldUseAudio(prevProps)) {
+        this.addListeners();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.removeListeners();
+    }
+  }, {
+    key: 'addListeners',
+    value: function addListeners() {
+      var _props = this.props,
+          onReady = _props.onReady,
+          onPlay = _props.onPlay,
+          onPause = _props.onPause,
+          onEnded = _props.onEnded,
+          onError = _props.onError,
+          playsinline = _props.playsinline,
+          onEnablePIP = _props.onEnablePIP;
+
+      this.player.addEventListener('canplay', onReady);
+      this.player.addEventListener('play', onPlay);
+      this.player.addEventListener('pause', onPause);
+      this.player.addEventListener('seeked', this.onSeek);
+      this.player.addEventListener('ended', onEnded);
+      this.player.addEventListener('error', onError);
+      this.player.addEventListener('enterpictureinpicture', onEnablePIP);
+      this.player.addEventListener('leavepictureinpicture', this.onDisablePIP);
+      if (playsinline) {
+        this.player.setAttribute('playsinline', '');
+        this.player.setAttribute('webkit-playsinline', '');
+        this.player.setAttribute('x5-playsinline', '');
+      }
+    }
+  }, {
+    key: 'removeListeners',
+    value: function removeListeners() {
+      var _props2 = this.props,
+          onReady = _props2.onReady,
+          onPlay = _props2.onPlay,
+          onPause = _props2.onPause,
+          onEnded = _props2.onEnded,
+          onError = _props2.onError,
+          onEnablePIP = _props2.onEnablePIP;
+
+      this.player.removeEventListener('canplay', onReady);
+      this.player.removeEventListener('play', onPlay);
+      this.player.removeEventListener('pause', onPause);
+      this.player.removeEventListener('seeked', this.onSeek);
+      this.player.removeEventListener('ended', onEnded);
+      this.player.removeEventListener('error', onError);
+      this.player.removeEventListener('enterpictureinpicture', onEnablePIP);
+      this.player.removeEventListener('leavepictureinpicture', this.onDisablePIP);
+    }
+  }, {
+    key: 'shouldUseAudio',
+    value: function shouldUseAudio(props) {
+      if (props.config.file.forceVideo) {
+        return false;
+      }
+      if (props.config.file.attributes.poster) {
+        return false; // Use <video> so that poster is shown
+      }
+      return AUDIO_EXTENSIONS.test(props.url) || props.config.file.forceAudio;
+    }
+  }, {
+    key: 'shouldUseHLS',
+    value: function shouldUseHLS(url) {
+      return HLS_EXTENSIONS.test(url) && !IOS || this.props.config.file.forceHLS;
+    }
+  }, {
+    key: 'shouldUseDASH',
+    value: function shouldUseDASH(url) {
+      return DASH_EXTENSIONS.test(url) || this.props.config.file.forceDASH;
+    }
+  }, {
+    key: 'load',
+    value: function load(url) {
+      var _this2 = this;
+
+      var _props$config$file = this.props.config.file,
+          hlsVersion = _props$config$file.hlsVersion,
+          dashVersion = _props$config$file.dashVersion;
+
+      if (this.shouldUseHLS(url)) {
+        (0, _utils.getSDK)(HLS_SDK_URL.replace('VERSION', hlsVersion), HLS_GLOBAL).then(function (Hls) {
+          _this2.hls = new Hls(_this2.props.config.file.hlsOptions);
+          _this2.hls.on(Hls.Events.ERROR, function (e, data) {
+            _this2.props.onError(e, data, _this2.hls, Hls);
+          });
+          _this2.hls.loadSource(url);
+          _this2.hls.attachMedia(_this2.player);
+        });
+      }
+      if (this.shouldUseDASH(url)) {
+        (0, _utils.getSDK)(DASH_SDK_URL.replace('VERSION', dashVersion), DASH_GLOBAL).then(function (dashjs) {
+          _this2.dash = dashjs.MediaPlayer().create();
+          _this2.dash.initialize(_this2.player, url, _this2.props.playing);
+          _this2.dash.getDebug().setLogToBrowserConsole(false);
+        });
+      }
+
+      if (url instanceof Array) {
+        // When setting new urls (<source>) on an already loaded video,
+        // HTMLMediaElement.load() is needed to reset the media element
+        // and restart the media resource. Just replacing children source
+        // dom nodes is not enough
+        this.player.load();
+      } else if ((0, _utils.isMediaStream)(url)) {
+        try {
+          this.player.srcObject = url;
+        } catch (e) {
+          this.player.src = window.URL.createObjectURL(url);
+        }
+      }
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      var promise = this.player.play();
+      if (promise) {
+        promise['catch'](this.props.onError);
+      }
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.player.pause();
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      this.player.removeAttribute('src');
+      if (this.hls) {
+        this.hls.destroy();
+      }
+      if (this.dash) {
+        this.dash.reset();
+      }
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.player.currentTime = seconds;
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.player.volume = fraction;
+    }
+  }, {
+    key: 'enablePIP',
+    value: function enablePIP() {
+      if (this.player.requestPictureInPicture && document.pictureInPictureElement !== this.player) {
+        this.player.requestPictureInPicture();
+      }
+    }
+  }, {
+    key: 'disablePIP',
+    value: function disablePIP() {
+      if (document.exitPictureInPicture && document.pictureInPictureElement === this.player) {
+        document.exitPictureInPicture();
+      }
+    }
+  }, {
+    key: 'setPlaybackRate',
+    value: function setPlaybackRate(rate) {
+      this.player.playbackRate = rate;
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      if (!this.player) return null;
+      var _player = this.player,
+          duration = _player.duration,
+          seekable = _player.seekable;
+      // on iOS, live streams return Infinity for the duration
+      // so instead we use the end of the seekable timerange
+
+      if (duration === Infinity && seekable.length > 0) {
+        return seekable.end(seekable.length - 1);
+      }
+      return duration;
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      if (!this.player) return null;
+      return this.player.currentTime;
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      if (!this.player) return null;
+      var buffered = this.player.buffered;
+
+      if (buffered.length === 0) {
+        return 0;
+      }
+      var end = buffered.end(buffered.length - 1);
+      var duration = this.getDuration();
+      if (end > duration) {
+        return duration;
+      }
+      return end;
+    }
+  }, {
+    key: 'getSource',
+    value: function getSource(url) {
+      var useHLS = this.shouldUseHLS(url);
+      var useDASH = this.shouldUseDASH(url);
+      if (url instanceof Array || (0, _utils.isMediaStream)(url) || useHLS || useDASH) {
+        return undefined;
+      }
+      if (MATCH_DROPBOX_URL.test(url)) {
+        return url.replace('www.dropbox.com', 'dl.dropboxusercontent.com');
+      }
+      return url;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props3 = this.props,
+          url = _props3.url,
+          playing = _props3.playing,
+          loop = _props3.loop,
+          controls = _props3.controls,
+          muted = _props3.muted,
+          config = _props3.config,
+          width = _props3.width,
+          height = _props3.height;
+
+      var useAudio = this.shouldUseAudio(this.props);
+      var Element = useAudio ? 'audio' : 'video';
+      var style = {
+        width: width === 'auto' ? width : '100%',
+        height: height === 'auto' ? height : '100%'
+      };
+      return _react2['default'].createElement(
+        Element,
+        _extends({
+          ref: this.ref,
+          src: this.getSource(url),
+          style: style,
+          preload: 'auto',
+          autoPlay: playing || undefined,
+          controls: controls,
+          muted: muted,
+          loop: loop
+        }, config.file.attributes),
+        url instanceof Array && url.map(this.renderSourceElement),
+        config.file.tracks.map(this.renderTrack)
+      );
+    }
+  }]);
+
+  return FilePlayer;
+}(_react.Component);
+
+FilePlayer.displayName = 'FilePlayer';
+FilePlayer.canPlay = canPlay;
+FilePlayer.canEnablePIP = canEnablePIP;
+exports['default'] = (0, _singlePlayer2['default'])(FilePlayer);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/Mixcloud.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-player/lib/players/Mixcloud.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Mixcloud = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = '//widget.mixcloud.com/media/js/widgetApi.js';
+var SDK_GLOBAL = 'Mixcloud';
+var MATCH_URL = /mixcloud\.com\/([^/]+\/[^/]+)/;
+
+var Mixcloud = exports.Mixcloud = function (_Component) {
+  _inherits(Mixcloud, _Component);
+
+  function Mixcloud() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Mixcloud);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Mixcloud.__proto__ || Object.getPrototypeOf(Mixcloud)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.duration = null, _this.currentTime = null, _this.secondsLoaded = null, _this.mute = function () {
+      // No volume support
+    }, _this.unmute = function () {
+      // No volume support
+    }, _this.ref = function (iframe) {
+      _this.iframe = iframe;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Mixcloud, [{
+    key: 'load',
+    value: function load(url) {
+      var _this2 = this;
+
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL).then(function (Mixcloud) {
+        _this2.player = Mixcloud.PlayerWidget(_this2.iframe);
+        _this2.player.ready.then(function () {
+          _this2.player.events.play.on(_this2.props.onPlay);
+          _this2.player.events.pause.on(_this2.props.onPause);
+          _this2.player.events.ended.on(_this2.props.onEnded);
+          _this2.player.events.error.on(_this2.props.error);
+          _this2.player.events.progress.on(function (seconds, duration) {
+            _this2.currentTime = seconds;
+            _this2.duration = duration;
+          });
+          _this2.props.onReady();
+        });
+      }, this.props.onError);
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('play');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      // Nothing to do
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.callPlayer('seek', seconds);
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      // No volume support
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.duration;
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.currentTime;
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return null;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          url = _props.url,
+          config = _props.config;
+
+      var id = url.match(MATCH_URL)[1];
+      var style = {
+        width: '100%',
+        height: '100%'
+      };
+      var query = (0, _utils.queryString)(_extends({}, config.mixcloud.options, {
+        feed: '/' + id + '/'
+      }));
+      // We have to give the iframe a key here to prevent a
+      // weird dialog appearing when loading a new track
+      return _react2['default'].createElement('iframe', {
+        key: id,
+        ref: this.ref,
+        style: style,
+        src: 'https://www.mixcloud.com/widget/iframe/?' + query,
+        frameBorder: '0'
+      });
+    }
+  }]);
+
+  return Mixcloud;
+}(_react.Component);
+
+Mixcloud.displayName = 'Mixcloud';
+
+Mixcloud.canPlay = function (url) {
+  return MATCH_URL.test(url);
+};
+
+Mixcloud.loopOnEnded = true;
+exports['default'] = (0, _singlePlayer2['default'])(Mixcloud);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/SoundCloud.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-player/lib/players/SoundCloud.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SoundCloud = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = 'https://w.soundcloud.com/player/api.js';
+var SDK_GLOBAL = 'SC';
+var MATCH_URL = /(soundcloud\.com|snd\.sc)\/.+$/;
+
+var SoundCloud = exports.SoundCloud = function (_Component) {
+  _inherits(SoundCloud, _Component);
+
+  function SoundCloud() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, SoundCloud);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SoundCloud.__proto__ || Object.getPrototypeOf(SoundCloud)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.duration = null, _this.currentTime = null, _this.fractionLoaded = null, _this.mute = function () {
+      _this.setVolume(0);
+    }, _this.unmute = function () {
+      if (_this.props.volume !== null) {
+        _this.setVolume(_this.props.volume);
+      }
+    }, _this.ref = function (iframe) {
+      _this.iframe = iframe;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(SoundCloud, [{
+    key: 'load',
+    value: function load(url, isReady) {
+      var _this2 = this;
+
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL).then(function (SC) {
+        if (!_this2.iframe) return;
+        var _SC$Widget$Events = SC.Widget.Events,
+            PLAY = _SC$Widget$Events.PLAY,
+            PLAY_PROGRESS = _SC$Widget$Events.PLAY_PROGRESS,
+            PAUSE = _SC$Widget$Events.PAUSE,
+            FINISH = _SC$Widget$Events.FINISH,
+            ERROR = _SC$Widget$Events.ERROR;
+
+        if (!isReady) {
+          _this2.player = SC.Widget(_this2.iframe);
+          _this2.player.bind(PLAY, _this2.props.onPlay);
+          _this2.player.bind(PAUSE, _this2.props.onPause);
+          _this2.player.bind(PLAY_PROGRESS, function (e) {
+            _this2.currentTime = e.currentPosition / 1000;
+            _this2.fractionLoaded = e.loadedProgress;
+          });
+          _this2.player.bind(FINISH, function () {
+            return _this2.props.onEnded();
+          });
+          _this2.player.bind(ERROR, function (e) {
+            return _this2.props.onError(e);
+          });
+        }
+        _this2.player.load(url, _extends({}, _this2.props.config.soundcloud.options, {
+          callback: function callback() {
+            _this2.player.getDuration(function (duration) {
+              _this2.duration = duration / 1000;
+              _this2.props.onReady();
+            });
+          }
+        }));
+      });
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('play');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      // Nothing to do
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.callPlayer('seekTo', seconds * 1000);
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.callPlayer('setVolume', fraction * 100);
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.duration;
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.currentTime;
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return this.fractionLoaded * this.duration;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var style = _extends({
+        width: '100%',
+        height: '100%'
+      }, this.props.style);
+      return _react2['default'].createElement('iframe', {
+        ref: this.ref,
+        src: 'https://w.soundcloud.com/player/?url=' + encodeURIComponent(this.props.url),
+        style: style,
+        frameBorder: 0
+      });
+    }
+  }]);
+
+  return SoundCloud;
+}(_react.Component);
+
+SoundCloud.displayName = 'SoundCloud';
+
+SoundCloud.canPlay = function (url) {
+  return MATCH_URL.test(url);
+};
+
+SoundCloud.loopOnEnded = true;
+exports['default'] = (0, _singlePlayer2['default'])(SoundCloud);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/Streamable.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-player/lib/players/Streamable.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Streamable = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = '//cdn.embed.ly/player-0.1.0.min.js';
+var SDK_GLOBAL = 'playerjs';
+var MATCH_URL = /streamable\.com\/([a-z0-9]+)$/;
+
+var Streamable = exports.Streamable = function (_Component) {
+  _inherits(Streamable, _Component);
+
+  function Streamable() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Streamable);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Streamable.__proto__ || Object.getPrototypeOf(Streamable)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.duration = null, _this.currentTime = null, _this.secondsLoaded = null, _this.mute = function () {
+      _this.callPlayer('mute');
+    }, _this.unmute = function () {
+      _this.callPlayer('unmute');
+    }, _this.ref = function (iframe) {
+      _this.iframe = iframe;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Streamable, [{
+    key: 'load',
+    value: function load(url) {
+      var _this2 = this;
+
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL).then(function (playerjs) {
+        if (!_this2.iframe) return;
+        _this2.player = new playerjs.Player(_this2.iframe);
+        _this2.player.setLoop(_this2.props.loop);
+        _this2.player.on('ready', _this2.props.onReady);
+        _this2.player.on('play', _this2.props.onPlay);
+        _this2.player.on('pause', _this2.props.onPause);
+        _this2.player.on('seeked', _this2.props.onSeek);
+        _this2.player.on('ended', _this2.props.onEnded);
+        _this2.player.on('error', _this2.props.onError);
+        _this2.player.on('timeupdate', function (_ref2) {
+          var duration = _ref2.duration,
+              seconds = _ref2.seconds;
+
+          _this2.duration = duration;
+          _this2.currentTime = seconds;
+        });
+        _this2.player.on('buffered', function (_ref3) {
+          var percent = _ref3.percent;
+
+          if (_this2.duration) {
+            _this2.secondsLoaded = _this2.duration * percent;
+          }
+        });
+        if (_this2.props.muted) {
+          _this2.player.mute();
+        }
+      }, this.props.onError);
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('play');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      // Nothing to do
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.callPlayer('setCurrentTime', seconds);
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.callPlayer('setVolume', fraction * 100);
+    }
+  }, {
+    key: 'setLoop',
+    value: function setLoop(loop) {
+      this.callPlayer('setLoop', loop);
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.duration;
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.currentTime;
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return this.secondsLoaded;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var id = this.props.url.match(MATCH_URL)[1];
+      var style = {
+        width: '100%',
+        height: '100%'
+      };
+      return _react2['default'].createElement('iframe', {
+        ref: this.ref,
+        src: 'https://streamable.com/o/' + id,
+        frameBorder: '0',
+        scrolling: 'no',
+        style: style,
+        allowFullScreen: true
+      });
+    }
+  }]);
+
+  return Streamable;
+}(_react.Component);
+
+Streamable.displayName = 'Streamable';
+
+Streamable.canPlay = function (url) {
+  return MATCH_URL.test(url);
+};
+
+exports['default'] = (0, _singlePlayer2['default'])(Streamable);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/Twitch.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-player/lib/players/Twitch.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Twitch = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = 'https://player.twitch.tv/js/embed/v1.js';
+var SDK_GLOBAL = 'Twitch';
+var MATCH_VIDEO_URL = /(?:www\.|go\.)?twitch\.tv\/videos\/(\d+)($|\?)/;
+var MATCH_CHANNEL_URL = /(?:www\.|go\.)?twitch\.tv\/([a-z0-9_]+)($|\?)/;
+var PLAYER_ID_PREFIX = 'twitch-player-';
+
+var Twitch = exports.Twitch = function (_Component) {
+  _inherits(Twitch, _Component);
+
+  function Twitch() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Twitch);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Twitch.__proto__ || Object.getPrototypeOf(Twitch)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.playerID = PLAYER_ID_PREFIX + (0, _utils.randomString)(), _this.mute = function () {
+      _this.callPlayer('setMuted', true);
+    }, _this.unmute = function () {
+      _this.callPlayer('setMuted', false);
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Twitch, [{
+    key: 'load',
+    value: function load(url, isReady) {
+      var _this2 = this;
+
+      var _props = this.props,
+          playsinline = _props.playsinline,
+          onError = _props.onError,
+          config = _props.config;
+
+      var isChannel = MATCH_CHANNEL_URL.test(url);
+      var id = isChannel ? url.match(MATCH_CHANNEL_URL)[1] : url.match(MATCH_VIDEO_URL)[1];
+      if (isReady) {
+        if (isChannel) {
+          this.player.setChannel(id);
+        } else {
+          this.player.setVideo('v' + id);
+        }
+        return;
+      }
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL).then(function (Twitch) {
+        _this2.player = new Twitch.Player(_this2.playerID, _extends({
+          video: isChannel ? '' : id,
+          channel: isChannel ? id : '',
+          height: '100%',
+          width: '100%',
+          playsinline: playsinline,
+          autoplay: _this2.props.playing,
+          muted: _this2.props.muted
+        }, config.twitch.options));
+        var _Twitch$Player = Twitch.Player,
+            READY = _Twitch$Player.READY,
+            PLAYING = _Twitch$Player.PLAYING,
+            PAUSE = _Twitch$Player.PAUSE,
+            ENDED = _Twitch$Player.ENDED;
+
+        _this2.player.addEventListener(READY, _this2.props.onReady);
+        _this2.player.addEventListener(PLAYING, _this2.props.onPlay);
+        _this2.player.addEventListener(PAUSE, _this2.props.onPause);
+        _this2.player.addEventListener(ENDED, _this2.props.onEnded);
+      }, onError);
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('play');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.callPlayer('seek', seconds);
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.callPlayer('setVolume', fraction);
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.callPlayer('getDuration');
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.callPlayer('getCurrentTime');
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return null;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var style = {
+        width: '100%',
+        height: '100%'
+      };
+      return _react2['default'].createElement('div', { style: style, id: this.playerID });
+    }
+  }]);
+
+  return Twitch;
+}(_react.Component);
+
+Twitch.displayName = 'Twitch';
+
+Twitch.canPlay = function (url) {
+  return MATCH_VIDEO_URL.test(url) || MATCH_CHANNEL_URL.test(url);
+};
+
+Twitch.loopOnEnded = true;
+exports['default'] = (0, _singlePlayer2['default'])(Twitch);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/Vimeo.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-player/lib/players/Vimeo.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Vimeo = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = 'https://player.vimeo.com/api/player.js';
+var SDK_GLOBAL = 'Vimeo';
+var MATCH_URL = /vimeo\.com\/.+/;
+var MATCH_FILE_URL = /vimeo\.com\/external\/.+\.mp4/;
+
+var Vimeo = exports.Vimeo = function (_Component) {
+  _inherits(Vimeo, _Component);
+
+  function Vimeo() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Vimeo);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Vimeo.__proto__ || Object.getPrototypeOf(Vimeo)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.duration = null, _this.currentTime = null, _this.secondsLoaded = null, _this.mute = function () {
+      _this.setVolume(0);
+    }, _this.unmute = function () {
+      if (_this.props.volume !== null) {
+        _this.setVolume(_this.props.volume);
+      }
+    }, _this.ref = function (container) {
+      _this.container = container;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Vimeo, [{
+    key: 'load',
+    value: function load(url) {
+      var _this2 = this;
+
+      this.duration = null;
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL).then(function (Vimeo) {
+        if (!_this2.container) return;
+        _this2.player = new Vimeo.Player(_this2.container, _extends({}, _this2.props.config.vimeo.playerOptions, {
+          url: url,
+          autoplay: _this2.props.playing,
+          muted: _this2.props.muted,
+          loop: _this2.props.loop
+        }));
+        _this2.player.ready().then(function () {
+          var iframe = _this2.container.querySelector('iframe');
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+        })['catch'](_this2.props.onError);
+        _this2.player.on('loaded', function () {
+          _this2.props.onReady();
+          _this2.refreshDuration();
+        });
+        _this2.player.on('play', function () {
+          _this2.props.onPlay();
+          _this2.refreshDuration();
+        });
+        _this2.player.on('pause', _this2.props.onPause);
+        _this2.player.on('seeked', function (e) {
+          return _this2.props.onSeek(e.seconds);
+        });
+        _this2.player.on('ended', _this2.props.onEnded);
+        _this2.player.on('error', _this2.props.onError);
+        _this2.player.on('timeupdate', function (_ref2) {
+          var seconds = _ref2.seconds;
+
+          _this2.currentTime = seconds;
+        });
+        _this2.player.on('progress', function (_ref3) {
+          var seconds = _ref3.seconds;
+
+          _this2.secondsLoaded = seconds;
+        });
+      }, this.props.onError);
+    }
+  }, {
+    key: 'refreshDuration',
+    value: function refreshDuration() {
+      var _this3 = this;
+
+      this.player.getDuration().then(function (duration) {
+        _this3.duration = duration;
+      });
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('play');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      this.callPlayer('unload');
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.callPlayer('setCurrentTime', seconds);
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.callPlayer('setVolume', fraction);
+    }
+  }, {
+    key: 'setLoop',
+    value: function setLoop(loop) {
+      this.callPlayer('setLoop', loop);
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.duration;
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.currentTime;
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return this.secondsLoaded;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var style = _extends({
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
+        backgroundColor: 'black'
+      }, this.props.style);
+      return _react2['default'].createElement('div', {
+        key: this.props.url,
+        ref: this.ref,
+        style: style
+      });
+    }
+  }]);
+
+  return Vimeo;
+}(_react.Component);
+
+Vimeo.displayName = 'Vimeo';
+
+Vimeo.canPlay = function (url) {
+  if (MATCH_FILE_URL.test(url)) {
+    return false;
+  }
+  return MATCH_URL.test(url);
+};
+
+exports['default'] = (0, _singlePlayer2['default'])(Vimeo);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/Wistia.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-player/lib/players/Wistia.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Wistia = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = '//fast.wistia.com/assets/external/E-v1.js';
+var SDK_GLOBAL = 'Wistia';
+var MATCH_URL = /(?:wistia\.com|wi\.st)\/(?:medias|embed)\/(.*)$/;
+
+var Wistia = exports.Wistia = function (_Component) {
+  _inherits(Wistia, _Component);
+
+  function Wistia() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Wistia);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Wistia.__proto__ || Object.getPrototypeOf(Wistia)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.mute = function () {
+      _this.callPlayer('mute');
+    }, _this.unmute = function () {
+      _this.callPlayer('unmute');
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Wistia, [{
+    key: 'getID',
+    value: function getID(url) {
+      return url && url.match(MATCH_URL)[1];
+    }
+  }, {
+    key: 'load',
+    value: function load(url) {
+      var _this2 = this;
+
+      var _props = this.props,
+          playing = _props.playing,
+          muted = _props.muted,
+          controls = _props.controls,
+          _onReady = _props.onReady,
+          onPlay = _props.onPlay,
+          onPause = _props.onPause,
+          onSeek = _props.onSeek,
+          onEnded = _props.onEnded,
+          config = _props.config;
+
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL).then(function () {
+        window._wq = window._wq || [];
+        window._wq.push({
+          id: _this2.getID(url),
+          options: _extends({
+            autoPlay: playing,
+            silentAutoPlay: 'allow',
+            muted: muted,
+            controlsVisibleOnLoad: controls
+          }, config.wistia.options),
+          onReady: function onReady(player) {
+            _this2.player = player;
+            _this2.player.bind('play', onPlay);
+            _this2.player.bind('pause', onPause);
+            _this2.player.bind('seek', onSeek);
+            _this2.player.bind('end', onEnded);
+            _onReady();
+          }
+        });
+      });
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('play');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pause');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      this.callPlayer('remove');
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(seconds) {
+      this.callPlayer('time', seconds);
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.callPlayer('volume', fraction);
+    }
+  }, {
+    key: 'setPlaybackRate',
+    value: function setPlaybackRate(rate) {
+      this.callPlayer('playbackRate', rate);
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.callPlayer('duration');
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.callPlayer('time');
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return null;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var id = this.getID(this.props.url);
+      var className = 'wistia_embed wistia_async_' + id;
+      var style = {
+        width: '100%',
+        height: '100%'
+      };
+      return _react2['default'].createElement('div', { key: id, className: className, style: style });
+    }
+  }]);
+
+  return Wistia;
+}(_react.Component);
+
+Wistia.displayName = 'Wistia';
+
+Wistia.canPlay = function (url) {
+  return MATCH_URL.test(url);
+};
+
+Wistia.loopOnEnded = true;
+exports['default'] = (0, _singlePlayer2['default'])(Wistia);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/YouTube.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-player/lib/players/YouTube.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.YouTube = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules/react-player/lib/utils.js");
+
+var _singlePlayer = __webpack_require__(/*! ../singlePlayer */ "./node_modules/react-player/lib/singlePlayer.js");
+
+var _singlePlayer2 = _interopRequireDefault(_singlePlayer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SDK_URL = 'https://www.youtube.com/iframe_api';
+var SDK_GLOBAL = 'YT';
+var SDK_GLOBAL_READY = 'onYouTubeIframeAPIReady';
+var MATCH_URL = /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})|youtube\.com\/playlist\?list=/;
+var MATCH_PLAYLIST = /list=([a-zA-Z0-9_-]+)/;
+
+function parsePlaylist(url) {
+  if (MATCH_PLAYLIST.test(url)) {
+    var _url$match = url.match(MATCH_PLAYLIST),
+        _url$match2 = _slicedToArray(_url$match, 2),
+        playlistId = _url$match2[1];
+
+    return {
+      listType: 'playlist',
+      list: playlistId
+    };
+  }
+  return {};
+}
+
+var YouTube = exports.YouTube = function (_Component) {
+  _inherits(YouTube, _Component);
+
+  function YouTube() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, YouTube);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = YouTube.__proto__ || Object.getPrototypeOf(YouTube)).call.apply(_ref, [this].concat(args))), _this), _this.callPlayer = _utils.callPlayer, _this.onStateChange = function (_ref2) {
+      var data = _ref2.data;
+      var _this$props = _this.props,
+          onPlay = _this$props.onPlay,
+          onPause = _this$props.onPause,
+          onBuffer = _this$props.onBuffer,
+          onEnded = _this$props.onEnded,
+          onReady = _this$props.onReady,
+          loop = _this$props.loop;
+      var _window$SDK_GLOBAL$Pl = window[SDK_GLOBAL].PlayerState,
+          PLAYING = _window$SDK_GLOBAL$Pl.PLAYING,
+          PAUSED = _window$SDK_GLOBAL$Pl.PAUSED,
+          BUFFERING = _window$SDK_GLOBAL$Pl.BUFFERING,
+          ENDED = _window$SDK_GLOBAL$Pl.ENDED,
+          CUED = _window$SDK_GLOBAL$Pl.CUED;
+
+      if (data === PLAYING) onPlay();
+      if (data === PAUSED) onPause();
+      if (data === BUFFERING) onBuffer();
+      if (data === ENDED) {
+        var isPlaylist = !!_this.callPlayer('getPlaylist');
+        if (loop && !isPlaylist) {
+          _this.play(); // Only loop manually if not playing a playlist
+        }
+        onEnded();
+      }
+      if (data === CUED) onReady();
+    }, _this.mute = function () {
+      _this.callPlayer('mute');
+    }, _this.unmute = function () {
+      _this.callPlayer('unMute');
+    }, _this.ref = function (container) {
+      _this.container = container;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(YouTube, [{
+    key: 'load',
+    value: function load(url, isReady) {
+      var _this2 = this;
+
+      var _props = this.props,
+          playing = _props.playing,
+          muted = _props.muted,
+          playsinline = _props.playsinline,
+          controls = _props.controls,
+          loop = _props.loop,
+          config = _props.config,
+          _onError = _props.onError;
+      var _config$youtube = config.youtube,
+          playerVars = _config$youtube.playerVars,
+          embedOptions = _config$youtube.embedOptions;
+
+      var id = url && url.match(MATCH_URL)[1];
+      if (isReady) {
+        if (MATCH_PLAYLIST.test(url)) {
+          this.player.loadPlaylist(parsePlaylist(url));
+          return;
+        }
+        this.player.cueVideoById({
+          videoId: id,
+          startSeconds: (0, _utils.parseStartTime)(url) || playerVars.start,
+          endSeconds: (0, _utils.parseEndTime)(url) || playerVars.end
+        });
+        return;
+      }
+      (0, _utils.getSDK)(SDK_URL, SDK_GLOBAL, SDK_GLOBAL_READY, function (YT) {
+        return YT.loaded;
+      }).then(function (YT) {
+        if (!_this2.container) return;
+        _this2.player = new YT.Player(_this2.container, _extends({
+          width: '100%',
+          height: '100%',
+          videoId: id,
+          playerVars: _extends({
+            autoplay: playing ? 1 : 0,
+            mute: muted ? 1 : 0,
+            controls: controls ? 1 : 0,
+            start: (0, _utils.parseStartTime)(url),
+            end: (0, _utils.parseEndTime)(url),
+            origin: window.location.origin,
+            playsinline: playsinline
+          }, parsePlaylist(url), playerVars),
+          events: {
+            onReady: _this2.props.onReady,
+            onStateChange: _this2.onStateChange,
+            onError: function onError(event) {
+              return _onError(event.data);
+            }
+          }
+        }, embedOptions));
+        if (loop) {
+          _this2.player.setLoop(true); // Enable playlist looping
+        }
+      }, _onError);
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.callPlayer('playVideo');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.callPlayer('pauseVideo');
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      if (!document.body.contains(this.callPlayer('getIframe'))) return;
+      this.callPlayer('stopVideo');
+    }
+  }, {
+    key: 'seekTo',
+    value: function seekTo(amount) {
+      this.callPlayer('seekTo', amount);
+      if (!this.props.playing) {
+        this.pause();
+      }
+    }
+  }, {
+    key: 'setVolume',
+    value: function setVolume(fraction) {
+      this.callPlayer('setVolume', fraction * 100);
+    }
+  }, {
+    key: 'setPlaybackRate',
+    value: function setPlaybackRate(rate) {
+      this.callPlayer('setPlaybackRate', rate);
+    }
+  }, {
+    key: 'setLoop',
+    value: function setLoop(loop) {
+      this.callPlayer('setLoop', loop);
+    }
+  }, {
+    key: 'getDuration',
+    value: function getDuration() {
+      return this.callPlayer('getDuration');
+    }
+  }, {
+    key: 'getCurrentTime',
+    value: function getCurrentTime() {
+      return this.callPlayer('getCurrentTime');
+    }
+  }, {
+    key: 'getSecondsLoaded',
+    value: function getSecondsLoaded() {
+      return this.callPlayer('getVideoLoadedFraction') * this.getDuration();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var style = _extends({
+        width: '100%',
+        height: '100%'
+      }, this.props.style);
+      return _react2['default'].createElement(
+        'div',
+        { style: style },
+        _react2['default'].createElement('div', { ref: this.ref })
+      );
+    }
+  }]);
+
+  return YouTube;
+}(_react.Component);
+
+YouTube.displayName = 'YouTube';
+
+YouTube.canPlay = function (url) {
+  return MATCH_URL.test(url);
+};
+
+exports['default'] = (0, _singlePlayer2['default'])(YouTube);
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/players/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-player/lib/players/index.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _YouTube = __webpack_require__(/*! ./YouTube */ "./node_modules/react-player/lib/players/YouTube.js");
+
+var _SoundCloud = __webpack_require__(/*! ./SoundCloud */ "./node_modules/react-player/lib/players/SoundCloud.js");
+
+var _Vimeo = __webpack_require__(/*! ./Vimeo */ "./node_modules/react-player/lib/players/Vimeo.js");
+
+var _Facebook = __webpack_require__(/*! ./Facebook */ "./node_modules/react-player/lib/players/Facebook.js");
+
+var _Streamable = __webpack_require__(/*! ./Streamable */ "./node_modules/react-player/lib/players/Streamable.js");
+
+var _Wistia = __webpack_require__(/*! ./Wistia */ "./node_modules/react-player/lib/players/Wistia.js");
+
+var _Twitch = __webpack_require__(/*! ./Twitch */ "./node_modules/react-player/lib/players/Twitch.js");
+
+var _DailyMotion = __webpack_require__(/*! ./DailyMotion */ "./node_modules/react-player/lib/players/DailyMotion.js");
+
+var _Mixcloud = __webpack_require__(/*! ./Mixcloud */ "./node_modules/react-player/lib/players/Mixcloud.js");
+
+var _FilePlayer = __webpack_require__(/*! ./FilePlayer */ "./node_modules/react-player/lib/players/FilePlayer.js");
+
+exports['default'] = [_YouTube.YouTube, _SoundCloud.SoundCloud, _Vimeo.Vimeo, _Facebook.Facebook, _Streamable.Streamable, _Wistia.Wistia, _Twitch.Twitch, _DailyMotion.DailyMotion, _Mixcloud.Mixcloud, _FilePlayer.FilePlayer];
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/preload.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-player/lib/preload.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports['default'] = renderPreloadPlayers;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Player = __webpack_require__(/*! ./Player */ "./node_modules/react-player/lib/Player.js");
+
+var _Player2 = _interopRequireDefault(_Player);
+
+var _YouTube = __webpack_require__(/*! ./players/YouTube */ "./node_modules/react-player/lib/players/YouTube.js");
+
+var _SoundCloud = __webpack_require__(/*! ./players/SoundCloud */ "./node_modules/react-player/lib/players/SoundCloud.js");
+
+var _Vimeo = __webpack_require__(/*! ./players/Vimeo */ "./node_modules/react-player/lib/players/Vimeo.js");
+
+var _DailyMotion = __webpack_require__(/*! ./players/DailyMotion */ "./node_modules/react-player/lib/players/DailyMotion.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var PRELOAD_PLAYERS = [{
+  Player: _YouTube.YouTube,
+  configKey: 'youtube',
+  url: 'https://www.youtube.com/watch?v=GlCmAC4MHek'
+}, {
+  Player: _SoundCloud.SoundCloud,
+  configKey: 'soundcloud',
+  url: 'https://soundcloud.com/seucheu/john-cage-433-8-bit-version'
+}, {
+  Player: _Vimeo.Vimeo,
+  configKey: 'vimeo',
+  url: 'https://vimeo.com/300970506'
+}, {
+  Player: _DailyMotion.DailyMotion,
+  configKey: 'dailymotion',
+  url: 'http://www.dailymotion.com/video/xqdpyk'
+}];
+
+function renderPreloadPlayers(url, config) {
+  var players = [];
+
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = PRELOAD_PLAYERS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var player = _step.value;
+
+      if (!player.Player.canPlay(url) && config[player.configKey].preload) {
+        players.push(_react2['default'].createElement(_Player2['default'], {
+          key: player.Player.displayName,
+          activePlayer: player.Player,
+          url: player.url,
+          playing: true,
+          muted: true,
+          style: { display: 'none' }
+        }));
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator['return']) {
+        _iterator['return']();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return players;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/props.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-player/lib/props.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DEPRECATED_CONFIG_PROPS = exports.defaultProps = exports.propTypes = undefined;
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var string = _propTypes2['default'].string,
+    bool = _propTypes2['default'].bool,
+    number = _propTypes2['default'].number,
+    array = _propTypes2['default'].array,
+    oneOfType = _propTypes2['default'].oneOfType,
+    shape = _propTypes2['default'].shape,
+    object = _propTypes2['default'].object,
+    func = _propTypes2['default'].func;
+var propTypes = exports.propTypes = {
+  url: oneOfType([string, array, object]),
+  playing: bool,
+  loop: bool,
+  controls: bool,
+  volume: number,
+  muted: bool,
+  playbackRate: number,
+  width: oneOfType([string, number]),
+  height: oneOfType([string, number]),
+  style: object,
+  progressInterval: number,
+  playsinline: bool,
+  pip: bool,
+  light: oneOfType([bool, string]),
+  wrapper: oneOfType([string, func, shape({ render: func.isRequired })]),
+  config: shape({
+    soundcloud: shape({
+      options: object
+    }),
+    youtube: shape({
+      playerVars: object,
+      embedOptions: object,
+      preload: bool
+    }),
+    facebook: shape({
+      appId: string
+    }),
+    dailymotion: shape({
+      params: object,
+      preload: bool
+    }),
+    vimeo: shape({
+      playerOptions: object,
+      preload: bool
+    }),
+    file: shape({
+      attributes: object,
+      tracks: array,
+      forceVideo: bool,
+      forceAudio: bool,
+      forceHLS: bool,
+      forceDASH: bool,
+      hlsOptions: object,
+      hlsVersion: string,
+      dashVersion: string
+    }),
+    wistia: shape({
+      options: object
+    }),
+    mixcloud: shape({
+      options: object
+    }),
+    twitch: shape({
+      options: object
+    })
+  }),
+  onReady: func,
+  onStart: func,
+  onPlay: func,
+  onPause: func,
+  onBuffer: func,
+  onEnded: func,
+  onError: func,
+  onDuration: func,
+  onSeek: func,
+  onProgress: func,
+  onEnablePIP: func,
+  onDisablePIP: func
+};
+
+var defaultProps = exports.defaultProps = {
+  playing: false,
+  loop: false,
+  controls: false,
+  volume: null,
+  muted: false,
+  playbackRate: 1,
+  width: '640px',
+  height: '360px',
+  style: {},
+  progressInterval: 1000,
+  playsinline: false,
+  pip: false,
+  light: false,
+  wrapper: 'div',
+  config: {
+    soundcloud: {
+      options: {
+        visual: true, // Undocumented, but makes player fill container and look better
+        buying: false,
+        liking: false,
+        download: false,
+        sharing: false,
+        show_comments: false,
+        show_playcount: false
+      }
+    },
+    youtube: {
+      playerVars: {
+        playsinline: 1,
+        showinfo: 0,
+        rel: 0,
+        iv_load_policy: 3,
+        modestbranding: 1
+      },
+      embedOptions: {},
+      preload: false
+    },
+    facebook: {
+      appId: '1309697205772819'
+    },
+    dailymotion: {
+      params: {
+        api: 1,
+        'endscreen-enable': false
+      },
+      preload: false
+    },
+    vimeo: {
+      playerOptions: {
+        autopause: false,
+        byline: false,
+        portrait: false,
+        title: false
+      },
+      preload: false
+    },
+    file: {
+      attributes: {},
+      tracks: [],
+      forceVideo: false,
+      forceAudio: false,
+      forceHLS: false,
+      forceDASH: false,
+      hlsOptions: {},
+      hlsVersion: '0.10.1',
+      dashVersion: '2.9.2'
+    },
+    wistia: {
+      options: {}
+    },
+    mixcloud: {
+      options: {
+        hide_cover: 1
+      }
+    },
+    twitch: {
+      options: {}
+    }
+  },
+  onReady: function onReady() {},
+  onStart: function onStart() {},
+  onPlay: function onPlay() {},
+  onPause: function onPause() {},
+  onBuffer: function onBuffer() {},
+  onEnded: function onEnded() {},
+  onError: function onError() {},
+  onDuration: function onDuration() {},
+  onSeek: function onSeek() {},
+  onProgress: function onProgress() {},
+  onEnablePIP: function onEnablePIP() {},
+  onDisablePIP: function onDisablePIP() {}
+};
+
+var DEPRECATED_CONFIG_PROPS = exports.DEPRECATED_CONFIG_PROPS = ['soundcloudConfig', 'youtubeConfig', 'facebookConfig', 'dailymotionConfig', 'vimeoConfig', 'fileConfig', 'wistiaConfig'];
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/singlePlayer.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-player/lib/singlePlayer.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+exports['default'] = createSinglePlayer;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _props2 = __webpack_require__(/*! ./props */ "./node_modules/react-player/lib/props.js");
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-player/lib/utils.js");
+
+var _Player = __webpack_require__(/*! ./Player */ "./node_modules/react-player/lib/Player.js");
+
+var _Player2 = _interopRequireDefault(_Player);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SUPPORTED_PROPS = Object.keys(_props2.propTypes);
+
+function createSinglePlayer(activePlayer) {
+  var _class, _temp2;
+
+  return _temp2 = _class = function (_Component) {
+    _inherits(SinglePlayer, _Component);
+
+    function SinglePlayer() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, SinglePlayer);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SinglePlayer.__proto__ || Object.getPrototypeOf(SinglePlayer)).call.apply(_ref, [this].concat(args))), _this), _this.config = (0, _utils.getConfig)(_this.props, _props2.defaultProps, true), _this.getDuration = function () {
+        if (!_this.player) return null;
+        return _this.player.getDuration();
+      }, _this.getCurrentTime = function () {
+        if (!_this.player) return null;
+        return _this.player.getCurrentTime();
+      }, _this.getSecondsLoaded = function () {
+        if (!_this.player) return null;
+        return _this.player.getSecondsLoaded();
+      }, _this.getInternalPlayer = function () {
+        var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'player';
+
+        if (!_this.player) return null;
+        return _this.player.getInternalPlayer(key);
+      }, _this.seekTo = function (fraction) {
+        if (!_this.player) return null;
+        _this.player.seekTo(fraction);
+      }, _this.ref = function (player) {
+        _this.player = player;
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(SinglePlayer, [{
+      key: 'shouldComponentUpdate',
+      value: function shouldComponentUpdate(nextProps) {
+        return !(0, _utils.isEqual)(this.props, nextProps);
+      }
+    }, {
+      key: 'componentWillUpdate',
+      value: function componentWillUpdate(nextProps) {
+        this.config = (0, _utils.getConfig)(nextProps, _props2.defaultProps);
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _config$file = this.config.file,
+            forceVideo = _config$file.forceVideo,
+            forceAudio = _config$file.forceAudio,
+            forceHLS = _config$file.forceHLS,
+            forceDASH = _config$file.forceDASH;
+
+        var skipCanPlay = forceVideo || forceAudio || forceHLS || forceDASH;
+        if (!activePlayer.canPlay(this.props.url) && !skipCanPlay) {
+          return null;
+        }
+        var _props = this.props,
+            style = _props.style,
+            width = _props.width,
+            height = _props.height,
+            Wrapper = _props.wrapper;
+
+        var otherProps = (0, _utils.omit)(this.props, SUPPORTED_PROPS, _props2.DEPRECATED_CONFIG_PROPS);
+        return _react2['default'].createElement(
+          Wrapper,
+          _extends({ style: _extends({}, style, { width: width, height: height }) }, otherProps),
+          _react2['default'].createElement(_Player2['default'], _extends({}, this.props, {
+            ref: this.ref,
+            activePlayer: activePlayer,
+            config: this.config
+          }))
+        );
+      }
+    }]);
+
+    return SinglePlayer;
+  }(_react.Component), _class.displayName = activePlayer.displayName + 'Player', _class.propTypes = _props2.propTypes, _class.defaultProps = _props2.defaultProps, _class.canPlay = activePlayer.canPlay, _temp2;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-player/lib/utils.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-player/lib/utils.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+exports.parseStartTime = parseStartTime;
+exports.parseEndTime = parseEndTime;
+exports.randomString = randomString;
+exports.queryString = queryString;
+exports.getSDK = getSDK;
+exports.getConfig = getConfig;
+exports.omit = omit;
+exports.callPlayer = callPlayer;
+exports.isObject = isObject;
+exports.isEqual = isEqual;
+exports.isMediaStream = isMediaStream;
+
+var _loadScript = __webpack_require__(/*! load-script */ "./node_modules/load-script/index.js");
+
+var _loadScript2 = _interopRequireDefault(_loadScript);
+
+var _deepmerge = __webpack_require__(/*! deepmerge */ "./node_modules/deepmerge/dist/umd.js");
+
+var _deepmerge2 = _interopRequireDefault(_deepmerge);
+
+var _props = __webpack_require__(/*! ./props */ "./node_modules/react-player/lib/props.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var MATCH_START_QUERY = /[?&#](?:start|t)=([0-9hms]+)/;
+var MATCH_END_QUERY = /[?&#]end=([0-9hms]+)/;
+var MATCH_START_STAMP = /(\d+)(h|m|s)/g;
+var MATCH_NUMERIC = /^\d+$/;
+
+// Parse YouTube URL for a start time param, ie ?t=1h14m30s
+// and return the start time in seconds
+function parseTimeParam(url, pattern) {
+  var match = url.match(pattern);
+  if (match) {
+    var stamp = match[1];
+    if (stamp.match(MATCH_START_STAMP)) {
+      return parseTimeString(stamp);
+    }
+    if (MATCH_NUMERIC.test(stamp)) {
+      return parseInt(stamp);
+    }
+  }
+  return undefined;
+}
+
+function parseTimeString(stamp) {
+  var seconds = 0;
+  var array = MATCH_START_STAMP.exec(stamp);
+  while (array !== null) {
+    var _array = array,
+        _array2 = _slicedToArray(_array, 3),
+        count = _array2[1],
+        period = _array2[2];
+
+    if (period === 'h') seconds += parseInt(count, 10) * 60 * 60;
+    if (period === 'm') seconds += parseInt(count, 10) * 60;
+    if (period === 's') seconds += parseInt(count, 10);
+    array = MATCH_START_STAMP.exec(stamp);
+  }
+  return seconds;
+}
+
+function parseStartTime(url) {
+  return parseTimeParam(url, MATCH_START_QUERY);
+}
+
+function parseEndTime(url) {
+  return parseTimeParam(url, MATCH_END_QUERY);
+}
+
+// http://stackoverflow.com/a/38622545
+function randomString() {
+  return Math.random().toString(36).substr(2, 5);
+}
+
+function queryString(object) {
+  return Object.keys(object).map(function (key) {
+    return key + '=' + object[key];
+  }).join('&');
+}
+
+// Util function to load an external SDK
+// or return the SDK if it is already loaded
+var resolves = {};
+function getSDK(url, sdkGlobal) {
+  var sdkReady = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+  var isLoaded = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : function () {
+    return true;
+  };
+  var fetchScript = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : _loadScript2['default'];
+
+  if (window[sdkGlobal] && isLoaded(window[sdkGlobal])) {
+    return Promise.resolve(window[sdkGlobal]);
+  }
+  return new Promise(function (resolve, reject) {
+    // If we are already loading the SDK, add the resolve
+    // function to the existing array of resolve functions
+    if (resolves[url]) {
+      resolves[url].push(resolve);
+      return;
+    }
+    resolves[url] = [resolve];
+    var onLoaded = function onLoaded(sdk) {
+      // When loaded, resolve all pending promises
+      resolves[url].forEach(function (resolve) {
+        return resolve(sdk);
+      });
+    };
+    if (sdkReady) {
+      var previousOnReady = window[sdkReady];
+      window[sdkReady] = function () {
+        if (previousOnReady) previousOnReady();
+        onLoaded(window[sdkGlobal]);
+      };
+    }
+    fetchScript(url, function (err) {
+      if (err) reject(err);
+      if (!sdkReady) {
+        onLoaded(window[sdkGlobal]);
+      }
+    });
+  });
+}
+
+function getConfig(props, defaultProps, showWarning) {
+  var config = (0, _deepmerge2['default'])(defaultProps.config, props.config);
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = _props.DEPRECATED_CONFIG_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var p = _step.value;
+
+      if (props[p]) {
+        var key = p.replace(/Config$/, '');
+        config = (0, _deepmerge2['default'])(config, _defineProperty({}, key, props[p]));
+        if (showWarning) {
+          var link = 'https://github.com/CookPete/react-player#config-prop';
+          var message = 'ReactPlayer: %c' + p + ' %cis deprecated, please use the config prop instead \u2013 ' + link;
+          console.warn(message, 'font-weight: bold', '');
+        }
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator['return']) {
+        _iterator['return']();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return config;
+}
+
+function omit(object) {
+  var _ref;
+
+  for (var _len = arguments.length, arrays = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    arrays[_key - 1] = arguments[_key];
+  }
+
+  var omitKeys = (_ref = []).concat.apply(_ref, arrays);
+  var output = {};
+  var keys = Object.keys(object);
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = keys[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var key = _step2.value;
+
+      if (omitKeys.indexOf(key) === -1) {
+        output[key] = object[key];
+      }
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2['return']) {
+        _iterator2['return']();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
+      }
+    }
+  }
+
+  return output;
+}
+
+function callPlayer(method) {
+  var _player;
+
+  // Util method for calling a method on this.player
+  // but guard against errors and console.warn instead
+  if (!this.player || !this.player[method]) {
+    var message = 'ReactPlayer: ' + this.constructor.displayName + ' player could not call %c' + method + '%c \u2013 ';
+    if (!this.player) {
+      message += 'The player was not available';
+    } else if (!this.player[method]) {
+      message += 'The method was not available';
+    }
+    console.warn(message, 'font-weight: bold', '');
+    return null;
+  }
+
+  for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+    args[_key2 - 1] = arguments[_key2];
+  }
+
+  return (_player = this.player)[method].apply(_player, args);
+}
+
+function isObject(val) {
+  return val !== null && (typeof val === 'undefined' ? 'undefined' : _typeof(val)) === 'object';
+}
+
+// Deep comparison of two objects but ignoring
+// functions, for use in shouldComponentUpdate
+function isEqual(a, b) {
+  if (typeof a === 'function' && typeof b === 'function') {
+    return true;
+  }
+  if (a instanceof Array && b instanceof Array) {
+    if (a.length !== b.length) {
+      return false;
+    }
+    for (var i = 0; i !== a.length; i++) {
+      if (!isEqual(a[i], b[i])) {
+        return false;
+      }
+    }
+    return true;
+  }
+  if (isObject(a) && isObject(b)) {
+    if (Object.keys(a).length !== Object.keys(b).length) {
+      return false;
+    }
+    var _iteratorNormalCompletion3 = true;
+    var _didIteratorError3 = false;
+    var _iteratorError3 = undefined;
+
+    try {
+      for (var _iterator3 = Object.keys(a)[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+        var key = _step3.value;
+
+        if (!isEqual(a[key], b[key])) {
+          return false;
+        }
+      }
+    } catch (err) {
+      _didIteratorError3 = true;
+      _iteratorError3 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion3 && _iterator3['return']) {
+          _iterator3['return']();
+        }
+      } finally {
+        if (_didIteratorError3) {
+          throw _iteratorError3;
+        }
+      }
+    }
+
+    return true;
+  }
+  return a === b;
+}
+
+function isMediaStream(url) {
+  return typeof window !== 'undefined' && typeof window.MediaStream !== 'undefined' && url instanceof window.MediaStream;
+}
+
+/***/ }),
+
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
   !*** delegated ./node_modules/react/index.js from dll-reference dll_831a3634f66cb1dada0c ***!
@@ -23735,14 +30990,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var _components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/SideBarNav */ "./components/SideBarNav.js");
-/* harmony import */ var _components_MiniPlayer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MiniPlayer */ "./components/MiniPlayer.js");
-/* harmony import */ var _components_Curation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Curation */ "./components/Curation.js");
-/* harmony import */ var _static_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../static/style.css */ "./static/style.css");
-/* harmony import */ var _static_style_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_static_style_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_FullPlayer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/FullPlayer */ "./components/FullPlayer.js");
-/* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! contentful */ "./node_modules/contentful/dist/es-modules/contentful.js");
+/* harmony import */ var _components_Gallery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Gallery */ "./components/Gallery.js");
+/* harmony import */ var _static_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../static/style.css */ "./static/style.css");
+/* harmony import */ var _static_style_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_static_style_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_MusicPlayer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/MusicPlayer */ "./components/MusicPlayer.js");
+/* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! contentful */ "./node_modules/contentful/dist/es-modules/contentful.js");
 
 var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/pages/index.js";
 
@@ -23777,8 +31031,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
- // import { getCmsContent } from '../lib/api'
-
 
 var CONTENTFUL_SPACE_ID = 'aft70ikgwtvx';
 var CONTENTFUL_ACCESS_TOKEN = '4e75a8b58a058563c5644162137d97c12e26b371e81afdd28388f6018aa69bc4';
@@ -23804,11 +31056,13 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
       menuOpen: false,
       fullPlayerOpen: false,
-      curationOpen: false
+      curationOpen: false,
+      currentTrack: false,
+      tracks: [],
+      currentIndex: 0
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "openMenu", function (e) {
-      console.log(e);
       var menuOpen = _this.state.menuOpen;
 
       if (!menuOpen) {
@@ -23912,10 +31166,14 @@ function (_Component) {
       var textWrap = document.querySelectorAll('.line, .text'); // const textLogo = document.querySelector('.text-wrap .text')
 
       var waves = document.querySelector('.wave-container');
+      var miniplayerButtons = Array.from(document.querySelectorAll('.mini-player_btn_wrapper svg'));
 
       if (!curationOpen) {
         // Hide
         logo.style.display = 'none';
+        miniplayerButtons.forEach(function (button) {
+          return button.classList.toggle('black');
+        });
         curationAnim.to(textWrap, 0.5, {
           display: 'none',
           opacity: 0,
@@ -23979,28 +31237,31 @@ function (_Component) {
   _createClass(Home, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(this.props); // this.getData()
+      var songs = this.props.data.songs;
     }
   }, {
     key: "render",
     value: function render() {
-      var songs = this.props.data.songs;
+      var _this$props$data = this.props.data,
+          songs = _this$props$data.songs,
+          videos = _this$props$data.videos,
+          photoGallery = _this$props$data.photoGallery;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 204
+          lineNumber: 218
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 205
+          lineNumber: 219
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 220
         },
         __self: this
       }, "Pye Luis"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -24009,56 +31270,56 @@ function (_Component) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 221
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
         href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 226
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 215
+          lineNumber: 229
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 216
+          lineNumber: 230
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -one",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 231
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -two",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 218
+          lineNumber: 232
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -three",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219
+          lineNumber: 233
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "line",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 221
+          lineNumber: 235
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -24066,7 +31327,7 @@ function (_Component) {
         onClick: this.toggleCuration,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222
+          lineNumber: 236
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -24074,56 +31335,14 @@ function (_Component) {
         onMouseEnter: this.revealPlayButton,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 223
+          lineNumber: 237
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 224
-        },
-        __self: this
-      }, "P"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 225
-        },
-        __self: this
-      }, "Y"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 226
-        },
-        __self: this
-      }, "E"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 227
-        },
-        __self: this
-      }, "L"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 228
-        },
-        __self: this
-      }, "U"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 229
-        },
-        __self: this
-      }, "I"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 230
-        },
-        __self: this
-      }, "S"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, "Pye Luis", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "main-btn_wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 231
+          lineNumber: 239
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24132,14 +31351,14 @@ function (_Component) {
         className: "main-btn",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 240
         },
         __self: this
       })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "header",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 241
+          lineNumber: 249
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -24147,55 +31366,48 @@ function (_Component) {
         onClick: this.openMenu,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 242
+          lineNumber: 250
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "burger",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 243
+          lineNumber: 251
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "logo-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 245
+          lineNumber: 253
         },
         __self: this
       }, "PL's Playlist"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "back_btn",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 246
+          lineNumber: 254
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "circle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 247
+          lineNumber: 255
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 248
+          lineNumber: 256
         },
         __self: this
       }, "Back"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MiniPlayer__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        toggleFullPlayer: this.toggleFullPlayer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 260
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -24203,21 +31415,23 @@ function (_Component) {
         onClick: this.handleDim,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 255
+          lineNumber: 262
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_FullPlayer__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MusicPlayer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        toggleFullPlayer: this.toggleFullPlayer,
         songs: songs,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 257
+          lineNumber: 264
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Curation__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        songs: songs,
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Gallery__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        videos: videos,
+        photoGallery: photoGallery,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 258
+          lineNumber: 268
         },
         __self: this
       })));
@@ -24228,14 +31442,14 @@ function (_Component) {
       var _getInitialProps = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
-        var req, CMS, _ref2, items, songs;
+        var req, CMS, _ref2, items, songs, photoGallery, videos;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 req = _ref.req;
-                CMS = contentful__WEBPACK_IMPORTED_MODULE_9__["createClient"]({
+                CMS = contentful__WEBPACK_IMPORTED_MODULE_8__["createClient"]({
                   space: CONTENTFUL_SPACE_ID,
                   accessToken: CONTENTFUL_ACCESS_TOKEN
                 });
@@ -24248,13 +31462,21 @@ function (_Component) {
                 songs = items.filter(function (item) {
                   return item.sys.contentType.sys.id === 'song';
                 });
+                photoGallery = items.filter(function (item) {
+                  return item.sys.contentType.sys.id === 'photo';
+                })[0];
+                videos = items.filter(function (item) {
+                  return item.sys.contentType.sys.id === 'video';
+                });
                 return _context.abrupt("return", {
                   data: {
-                    songs: songs
+                    songs: songs,
+                    photoGallery: photoGallery,
+                    videos: videos
                   }
                 });
 
-              case 8:
+              case 10:
               case "end":
                 return _context.stop();
             }
