@@ -28,7 +28,8 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 var Gallery = function Gallery(_ref) {
   var photoGallery = _ref.photoGallery,
-      videos = _ref.videos;
+      videos = _ref.videos,
+      toggleGallery = _ref.toggleGallery;
 
   var _videos = videos.map(function (video) {
     video.fields.file.isVideo = true;
@@ -127,18 +128,18 @@ var Gallery = function Gallery(_ref) {
     __self: this
   }), "Youtube"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_list_content_desc",
+    onClick: toggleGallery,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  }, "Or Play Here"), items.map(function (item) {
-    console.log(item);
+  }, "Hide Gallery"), items.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "item",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 33
       },
       __self: this
     }, item.isVideo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -146,35 +147,35 @@ var Gallery = function Gallery(_ref) {
       className: "thumb",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 35
       },
       __self: this
     }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "thumb",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 37
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: item.fields.file.url + '?w=400&h=400',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 38
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "info",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 42
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "name",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: this
     }, item.fields.title)));
@@ -248,9 +249,61 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(MusicPlayer).call(this, props));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "formatTime", function (secs) {
-      var minutes = Math.floor(secs / 60) || 0;
-      var seconds = secs - minutes * 60 || 0;
-      return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+      var minutes = "0";
+
+      if (secs >= 60) {
+        minutes = "0".concat(Math.floor(secs / 60) || 0);
+      }
+
+      var seconds = secs < minutes ? secs : minutes - secs;
+      return minutes + ':' + (seconds < 10 ? '0' : null) + seconds;
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "computeProportionalWidth", function (playbackTimeline, time, duration) {
+      var playbackWidth = playbackTimeline.offsetWidth;
+      var ratio = time / duration;
+      return "".concat(ratio);
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "startTimer", function (_ref) {
+      var progress = _ref.progress,
+          playbackTimeline = _ref.playbackTimeline,
+          progressBall = _ref.progressBall,
+          startTime = _ref.startTime,
+          endTime = _ref.endTime;
+      var count = 0;
+
+      _this.setState({
+        playing: true,
+        time: _this.state.time,
+        start: _this.state.time
+      });
+
+      _this.timer = setInterval(function () {
+        return _this.setState({
+          time: count++
+        }, function () {
+          var currentProgress = _this.computeProportionalWidth(playbackTimeline, _this.state.time, _this.state.currentTrack.sound.duration()); // progress.style.width = `${currentProgress}%`
+
+
+          progressBall.style.marginLeft = "".concat(currentProgress, "%");
+        });
+      }, 1000);
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "stopTimer", function () {
+      _this.setState({
+        playing: false
+      });
+
+      clearInterval(_this.timer);
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "resetTimer", function () {
+      _this.setState({
+        time: 0,
+        playing: false
+      });
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "playCurrentTrack", function (e) {
@@ -260,6 +313,18 @@ function (_Component) {
       if (currentTrack) {
         currentTrack.sound.play();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "makeCurrentTrack", function (track) {
+      var currentTrack = _this.state.currentTrack;
+
+      if (currentTrack) {
+        currentTrack.sound.stop();
+      }
+
+      _this.setState({
+        currentTrack: track
+      });
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "nextSong", function () {});
@@ -279,7 +344,9 @@ function (_Component) {
       currentIndex: 0,
       playing: false,
       tracks: [],
-      currentTrack: null
+      currentTrack: null,
+      time: 0,
+      start: 0
     };
     return _this;
   }
@@ -287,40 +354,30 @@ function (_Component) {
   _createClass(MusicPlayer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var progress = document.querySelector('.slider_progress');
-      var progressBall = document.querySelector('.slider_handle');
-      var timer = document.querySelector('.playback_timeline_end-time');
+      var elements = {
+        progress: document.querySelector('.slider_progress'),
+        playbackTimeline: document.querySelector('.playback_timeline_slider'),
+        progressBall: document.querySelector('.slider_handle'),
+        startTime: document.querySelector('.playback_timeline_start-time'),
+        endTime: document.querySelector('.playback_timeline_end-time')
+      };
       var self = this;
       var howlLoadedSongs = this.props.songs.map(function (song) {
         var sound = new howler__WEBPACK_IMPORTED_MODULE_6__["Howl"]({
           src: [song.fields.trackUrl.fields.file.url],
           onplay: function onplay(arg) {
-            var count = 0;
-            var timerInterval = setInterval(function () {
-              count++;
-              progress.style.width = "".concat(count, "%");
-              progressBall.style.left = "".concat(count, "px");
-            }, 1000);
-            self.setState({
-              playing: true
-            }, function () {
-              timer.innerHTML = "".concat(self.formatTime(Math.round(self.state.currentTrack.sound.duration())));
-            });
+            self.startTimer(elements);
           },
           onend: function onend() {
-            self.setState({
-              playing: false
-            });
+            self.stopTimer();
+            self.resetTimer();
           },
           onpause: function onpause() {
-            self.setState({
-              playing: false
-            });
+            self.stopTimer();
           },
           onstop: function onstop() {
-            self.setState({
-              playing: false
-            });
+            self.stopTimer();
+            self.resetTimer();
           }
         });
         return _objectSpread({}, song, {
@@ -335,32 +392,34 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var currentTrack = this.state.currentTrack ? this.state.currentTrack : this.props.currentTrack;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 153
         },
         __self: this
       }, currentTrack ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "mini-player",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 155
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "track_info_wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 156
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "track_info",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 157
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -370,68 +429,68 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 158
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "info",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 169
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 170
         },
         __self: this
       }, currentTrack.fields.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "artist",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 171
         },
         __self: this
       }, "Pye Luis")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "mini-player_btn_wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 175
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_backIcon__WEBPACK_IMPORTED_MODULE_4__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 176
         },
         __self: this
       }), this.state.playing ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_pauseIcon__WEBPACK_IMPORTED_MODULE_5__["default"], {
         onClick: this.pause,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 178
         },
         __self: this
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_playIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
         onClick: this.playCurrentTrack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 180
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_nextIcon__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 183
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_musicIcon__WEBPACK_IMPORTED_MODULE_2__["default"], {
         onClick: this.props.toggleFullPlayer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 184
         },
         __self: this
       }))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -439,21 +498,21 @@ function (_Component) {
         id: "player",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 189
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playback_wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 190
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playback_blur",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 191
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -463,146 +522,141 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 192
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playback_info",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 155
+          lineNumber: 202
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 156
+          lineNumber: 203
         },
         __self: this
       }, currentTrack ? currentTrack.fields.title : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "artist",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 206
         },
         __self: this
       }, "Pye Luis")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playback_btn_wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 208
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "btn-prev fa fa-step-backward",
-        "aria-hidden": "true",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_backIcon__WEBPACK_IMPORTED_MODULE_4__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 209
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "btn-switch",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 210
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "btn-play fa fa-play",
-        "aria-hidden": "true",
+      }, this.state.playing ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_pauseIcon__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        onClick: this.pause,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 212
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "btn-pause fa fa-pause",
-        "aria-hidden": "true",
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_playIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        onClick: this.playCurrentTrack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 214
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "btn-next fa fa-step-forward",
-        "aria-hidden": "true",
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_nextIcon__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 167
+          lineNumber: 217
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playback_timeline",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169
+          lineNumber: 219
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playback_timeline_start-time",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 170
+          lineNumber: 220
         },
         __self: this
-      }, "00:00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.formatTime(this.state.time)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playback_timeline_slider",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171
+          lineNumber: 223
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider_base",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 172
+          lineNumber: 224
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider_progress",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 173
+          lineNumber: 225
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "slider_handle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174
+          lineNumber: 226
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playback_timeline_end-time",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 228
         },
         __self: this
-      }, "03:11"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.state.currentTrack ? this.formatTime(Math.round(this.state.currentTrack.sound.duration())) : null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "list_wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179
+          lineNumber: 237
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "list",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180
+          lineNumber: 238
         },
         __self: this
-      }, this.props.songs.map(function (song, i) {
+      }, this.state.tracks ? this.state.tracks.map(function (song, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "list_item selected",
           key: i,
+          onClick: _this2.makeCurrentTrack.bind(_this2, song),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 182
+            lineNumber: 240
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -612,32 +666,32 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 183
+            lineNumber: 241
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "info",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 191
+            lineNumber: 249
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "title",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 192
+            lineNumber: 250
           },
           __self: this
         }, song.fields.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "artist",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 193
+            lineNumber: 251
           },
           __self: this
         }, "Pye Luis")));
-      })))));
+      }) : null))));
     }
   }]);
 
@@ -30990,7 +31044,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var _components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/SideBarNav */ "./components/SideBarNav.js");
-/* harmony import */ var _components_Gallery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Gallery */ "./components/Gallery.js");
+/* harmony import */ var _components_Gallery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Gallery */ "./components/Gallery.js");
 /* harmony import */ var _static_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../static/style.css */ "./static/style.css");
 /* harmony import */ var _static_style_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_static_style_css__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
@@ -31155,11 +31209,12 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "toggleCuration", function () {
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "toggleGallery", function () {
       var curationOpen = _this.state.curationOpen;
       var curationAnim = new TimelineMax({});
       var curator = document.getElementById('curator');
       var backButton = document.querySelector('.back_btn');
+      var backButtonText = document.querySelector('.back_btn .text');
       var curatorWrapper = document.querySelector('#curator .curator_title_wrapper');
       var curatorList = document.querySelector('.curator_list');
       var logo = document.querySelector('.logo-text');
@@ -31191,6 +31246,13 @@ function (_Component) {
           opacity: 1,
           x: 0,
           ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 1), curationAnim.fromTo(backButtonText, 0.8, {
+          x: 15
+        }, {
+          display: 'flex',
+          opacity: 1,
+          x: 0,
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
         }, 1), curationAnim.fromTo(curatorWrapper, 0.8, {
           opacity: 0,
           x: 30
@@ -31208,6 +31270,61 @@ function (_Component) {
           display: 'block',
           ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
         }, 1.2);
+
+        _this.setState({
+          curationOpen: !_this.state.curationOpen
+        });
+      } else {
+        var mainToHome = new TimelineMax({}); // Hide
+
+        mainToHome.fromTo(document.querySelector('.curator_title_wrapper'), 0.5, {
+          opacity: 1,
+          x: 0
+        }, {
+          opacity: 0,
+          x: 30,
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 0.2), mainToHome.fromTo(document.querySelector('.curator_list'), 0.5, {
+          opacity: 1,
+          display: 'block',
+          x: 0
+        }, {
+          opacity: 0,
+          x: 30,
+          display: 'none',
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 0.5), mainToHome.to(document.querySelector('.back_btn'), 0.5, {
+          display: 'none',
+          opacity: 0,
+          x: 15,
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 0.5), mainToHome.to(document.querySelector('#curator'), 0, {
+          display: 'none',
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 1), // Background Up
+        mainToHome.to(waves, 1, {
+          yPercent: 0,
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 1), // 	Show
+        mainToHome.to(textWrap, 0.5, {
+          display: 'flex',
+          opacity: 1,
+          y: 0,
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 1.2), mainToHome.to(document.querySelector('.logo-text'), 0.5, {
+          display: 'block',
+          opacity: 1,
+          y: 0,
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 1.2), // 	Force to redraw by using y translate
+        mainToHome.fromTo(document.querySelector('.text-wrap .text'), 0.1, {
+          y: 0.1,
+          position: 'absolute'
+        }, {
+          y: 0,
+          position: 'relative',
+          ease: gsap__WEBPACK_IMPORTED_MODULE_2__["Power2"].easeInOut
+        }, 1.3); // $('.text-wrap .text').css('position', 'relative');
       }
     });
 
@@ -31249,19 +31366,19 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 218
+          lineNumber: 286
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219
+          lineNumber: 287
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 220
+          lineNumber: 288
         },
         __self: this
       }, "Pye Luis"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -31270,64 +31387,64 @@ function (_Component) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 221
+          lineNumber: 289
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
         href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 226
+          lineNumber: 294
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 229
+          lineNumber: 297
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 230
+          lineNumber: 298
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -one",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 231
+          lineNumber: 299
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -two",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 300
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -three",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 301
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "line",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 235
+          lineNumber: 303
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "text-wrap",
-        onClick: this.toggleCuration,
+        onClick: this.toggleGallery,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 236
+          lineNumber: 304
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -31335,14 +31452,14 @@ function (_Component) {
         onMouseEnter: this.revealPlayButton,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 237
+          lineNumber: 305
         },
         __self: this
       }, "Pye Luis", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "main-btn_wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 239
+          lineNumber: 307
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -31351,14 +31468,14 @@ function (_Component) {
         className: "main-btn",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 240
+          lineNumber: 308
         },
         __self: this
       })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "header",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 249
+          lineNumber: 317
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -31366,48 +31483,49 @@ function (_Component) {
         onClick: this.openMenu,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 250
+          lineNumber: 318
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "burger",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 251
+          lineNumber: 319
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "logo-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 321
         },
         __self: this
       }, "PL's Playlist"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "back_btn",
+        onClick: this.toggleGallery,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 254
+          lineNumber: 322
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "circle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 255
+          lineNumber: 323
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 256
+          lineNumber: 324
         },
         __self: this
       }, "Back"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 260
+          lineNumber: 328
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -31415,7 +31533,7 @@ function (_Component) {
         onClick: this.handleDim,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 262
+          lineNumber: 330
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MusicPlayer__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -31423,15 +31541,16 @@ function (_Component) {
         songs: songs,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 264
+          lineNumber: 332
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Gallery__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Gallery__WEBPACK_IMPORTED_MODULE_4__["default"], {
         videos: videos,
+        toggleGallery: this.toggleGallery,
         photoGallery: photoGallery,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 268
+          lineNumber: 333
         },
         __self: this
       })));

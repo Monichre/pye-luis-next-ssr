@@ -313,8 +313,7 @@ body {
 }
 
 .mini-player_btn_wrapper svg.black {
-  fill: #000;
-  color: black;
+  stroke: #000;
 }
 
 img.btn-open-player {
@@ -376,6 +375,9 @@ img.btn-open-player {
   z-index: 999;
 }
 
+.player .playback_btn_wrapper svg {
+  stroke: #000;
+}
 .playback_wrapper {
   height: 310px;
   position: relative;
@@ -490,14 +492,14 @@ img.btn-open-player {
   top: 12px;
 }
 .playback_timeline_slider .slider_handle {
-  transform: matrix(1, 0, 0, 1, 37, 0);
+  /* transform: matrix(1, 0, 0, 1, 37, 0); */
   width: 12px;
   height: 12px;
   background-color: #252120;
   border-radius: 50%;
   position: absolute;
   top: 7px;
-  left: -6px;
+  left: 0;
 }
 
 .list_wrapper {

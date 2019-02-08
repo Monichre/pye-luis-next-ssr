@@ -13,59 +13,96 @@ class MusicPlayer extends Component {
       currentIndex: 0,
       playing: false,
       tracks: [],
-      currentTrack: null
+      currentTrack: null,
+      time: 0,
+      start: 0
     }
   }
 
   formatTime = secs => {
-    var minutes = Math.floor(secs / 60) || 0
-    var seconds = secs - minutes * 60 || 0
+    let minutes = `0`
+    if (secs >= 60) {
+      minutes = `0${Math.floor(secs / 60) || 0}`
+    }
 
-    return minutes + ':' + (seconds < 10 ? '0' : '') + seconds
+    let seconds = secs < minutes ? secs : minutes - secs
+
+    return minutes + ':' + (seconds < 10 ? '0' : null) + seconds
+  }
+
+  computeProportionalWidth = (playbackTimeline, time, duration) => {
+    const playbackWidth = playbackTimeline.offsetWidth
+    const ratio = time / duration
+    return `${ratio}`
+  }
+
+  startTimer = ({
+    progress,
+    playbackTimeline,
+    progressBall,
+    startTime,
+    endTime
+  }) => {
+    let count = 0
+    this.setState({
+      playing: true,
+      time: this.state.time,
+      start: this.state.time
+    })
+    this.timer = setInterval(
+      () =>
+        this.setState(
+          {
+            time: count++
+          },
+          () => {
+            const currentProgress = this.computeProportionalWidth(
+              playbackTimeline,
+              this.state.time,
+              this.state.currentTrack.sound.duration()
+            )
+            // progress.style.width = `${currentProgress}%`
+            progressBall.style.marginLeft = `${currentProgress}%`
+          }
+        ),
+      1000
+    )
+  }
+
+  stopTimer = () => {
+    this.setState({ playing: false })
+    clearInterval(this.timer)
+  }
+  resetTimer = () => {
+    this.setState({ time: 0, playing: false })
   }
 
   componentDidMount () {
-    const progress = document.querySelector('.slider_progress')
-    const progressBall = document.querySelector('.slider_handle')
-    const timer = document.querySelector('.playback_timeline_end-time')
+    const elements = {
+      progress: document.querySelector('.slider_progress'),
+      playbackTimeline: document.querySelector('.playback_timeline_slider'),
+      progressBall: document.querySelector('.slider_handle'),
+      startTime: document.querySelector('.playback_timeline_start-time'),
+      endTime: document.querySelector('.playback_timeline_end-time')
+    }
+
     const self = this
     const howlLoadedSongs = this.props.songs.map(song => {
       const sound = new Howl({
         src: [song.fields.trackUrl.fields.file.url],
         onplay: arg => {
-          let count = 0
-          const timerInterval = setInterval(() => {
-            count++
-
-            progress.style.width = `${count}%`
-            progressBall.style.left = `${count}px`
-          }, 1000)
-
-          self.setState(
-            {
-              playing: true
-            },
-            () => {
-              timer.innerHTML = `${self.formatTime(
-                Math.round(self.state.currentTrack.sound.duration())
-              )}`
-            }
-          )
+          self.startTimer(elements)
         },
         onend: function () {
-          self.setState({
-            playing: false
-          })
+          self.stopTimer()
+          self.resetTimer()
         },
         onpause: function () {
-          self.setState({
-            playing: false
-          })
+          self.stopTimer()
         },
         onstop: function () {
-          self.setState({
-            playing: false
-          })
+          self.stopTimer()
+          self.resetTimer()
         }
       })
       return {
@@ -87,6 +124,16 @@ class MusicPlayer extends Component {
     if (currentTrack) {
       currentTrack.sound.play()
     }
+  }
+  
+  makeCurrentTrack = (track) => {
+    const { currentTrack } = this.state
+    if (currentTrack) {
+      currentTrack.sound.stop()
+    }
+    this.setState({
+      currentTrack: track
+    })
   }
   nextSong = () => {}
   previousSong = () => {}
@@ -159,27 +206,38 @@ class MusicPlayer extends Component {
               <div className='artist'>Pye Luis</div>
             </div>
             <div className='playback_btn_wrapper'>
-              <i className='btn-prev fa fa-step-backward' aria-hidden='true' />
+              <BackIcon />
               <div className='btn-switch'>
-                <i className='btn-play fa fa-play' aria-hidden='true' />
-                <i className='btn-pause fa fa-pause' aria-hidden='true' />
+                {this.state.playing ? (
+                  <PauseIcon onClick={this.pause} />
+                ) : (
+                  <PlayIcon onClick={this.playCurrentTrack} />
+                )}
               </div>
-              <i className='btn-next fa fa-step-forward' aria-hidden='true' />
+              <NextIcon />
             </div>
             <div className='playback_timeline'>
-              <div className='playback_timeline_start-time'>00:00</div>
+              <div className='playback_timeline_start-time'>
+                {this.formatTime(this.state.time)}
+              </div>
               <div className='playback_timeline_slider'>
                 <div className='slider_base' />
                 <div className='slider_progress' />
                 <div className='slider_handle' />
               </div>
-              <div className='playback_timeline_end-time'>03:11</div>
+              <div className='playback_timeline_end-time'>
+                {this.state.currentTrack
+                  ? this.formatTime(
+                    Math.round(this.state.currentTrack.sound.duration())
+                  )
+                  : null}
+              </div>
             </div>
           </div>
           <div className='list_wrapper'>
             <ul className='list'>
-              {this.props.songs.map((song, i) => (
-                <li className='list_item selected' key={i}>
+              {this.state.tracks ? this.state.tracks.map((song, i) => (
+                <li className='list_item selected' key={i} onClick={this.makeCurrentTrack.bind(this, song)}>
                   <div
                     className='thumb'
                     style={{
@@ -193,7 +251,7 @@ class MusicPlayer extends Component {
                     <div className='artist'>Pye Luis</div>
                   </div>
                 </li>
-              ))}
+              )) : null}
             </ul>
           </div>
         </div>

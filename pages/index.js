@@ -134,11 +134,12 @@ class Home extends Component {
     TweenMax.to('.mini-player', 0.5, { x: 0, ease: Expo.easeOut })
   }
 
-  toggleCuration = () => {
+  toggleGallery = () => {
     const { curationOpen } = this.state
     const curationAnim = new TimelineMax({})
     const curator = document.getElementById('curator')
     const backButton = document.querySelector('.back_btn')
+    const backButtonText = document.querySelector('.back_btn .text')
     const curatorWrapper = document.querySelector(
       '#curator .curator_title_wrapper'
     )
@@ -173,6 +174,13 @@ class Home extends Component {
         1
       ),
       curationAnim.fromTo(
+        backButtonText,
+        0.8,
+        { x: 15 },
+        { display: 'flex', opacity: 1, x: 0, ease: Power2.easeInOut },
+        1
+      ),
+      curationAnim.fromTo(
         curatorWrapper,
         0.8,
         { opacity: 0, x: 30 },
@@ -186,6 +194,68 @@ class Home extends Component {
         { opacity: 1, x: 0, display: 'block', ease: Power2.easeInOut },
         1.2
       )
+
+      this.setState({
+        curationOpen: !this.state.curationOpen
+      })
+    } else {
+      const mainToHome = new TimelineMax({})
+      // Hide
+      mainToHome.fromTo(
+        document.querySelector('.curator_title_wrapper'),
+        0.5,
+        { opacity: 1, x: 0 },
+        { opacity: 0, x: 30, ease: Power2.easeInOut },
+        0.2
+      ),
+      mainToHome.fromTo(
+        document.querySelector('.curator_list'),
+        0.5,
+        { opacity: 1, display: 'block', x: 0 },
+        { opacity: 0, x: 30, display: 'none', ease: Power2.easeInOut },
+        0.5
+      ),
+      mainToHome.to(
+        document.querySelector('.back_btn'),
+        0.5,
+        { display: 'none', opacity: 0, x: 15, ease: Power2.easeInOut },
+        0.5
+      ),
+      mainToHome.to(
+        document.querySelector('#curator'),
+        0,
+        { display: 'none', ease: Power2.easeInOut },
+        1
+      ),
+      // Background Up
+      mainToHome.to(
+        waves,
+        1,
+        { yPercent: 0, ease: Power2.easeInOut },
+        1
+      ),
+      // 	Show
+      mainToHome.to(
+        textWrap,
+        0.5,
+        { display: 'flex', opacity: 1, y: 0, ease: Power2.easeInOut },
+        1.2
+      ),
+      mainToHome.to(
+        document.querySelector('.logo-text'),
+        0.5,
+        { display: 'block', opacity: 1, y: 0, ease: Power2.easeInOut },
+        1.2
+      ),
+      // 	Force to redraw by using y translate
+      mainToHome.fromTo(
+        document.querySelector('.text-wrap .text'),
+        0.1,
+        { y: 0.1, position: 'absolute' },
+        { y: 0, position: 'relative', ease: Power2.easeInOut },
+        1.3
+      )
+      // $('.text-wrap .text').css('position', 'relative');
     }
   }
 
@@ -209,11 +279,9 @@ class Home extends Component {
     // TweenMax.to('.line', 0.5, {css: { scaleY: 1, transformOrigin: "center center" }, ease: Expo.easeOut})
   }
 
-
-
   render () {
     const { songs, videos, photoGallery } = this.props.data
-    
+
     return (
       <Fragment>
         <Head>
@@ -233,7 +301,7 @@ class Home extends Component {
             <div className='wave -three' />
           </div>
           <div className='line' />
-          <div className='text-wrap' onClick={this.toggleCuration}>
+          <div className='text-wrap' onClick={this.toggleGallery}>
             <div className='text' onMouseEnter={this.revealPlayButton}>
               Pye Luis
               <div className='main-btn_wrapper'>
@@ -251,7 +319,7 @@ class Home extends Component {
               <div className='burger' />
             </div>
             <div className='logo-text'>PL's Playlist</div>
-            <div className='back_btn'>
+            <div className='back_btn' onClick={this.toggleGallery}>
               <div className='circle' />
               <div className='text'>Back</div>
             </div>
@@ -261,11 +329,12 @@ class Home extends Component {
 
           <div className='dim' onClick={this.handleDim} />
 
-          <MusicPlayer
-            toggleFullPlayer={this.toggleFullPlayer}
-            songs={songs}
+          <MusicPlayer toggleFullPlayer={this.toggleFullPlayer} songs={songs} />
+          <Gallery
+            videos={videos}
+            toggleGallery={this.toggleGallery}
+            photoGallery={photoGallery}
           />
-          <Gallery videos={videos} photoGallery={photoGallery} />
         </div>
       </Fragment>
     )

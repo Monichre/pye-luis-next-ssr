@@ -1,6 +1,6 @@
 import ReactPlayer from 'react-player'
 
-const Gallery = ({ photoGallery, videos }) => {
+const Gallery = ({ photoGallery, videos, toggleGallery }) => {
   const _videos = videos.map(video => {
     video.fields.file.isVideo = true
     return video.fields.file
@@ -25,9 +25,10 @@ const Gallery = ({ photoGallery, videos }) => {
               </div>
             </div>
           </div>
-          <div className='curator_list_content_desc'>Or Play Here</div>
+          <div className='curator_list_content_desc' onClick={toggleGallery}>
+            Hide Gallery
+          </div>
           {items.map(item => {
-            console.log(item)
             return (
               <div className='item'>
                 {item.isVideo ? (
