@@ -93,6 +93,154 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/AnimatedItem.js":
+/*!************************************!*\
+  !*** ./components/AnimatedItem.js ***!
+  \************************************/
+/*! exports provided: AnimatedItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnimatedItem", function() { return AnimatedItem; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-player */ "react-player");
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_flip_toolkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-flip-toolkit */ "react-flip-toolkit");
+/* harmony import */ var react_flip_toolkit__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_flip_toolkit__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/AnimatedItem.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var AnimatedItem =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(AnimatedItem, _Component);
+
+  function AnimatedItem() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, AnimatedItem);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(AnimatedItem)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      fullScreen: false,
+      playVideo: false
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "toggleFullScreen", function () {
+      var item = _this.props.item;
+
+      if (item.isVideo) {
+        _this.setState(function (prevState) {
+          return {
+            playVideo: !_this.state.playVideo
+          };
+        });
+      }
+
+      _this.setState(function (prevState) {
+        return {
+          fullScreen: !prevState.fullScreen
+        };
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(AnimatedItem, [{
+    key: "render",
+    value: function render() {
+      var item = this.props.item;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_flip_toolkit__WEBPACK_IMPORTED_MODULE_2__["Flipper"], {
+        flipKey: this.state.fullScreen,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_flip_toolkit__WEBPACK_IMPORTED_MODULE_2__["Flipped"], {
+        flipId: "square",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          backgroundImage: this.state.fullScreen ? "url(".concat(item.fields.file.url, ")") : 'none'
+        },
+        className: this.state.fullScreen ? 'full-screen-item item' : 'item',
+        onClick: this.toggleFullScreen,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, item.isVideo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        url: item.fields.file.url,
+        playing: this.state.playVideo,
+        controls: this.state.playVideo,
+        className: "thumb",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "thumb",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "data-href": item.fields.file.url + '?w=2000&h=2000&fm=jpg&fl=progressive',
+        src: item.fields.file.url + '?w=300&h=300&fm=jpg&fl=progressive',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      })))));
+    }
+  }]);
+
+  return AnimatedItem;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/***/ }),
+
 /***/ "./components/Gallery.js":
 /*!*******************************!*\
   !*** ./components/Gallery.js ***!
@@ -104,8 +252,7 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-player */ "react-player");
-/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _AnimatedItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AnimatedItem */ "./components/AnimatedItem.js");
 var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/Gallery.js";
 
 
@@ -179,103 +326,73 @@ var Gallery = function Gallery(_ref) {
     },
     __self: this
   }, "Count em")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "curator_list_content_desc",
+    onClick: toggleGallery,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, "Hide Gallery"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 22
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "curator_list_content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "connect_btn_wrapper item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "connect_btn",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "connect_btn_text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     },
     __self: this
   }, "View On ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
-  }), "Youtube"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "curator_list_content_desc",
-    onClick: toggleGallery,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "Hide Gallery"), items.map(function (item) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "item",
+  }), "Youtube"))), items.map(function (item) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AnimatedItem__WEBPACK_IMPORTED_MODULE_1__["AnimatedItem"], {
+      item: item,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 34
       },
       __self: this
-    }, item.isVideo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      url: item.fields.file.url,
-      className: "thumb",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 35
-      },
-      __self: this
-    }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "thumb",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: item.fields.file.url + '?w=400&h=400',
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 38
-      },
-      __self: this
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "info",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "name",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: this
-    }, item.fields.title)));
+    });
   }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Gallery);
+/*
+;<div className='info'>
+  <div className='name'>{item.fields.title}</div>
+</div>
+
+*/
 
 /***/ }),
 
@@ -832,93 +949,77 @@ var SideBarNav = function SideBarNav() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav_link",
+    target: "_blank",
+    rel: "noopener",
+    href: "https://www.facebook.com/pyeluisofficial/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
-  }, "Home ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "nav_link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, "Music")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "nav_link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, "Videos")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "nav_link",
+  }, "Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, "PL's Mix"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "nav_link",
+    target: "_blank",
+    rel: "noopener",
+    href: "https://www.instagram.com/pyeluisofficial/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "Instagram"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "nav_divider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 26
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "nav_sub",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 27
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav_link",
-    href: "",
+    target: "_blank",
+    rel: "noopener",
+    href: "https://devatadaun.bandcamp.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 29
     },
     __self: this
-  }, "About")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Pytch Records")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav_link",
-    href: "",
+    target: "_blank",
+    rel: "noopener",
+    href: "https://pytchrecords.bandcamp.com/album/pye-luis",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 39
     },
     __self: this
-  }, "Contact"))));
+  }, "Pye Luis Bandcamp"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SideBarNav);
@@ -1239,6 +1340,17 @@ var PlayIcon = function PlayIcon(props) {
 
 /***/ }),
 
+/***/ "./components/style.css":
+/*!******************************!*\
+  !*** ./components/style.css ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -1256,13 +1368,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gsap__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/SideBarNav */ "./components/SideBarNav.js");
 /* harmony import */ var _components_Gallery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Gallery */ "./components/Gallery.js");
-/* harmony import */ var _static_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../static/style.css */ "./static/style.css");
-/* harmony import */ var _static_style_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_static_style_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_MusicPlayer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/MusicPlayer */ "./components/MusicPlayer.js");
-/* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! contentful */ "contentful");
-/* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(contentful__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_MusicPlayer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/MusicPlayer */ "./components/MusicPlayer.js");
+/* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! contentful */ "contentful");
+/* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(contentful__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_style_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/style.css */ "./components/style.css");
+/* harmony import */ var _components_style_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_style_css__WEBPACK_IMPORTED_MODULE_8__);
 
 var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/pages/index.js";
 
@@ -1430,7 +1542,7 @@ function (_Component) {
       var curatorWrapper = document.querySelector('#curator .curator_title_wrapper');
       var curatorList = document.querySelector('.curator_list');
       var logo = document.querySelector('.logo-text');
-      var textWrap = document.querySelectorAll('.line, .text'); // const textLogo = document.querySelector('.text-wrap .text')
+      var textWrap = document.querySelector('.line'); // const textLogo = document.querySelector('.text-wrap .text')
 
       var waves = document.querySelector('.wave-container');
       var miniplayerButtons = Array.from(document.querySelectorAll('.mini-player_btn_wrapper svg'));
@@ -1578,19 +1690,19 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 286
+          lineNumber: 280
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 287
+          lineNumber: 281
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 282
         },
         __self: this
       }, "Pye Luis"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -1599,56 +1711,56 @@ function (_Component) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 289
+          lineNumber: 283
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
         href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 288
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 297
+          lineNumber: 291
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 298
+          lineNumber: 292
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -one",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 299
+          lineNumber: 293
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -two",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 300
+          lineNumber: 294
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "wave -three",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 301
+          lineNumber: 295
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "line",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 303
+          lineNumber: 297
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -1656,7 +1768,7 @@ function (_Component) {
         onClick: this.toggleGallery,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 304
+          lineNumber: 298
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -1664,14 +1776,14 @@ function (_Component) {
         onMouseEnter: this.revealPlayButton,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 305
+          lineNumber: 299
         },
         __self: this
       }, "Pye Luis", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "main-btn_wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 301
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -1680,14 +1792,14 @@ function (_Component) {
         className: "main-btn",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 302
         },
         __self: this
       })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "header",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 317
+          lineNumber: 311
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -1695,21 +1807,21 @@ function (_Component) {
         onClick: this.openMenu,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 318
+          lineNumber: 312
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "burger",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 319
+          lineNumber: 313
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "logo-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 321
+          lineNumber: 315
         },
         __self: this
       }, "PL's Playlist"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -1717,27 +1829,27 @@ function (_Component) {
         onClick: this.toggleGallery,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 322
+          lineNumber: 316
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "circle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 323
+          lineNumber: 317
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 324
+          lineNumber: 318
         },
         __self: this
       }, "Back"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 328
+          lineNumber: 322
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -1745,15 +1857,15 @@ function (_Component) {
         onClick: this.handleDim,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 330
+          lineNumber: 324
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MusicPlayer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MusicPlayer__WEBPACK_IMPORTED_MODULE_6__["default"], {
         toggleFullPlayer: this.toggleFullPlayer,
         songs: songs,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 332
+          lineNumber: 326
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Gallery__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1762,7 +1874,7 @@ function (_Component) {
         photoGallery: photoGallery,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 333
+          lineNumber: 327
         },
         __self: this
       })));
@@ -1780,7 +1892,7 @@ function (_Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 req = _ref.req;
-                CMS = contentful__WEBPACK_IMPORTED_MODULE_8__["createClient"]({
+                CMS = contentful__WEBPACK_IMPORTED_MODULE_7__["createClient"]({
                   space: CONTENTFUL_SPACE_ID,
                   accessToken: CONTENTFUL_ACCESS_TOKEN
                 });
@@ -1827,17 +1939,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
-
-/***/ }),
-
-/***/ "./static/style.css":
-/*!**************************!*\
-  !*** ./static/style.css ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ }),
 
@@ -1916,6 +2017,17 @@ module.exports = require("next/head");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-flip-toolkit":
+/*!*************************************!*\
+  !*** external "react-flip-toolkit" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-flip-toolkit");
 
 /***/ }),
 

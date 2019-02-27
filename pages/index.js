@@ -2,11 +2,10 @@ import React, { Fragment, Component } from 'react'
 import { TweenMax, Power2, Expo } from 'gsap'
 import SideBarNav from '../components/SideBarNav'
 import Gallery from '../components/Gallery'
-import '../static/style.css'
 import Head from 'next/head'
 import MusicPlayer from '../components/MusicPlayer'
 import * as Contentful from 'contentful'
-
+import '../components/style.css'
 const CONTENTFUL_SPACE_ID = 'aft70ikgwtvx'
 const CONTENTFUL_ACCESS_TOKEN =
   '4e75a8b58a058563c5644162137d97c12e26b371e81afdd28388f6018aa69bc4'
@@ -145,7 +144,7 @@ class Home extends Component {
     )
     const curatorList = document.querySelector('.curator_list')
     const logo = document.querySelector('.logo-text')
-    const textWrap = document.querySelectorAll('.line, .text')
+    const textWrap = document.querySelector('.line')
     // const textLogo = document.querySelector('.text-wrap .text')
     const waves = document.querySelector('.wave-container')
     const miniplayerButtons = Array.from(
@@ -228,12 +227,7 @@ class Home extends Component {
         1
       ),
       // Background Up
-      mainToHome.to(
-        waves,
-        1,
-        { yPercent: 0, ease: Power2.easeInOut },
-        1
-      ),
+      mainToHome.to(waves, 1, { yPercent: 0, ease: Power2.easeInOut }, 1),
       // 	Show
       mainToHome.to(
         textWrap,

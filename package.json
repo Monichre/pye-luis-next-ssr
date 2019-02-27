@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export",
+    "now": "next build && next export && cd ./out && now"
   },
   "dependencies": {
+    "@now/next": "^0.0.83",
     "@zeit/next-css": "^1.0.1",
     "axios": "^0.18.0",
     "contentful": "^7.0.5",
@@ -18,6 +21,8 @@
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-player": "^1.9.3"
+    "react-flip-toolkit": "^6.5.7",
+    "react-player": "^1.9.3",
+    "rebass": "^3.0.1"
   }
 }

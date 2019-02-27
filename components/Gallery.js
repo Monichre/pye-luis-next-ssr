@@ -1,4 +1,4 @@
-import ReactPlayer from 'react-player'
+import { AnimatedItem } from './AnimatedItem'
 
 const Gallery = ({ photoGallery, videos, toggleGallery }) => {
   const _videos = videos.map(video => {
@@ -15,6 +15,10 @@ const Gallery = ({ photoGallery, videos, toggleGallery }) => {
         <div className='curator_line' />
         <span>Count em</span>
       </div>
+
+      <div className='curator_list_content_desc' onClick={toggleGallery}>
+        Hide Gallery
+      </div>
       <div className='curator_list'>
         <div className='curator_list_content'>
           <div className='connect_btn_wrapper item'>
@@ -25,25 +29,9 @@ const Gallery = ({ photoGallery, videos, toggleGallery }) => {
               </div>
             </div>
           </div>
-          <div className='curator_list_content_desc' onClick={toggleGallery}>
-            Hide Gallery
-          </div>
-          {items.map(item => {
-            return (
-              <div className='item'>
-                {item.isVideo ? (
-                  <ReactPlayer url={item.fields.file.url} className='thumb' />
-                ) : (
-                  <div className='thumb'>
-                    <img src={item.fields.file.url + '?w=400&h=400'} />
-                  </div>
-                )}
 
-                <div className='info'>
-                  <div className='name'>{item.fields.title}</div>
-                </div>
-              </div>
-            )
+          {items.map(item => {
+            return <AnimatedItem item={item} />
           })}
         </div>
       </div>
@@ -52,3 +40,10 @@ const Gallery = ({ photoGallery, videos, toggleGallery }) => {
 }
 
 export default Gallery
+
+/*
+;<div className='info'>
+  <div className='name'>{item.fields.title}</div>
+</div>
+
+*/
