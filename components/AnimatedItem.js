@@ -20,7 +20,14 @@ export class AnimatedItem extends Component {
 
   render () {
     const { item } = this.props
-    return (
+    return item.isVideo ? (
+      <ReactPlayer
+        url={item.fields.file.url}
+        playing={this.state.playVideo}
+        controls={this.state.playVideo}
+        className='thumb'
+      />
+    ) : (
       <Flipper flipKey={this.state.fullScreen}>
         <Flipped flipId='square'>
           <div
@@ -32,14 +39,7 @@ export class AnimatedItem extends Component {
             className={this.state.fullScreen ? 'full-screen-item item' : 'item'}
             onClick={this.toggleFullScreen}
           >
-            {item.isVideo ? (
-              <ReactPlayer
-                url={item.fields.file.url}
-                playing={this.state.playVideo}
-                controls={this.state.playVideo}
-                className='thumb'
-              />
-            ) : (
+  
               <div className='thumb'>
                 <img
                   data-href={
@@ -51,7 +51,6 @@ export class AnimatedItem extends Component {
                   }
                 />
               </div>
-            )}
           </div>
         </Flipped>
       </Flipper>

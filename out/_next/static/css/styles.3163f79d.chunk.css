@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Roboto");
-
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Roboto);
 /* $font-one: "Josefin Sans", sans-serif;
 $font-two: "Roboto", sans-serif;
 $font-three: "Oswald", sans-serif; */
@@ -828,3 +827,4 @@ img.btn-open-player {
 .curator_list_content_desc {
   display: none;
 }
+

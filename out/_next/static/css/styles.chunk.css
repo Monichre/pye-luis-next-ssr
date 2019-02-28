@@ -669,7 +669,7 @@ img.btn-open-player {
 .curator_list_content .item {
   cursor: pointer;
   height: 25vh;
-  margin: 0 20px;
+  margin: 30px 0 0 0;
 }
 .curator_list_content .item:active {
   transform: scale(0.95);
@@ -695,7 +695,7 @@ img.btn-open-player {
   height: 18vh !important;
   border-radius: 10px;
   background-size: cover;
-  margin-bottom: 20px;
+  margin: 0 20px;
   transition: 0.5s;
   overflow: hidden;
 }
@@ -756,6 +756,19 @@ img.btn-open-player {
   }
   .playback_timeline {
     display: none;
+  }
+  .curator_list_content {
+    padding: 0 50px;
+    white-space: nowrap;
+    text-align: left;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 65%;
+    margin-top: -6.6666666667vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   .playback_info {
     display: block;

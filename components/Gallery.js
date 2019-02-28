@@ -1,4 +1,4 @@
-import { AnimatedItem } from './AnimatedItem'
+import { Thumb } from './Thumb'
 
 const Gallery = ({ photoGallery, videos, toggleGallery }) => {
   const _videos = videos.map(video => {
@@ -31,7 +31,7 @@ const Gallery = ({ photoGallery, videos, toggleGallery }) => {
           </div>
 
           {items.map(item => {
-            return <AnimatedItem item={item} />
+            return <Thumb item={item} />
           })}
         </div>
       </div>
