@@ -1,7 +1,16 @@
+import Link from 'next/link'
+
 const SideBarNav = () => {
   return (
     <div className='nav'>
       <ul className='nav_main'>
+        <li className='nav_link'>
+          <Link href='/'>Home</Link>
+        </li>
+
+        <li className='nav_link'>
+          <Link href='/gallery'>Gallery</Link>
+        </li>
         <li>
           <a
             className='nav_link'

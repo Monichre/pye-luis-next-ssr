@@ -22,7 +22,7 @@ export class Thumb extends Component {
       <ReactPlayer
         url={item.fields.file.url}
         playing={this.state.playVideo}
-        controls={this.state.playVideo}
+        controls={true}
         className='thumb'
       />
     ) : (
