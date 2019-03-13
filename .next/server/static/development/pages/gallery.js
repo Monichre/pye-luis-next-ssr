@@ -88,10 +88,225 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/GalleryGrid.js":
+/*!***********************************!*\
+  !*** ./components/GalleryGrid.js ***!
+  \***********************************/
+/*! exports provided: GalleryGrid, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GalleryGrid", function() { return GalleryGrid; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_spring__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-spring */ "react-spring");
+/* harmony import */ var react_spring__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_spring__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/GalleryGrid.js";
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  background: white;\n  border-radius: 5px;\n  will-change: transform, opacity;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+var Item = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(react_spring__WEBPACK_IMPORTED_MODULE_2__["animated"].div)(_templateObject());
+function GalleryGrid(_ref) {
+  var photos = _ref.photos;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      open = _useState2[0],
+      set = _useState2[1];
+
+  var springRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  var _useSpring = Object(react_spring__WEBPACK_IMPORTED_MODULE_2__["useSpring"])({
+    ref: springRef,
+    config: react_spring__WEBPACK_IMPORTED_MODULE_2__["config"].stiff,
+    from: {
+      size: '20%',
+      background: 'hotpink'
+    },
+    to: {
+      size: open ? '100%' : '20%',
+      background: open ? 'white' : 'hotpink'
+    }
+  }),
+      size = _useSpring.size,
+      opacity = _useSpring.opacity,
+      rest = _objectWithoutProperties(_useSpring, ["size", "opacity"]);
+
+  var transRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  var transitions = Object(react_spring__WEBPACK_IMPORTED_MODULE_2__["useTransition"])(open ? photos : [], function (item) {
+    return item.name;
+  }, {
+    ref: transRef,
+    unique: true,
+    trail: 400 / photos.length,
+    from: {
+      opacity: 0,
+      transform: 'scale(0)'
+    },
+    enter: {
+      opacity: 1,
+      transform: 'scale(1)'
+    },
+    leave: {
+      opacity: 0,
+      transform: 'scale(0)'
+    }
+  }); // This will orchestrate the two animations above, comment the last arg and it creates a sequence
+
+  Object(react_spring__WEBPACK_IMPORTED_MODULE_2__["useChain"])(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 0.6]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, photos.map(function (photo, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "masonry__item middle",
+      style: _objectSpread({}, rest, {
+        width: size,
+        height: size
+      }),
+      onClick: function onClick() {
+        return set(function (open) {
+          return !open;
+        });
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figcaption", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }, "#", i + 1), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, photo.fields.file.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "background",
+      style: {
+        backgroundImage: "url(".concat(photo.fields.file.url, "?h=200&w=200)")
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Item, {
+      key: i,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "detail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "icon",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "circles",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "circle circle1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    }, "||")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "circle circle2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: this
+    }, "\u27A4"))))));
+  }));
+}
+/* harmony default export */ __webpack_exports__["default"] = (GalleryGrid);
+
+/***/ }),
 
 /***/ "./components/Header.js":
 /*!******************************!*\
@@ -105,62 +320,152 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Header", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "gsap");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gsap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_SideBarNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SideBarNav */ "./components/SideBarNav.js");
 var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/components/Header.js";
 
-var Header = function Header(_ref) {
-  var openMenu = _ref.openMenu;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "header",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "burger-wrapper",
-    onClick: openMenu,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "burger",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "logo-text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, "PL's Playlist"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "back_btn",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "circle",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, "Back")));
-};
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var Header =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Header, _Component);
+
+  function Header(props) {
+    var _this;
+
+    _classCallCheck(this, Header);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Header).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "openMenu", function (e) {
+      var menuOpen = _this.state.menuOpen;
+
+      if (!menuOpen) {
+        gsap__WEBPACK_IMPORTED_MODULE_1__["TweenMax"].to('.dim', 0.5, {
+          opacity: 1,
+          display: 'block',
+          ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power2"].easeInOut
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_1__["TweenMax"].fromTo('.nav', 0.5, {
+          xPercent: -100
+        }, {
+          xPercent: 0,
+          display: 'block',
+          ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Expo"].easeOut
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_1__["TweenMax"].staggerFrom('.nav li', 0.5, {
+          opacity: 0,
+          y: 20,
+          ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power2"].easeInOut
+        }, 0.1);
+
+        _this.setState({
+          menuOpen: true
+        });
+      } else {
+        gsap__WEBPACK_IMPORTED_MODULE_1__["TweenMax"].to('.dim', 0.5, {
+          opacity: 0,
+          display: 'none',
+          ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power2"].easeInOut
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_1__["TweenMax"].to('.nav', 0.5, {
+          xPercent: -100,
+          display: 'none',
+          ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Expo"].easeOut
+        });
+
+        _this.setState({
+          menuOpen: false
+        });
+      }
+    });
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Header, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "burger-wrapper",
+        onClick: this.openMenu,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "burger",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "logo-text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, "PL's Playlist"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "back_btn",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "circle",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, "Back")));
+    }
+  }]);
+
+  return Header;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /***/ }),
 
@@ -210,24 +515,36 @@ var SideBarNav = function SideBarNav() {
       lineNumber: 8
     },
     __self: this
-  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "Home"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav_link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/gallery",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
-  }, "Gallery")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
+    },
+    __self: this
+  }, "Gallery"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -237,13 +554,13 @@ var SideBarNav = function SideBarNav() {
     href: "https://www.facebook.com/pyeluisofficial/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   }, "Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -253,27 +570,27 @@ var SideBarNav = function SideBarNav() {
     href: "https://www.instagram.com/pyeluisofficial/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
   }, "Instagram"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "nav_divider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 39
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "nav_sub",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 40
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 41
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -283,13 +600,13 @@ var SideBarNav = function SideBarNav() {
     href: "https://devatadaun.bandcamp.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 42
     },
     __self: this
   }, "Pytch Records")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -299,7 +616,7 @@ var SideBarNav = function SideBarNav() {
     href: "https://pytchrecords.bandcamp.com/album/pye-luis",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 52
     },
     __self: this
   }, "Pye Luis Bandcamp"))));
@@ -387,7 +704,7 @@ function () {
             return _context.stop();
         }
       }
-    }, _callee, this);
+    }, _callee);
   }));
 
   return function getSiteContent() {
@@ -414,9 +731,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/SideBarNav */ "./components/SideBarNav.js");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "gsap");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gsap__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_gallery_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/gallery.css */ "./components/gallery.css");
-/* harmony import */ var _components_gallery_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_gallery_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _lib_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/api */ "./lib/api.js");
+/* harmony import */ var _components_GalleryGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/GalleryGrid */ "./components/GalleryGrid.js");
+/* harmony import */ var react_share__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-share */ "react-share");
+/* harmony import */ var react_share__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_share__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_gallery_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/gallery.css */ "./components/gallery.css");
+/* harmony import */ var _components_gallery_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_gallery_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _lib_api__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/api */ "./lib/api.js");
 
 var _jsxFileName = "/Users/Liam/Desktop/pye-luis-next-ssr/pages/gallery.js";
 
@@ -436,13 +756,15 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -469,56 +791,8 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Gallery)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+    _defineProperty(_assertThisInitialized(_this), "state", {
       menuOpen: false
-    });
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "openMenu", function (e) {
-      var menuOpen = _this.state.menuOpen;
-
-      if (!menuOpen) {
-        gsap__WEBPACK_IMPORTED_MODULE_4__["TweenMax"].to('.dim', 0.5, {
-          opacity: 1,
-          display: 'block',
-          ease: gsap__WEBPACK_IMPORTED_MODULE_4__["Power2"].easeInOut
-        });
-        gsap__WEBPACK_IMPORTED_MODULE_4__["TweenMax"].fromTo('.nav', 0.5, {
-          xPercent: -100
-        }, {
-          xPercent: 0,
-          display: 'block',
-          ease: gsap__WEBPACK_IMPORTED_MODULE_4__["Expo"].easeOut
-        });
-        gsap__WEBPACK_IMPORTED_MODULE_4__["TweenMax"].staggerFrom('.nav li', 0.5, {
-          opacity: 0,
-          y: 20,
-          ease: gsap__WEBPACK_IMPORTED_MODULE_4__["Power2"].easeInOut
-        }, 0.1);
-
-        _this.setState({
-          menuOpen: true
-        });
-      } else {
-        gsap__WEBPACK_IMPORTED_MODULE_4__["TweenMax"].to('.dim', 0.5, {
-          opacity: 0,
-          display: 'none',
-          ease: gsap__WEBPACK_IMPORTED_MODULE_4__["Power2"].easeInOut
-        });
-        gsap__WEBPACK_IMPORTED_MODULE_4__["TweenMax"].to('.nav', 0.5, {
-          xPercent: -100,
-          display: 'none',
-          ease: gsap__WEBPACK_IMPORTED_MODULE_4__["Expo"].easeOut
-        });
-
-        _this.setState({
-          menuOpen: false
-        });
-      } // // ===== If Nav is open	and in Curation page
-      // else if($('.nav').css("display") == "block" && $('#curator').css("display") == "block"){
-      // 	TweenMax.to(".dim", 0.5, {opacity: 0, display: 'none', ease: Power2.easeInOut});
-      // 	TweenMax.to(".nav", 0.5, {xPercent: -100, display:'none', ease: Expo.easeOut});
-      // 	// $('.logo-text').css({'opacity': '1', 'display': 'block'});
-
     });
 
     return _this;
@@ -528,58 +802,63 @@ function (_Component) {
     key: "render",
     value: function render() {
       var photos = this.props.data.photoGallery.fields.photos;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "gallery-page",
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_2__["Header"], {
-        openMenu: null,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 40
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "gallery-page",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
         className: "content-holder",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 42
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 44
         },
         __self: this
       }, "Pye Luis Gallery"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 45
         },
         __self: this
       }, "Peep This"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
         action: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 46
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "label",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 47
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -589,7 +868,7 @@ function (_Component) {
         type: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 48
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -598,34 +877,86 @@ function (_Component) {
         value: "\u27A4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 54
         },
         __self: this
-      }))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_share__WEBPACK_IMPORTED_MODULE_6__["FacebookShareButton"], {
+        url: 'http://localhost:3000/gallery',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 57
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_share__WEBPACK_IMPORTED_MODULE_6__["FacebookIcon"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_share__WEBPACK_IMPORTED_MODULE_6__["TwitterShareButton"], {
+        url: 'http://localhost:3000/gallery',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_share__WEBPACK_IMPORTED_MODULE_6__["TwitterIcon"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_share__WEBPACK_IMPORTED_MODULE_6__["RedditShareButton"], {
+        url: 'http://localhost:3000/gallery',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_share__WEBPACK_IMPORTED_MODULE_6__["RedditIcon"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_share__WEBPACK_IMPORTED_MODULE_6__["EmailShareButton"], {
+        url: 'http://localhost:3000/gallery',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_share__WEBPACK_IMPORTED_MODULE_6__["EmailIcon"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_SideBarNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
         className: "grid-holder",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 72
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "grid masonry",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 73
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "close-detail-view",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 74
         },
         __self: this
       }), photos && photos.length ? photos.map(function (photo, i) {
@@ -633,93 +964,93 @@ function (_Component) {
           className: "masonry__item middle",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100
+            lineNumber: 78
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("figure", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 101
+            lineNumber: 79
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("figcaption", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 102
+            lineNumber: 80
           },
           __self: this
         }, "#", i + 1), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "content",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 103
+            lineNumber: 81
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 104
+            lineNumber: 82
           },
           __self: this
         }, photo.fields.file.title)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "background",
           style: {
-            backgroundImage: "url(".concat(photo.fields.file.url, ")")
+            backgroundImage: "url(".concat(photo.fields.file.url, "?h=200&w=200)")
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 106
+            lineNumber: 84
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "detail",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 112
+            lineNumber: 92
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
           className: "icon",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 113
+            lineNumber: 93
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
           className: "circles",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 114
+            lineNumber: 94
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "circle circle1",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 115
+            lineNumber: 95
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 116
+            lineNumber: 96
           },
           __self: this
         }, "||")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "circle circle2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118
+            lineNumber: 98
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119
+            lineNumber: 99
           },
           __self: this
         }, "\u27A4"))))));
-      }) : null)));
+      }) : null))));
     }
   }], [{
     key: "getInitialProps",
@@ -734,7 +1065,7 @@ function (_Component) {
               case 0:
                 req = _ref.req;
                 _context.next = 3;
-                return Object(_lib_api__WEBPACK_IMPORTED_MODULE_6__["getSiteContent"])();
+                return Object(_lib_api__WEBPACK_IMPORTED_MODULE_8__["getSiteContent"])();
 
               case 3:
                 return _context.abrupt("return", _context.sent);
@@ -744,7 +1075,7 @@ function (_Component) {
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee);
       }));
 
       function getInitialProps(_x) {
@@ -813,7 +1144,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!********************************!*\
   !*** multi ./pages/gallery.js ***!
   \********************************/
@@ -877,6 +1208,50 @@ module.exports = require("next/link");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-dom");
+
+/***/ }),
+
+/***/ "react-share":
+/*!******************************!*\
+  !*** external "react-share" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-share");
+
+/***/ }),
+
+/***/ "react-spring":
+/*!*******************************!*\
+  !*** external "react-spring" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-spring");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 

@@ -5,11 +5,15 @@ const SideBarNav = () => {
     <div className='nav'>
       <ul className='nav_main'>
         <li className='nav_link'>
-          <Link href='/'>Home</Link>
+          <Link href='/'>
+          <a>Home</a>
+          </Link>
         </li>
 
         <li className='nav_link'>
-          <Link href='/gallery'>Gallery</Link>
+          <Link href='/gallery'>
+          <a>Gallery</a>
+          </Link>
         </li>
         <li>
           <a

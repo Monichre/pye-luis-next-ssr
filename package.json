@@ -23,6 +23,9 @@
     "react-dom": "^16.7.0",
     "react-flip-toolkit": "^6.5.7",
     "react-player": "^1.9.3",
-    "rebass": "^3.0.1"
+    "react-share": "^2.4.0",
+    "react-spring": "^8.0.14",
+    "rebass": "^3.0.1",
+    "styled-components": "^4.1.3"
   }
 }

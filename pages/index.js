@@ -27,53 +27,6 @@ class Home extends Component {
     localStorage.setItem('appCache', JSON.stringify(data))
   }
 
-  openMenu = e => {
-    const { menuOpen } = this.state
-
-    if (!menuOpen) {
-      TweenMax.to('.dim', 0.5, {
-        opacity: 1,
-        display: 'block',
-        ease: Power2.easeInOut
-      })
-      TweenMax.fromTo(
-        '.nav',
-        0.5,
-        { xPercent: -100 },
-        { xPercent: 0, display: 'block', ease: Expo.easeOut }
-      )
-      TweenMax.staggerFrom(
-        '.nav li',
-        0.5,
-        { opacity: 0, y: 20, ease: Power2.easeInOut },
-        0.1
-      )
-      this.setState({
-        menuOpen: true
-      })
-    } else {
-      TweenMax.to('.dim', 0.5, {
-        opacity: 0,
-        display: 'none',
-        ease: Power2.easeInOut
-      })
-      TweenMax.to('.nav', 0.5, {
-        xPercent: -100,
-        display: 'none',
-        ease: Expo.easeOut
-      })
-      this.setState({
-        menuOpen: false
-      })
-    }
-
-    // // ===== If Nav is open	and in Curation page
-    // else if($('.nav').css("display") == "block" && $('#curator').css("display") == "block"){
-    // 	TweenMax.to(".dim", 0.5, {opacity: 0, display: 'none', ease: Power2.easeInOut});
-    // 	TweenMax.to(".nav", 0.5, {xPercent: -100, display:'none', ease: Expo.easeOut});
-    // 	// $('.logo-text').css({'opacity': '1', 'display': 'block'});
-  }
-
   toggleFullPlayer = () => {
     const { fullPlayerOpen } = this.state
 
